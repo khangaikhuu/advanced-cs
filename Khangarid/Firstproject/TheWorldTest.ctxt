@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=TheWorldTest
+comment0.text=\r\n\ The\ test\ class\ TheWorldTest.\r\n\r\n\ @author\ \ (khangarid)\r\n\ @version\ (1.0)\r\n
+comment1.params=
+comment1.target=void\ testGetMyInt()
+comment2.params=
+comment2.target=void\ testGetMyLong()
+comment3.params=
+comment3.target=void\ testGetMyString()
+comment4.params=
+comment4.target=void\ testGetMyBoolean()
+comment5.params=
+comment5.target=void\ testGetMyChar()
+comment6.params=
+comment6.target=void\ testGetMyDouble()
+comment7.params=
+comment7.target=void\ testGetMyFloat()
+numComments=8
