@@ -12,7 +12,7 @@ public class conditionals
     private int b = 20;
     private int c = 10;
     
-    public String CheckMaxTwoNumber(int num1, int num2)
+    public String checkMaxTwoNumber(int num1, int num2)
     {
         if(num1>num2){
             return "Number one is bigger";

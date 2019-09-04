@@ -2,7 +2,7 @@
 comment0.target=conditionals
 comment0.text=\r\n\ Write\ a\ description\ of\ class\ conditionals\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=num1\ num2
-comment1.target=java.lang.String\ CheckMaxTwoNumber(int,\ int)
+comment1.target=java.lang.String\ checkMaxTwoNumber(int,\ int)
 comment2.params=num1\ num2
 comment2.target=java.lang.String\ numChecker(int,\ int)
 comment3.params=
