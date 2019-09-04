@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=Conditionals
+comment0.text=\r\n\ Here\ is\ my\ conditionals\ If\ ElSE\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=num1\ num2
+comment1.target=java.lang.String\ checkMaximumTwoNumbers(int,\ int)
+comment2.params=
+comment2.target=boolean\ checkMaximum()
+numComments=3
