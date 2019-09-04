@@ -33,10 +33,12 @@ public class conditionals
         {
             return"num1 is 10 and num2 is 5";
         }
-        else
+        else if(num1 == 10 && num2==10)
         {
-            return"num1 is 10 and num2 is 10";
+            return "num1 is 10 and num2 is 10";
         }
+        else return "num1 is " + num1 + " num2 is "+ num2 + ".";
+           
     }
     
     public boolean checkMaximum()
