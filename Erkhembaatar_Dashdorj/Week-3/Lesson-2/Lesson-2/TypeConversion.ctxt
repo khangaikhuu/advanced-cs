@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=TypeConversion
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ TypeConversion\ here.\r\n\r\n\ @author\ (Erkhem)\r\n\ @version\ (1.0)\r\n
+comment1.params=
+comment1.target=int\ getA()
+comment2.params=
+comment2.target=double\ getB()
+comment3.params=num
+comment3.target=void\ convertB(int)
+comment4.params=x\ y
+comment4.target=double\ getTwoIntegers(int,\ int)
+numComments=5
