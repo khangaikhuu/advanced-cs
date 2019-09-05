@@ -12,7 +12,7 @@ public class conditionals
     private int b = 20;
     private int c = 10;
     
-    public String CheckMaxTwoNumber(int num1, int num2)
+    public String checkMaxTwoNumber(int num1, int num2)
     {
         if(num1>num2){
             return "Number one is bigger";
@@ -33,10 +33,12 @@ public class conditionals
         {
             return"num1 is 10 and num2 is 5";
         }
-        else
+        else if(num1 == 10 && num2==10)
         {
-            return"num1 is 10 and num2 is 10";
+            return "num1 is 10 and num2 is 10";
         }
+        else return "num1 is " + num1 + " num2 is "+ num2 + ".";
+           
     }
     
     public boolean checkMaximum()
