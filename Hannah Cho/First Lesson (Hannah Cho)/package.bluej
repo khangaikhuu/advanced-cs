@@ -2,9 +2,9 @@
 dependency1.from=helloWorldTest
 dependency1.to=helloWorld
 dependency1.type=UsesDependency
-editor.fx.0.height=0
-editor.fx.0.width=0
-editor.fx.0.x=0
+editor.fx.0.height=735
+editor.fx.0.width=627
+editor.fx.0.x=754
 editor.fx.0.y=0
 objectbench.height=93
 objectbench.width=561
