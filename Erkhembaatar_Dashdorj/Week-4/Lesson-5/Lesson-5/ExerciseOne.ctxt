@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=ExerciseOne
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ ExerciseOne\ here.\r\n\r\n\ @author\ (Erkhem)\r\n\ @version\ (9/9/19)\r\n
+comment1.params=add
+comment1.target=void\ addGlobalSum(int)
+comment2.params=
+comment2.target=int\ getSum()
+comment3.params=add
+comment3.target=int\ addLocalSum(int)
+numComments=4
