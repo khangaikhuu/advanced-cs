@@ -23,12 +23,11 @@ public class arrayMethods
     
     public int intProduct(int[] array)
     {
-        int product = 0;
-        int sum = 0;
+        int product = 1;
         int arrayLength = array.length;
         for(int i=0;i<arrayLength;i++)
         {
-            sum*= array[i];
+            product *= array[i];
         }
         return product;
     }
