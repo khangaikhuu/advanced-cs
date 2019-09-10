@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=DrawIO
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ DrawIO\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=void\ checkValue()
+comment2.params=
+comment2.target=java.lang.String\ getA()
+comment3.params=
+comment3.target=void\ printArray()
+comment4.params=
+comment4.target=void\ maxValue()
+numComments=5
