@@ -2,10 +2,10 @@
 dependency1.from=MyClassTest
 dependency1.to=MyClass
 dependency1.type=UsesDependency
-editor.fx.0.height=719
-editor.fx.0.width=634
-editor.fx.0.x=728
-editor.fx.0.y=2
+editor.fx.0.height=0
+editor.fx.0.width=0
+editor.fx.0.x=0
+editor.fx.0.y=0
 objectbench.height=89
 objectbench.width=594
 package.divider.horizontal=0.6
