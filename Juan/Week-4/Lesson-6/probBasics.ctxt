@@ -1,0 +1,24 @@
+#BlueJ class context
+comment0.target=probBasics
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ probBasics\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=name
+comment1.target=java.lang.String\ concat(java.lang.String)
+comment10.params=array
+comment10.target=int\ maximum(int[])
+comment2.params=a\ b
+comment2.target=int\ adder(int,\ int)
+comment3.params=c\ d
+comment3.target=int\ divider(int,\ int)
+comment4.params=A\ B\ C\ D
+comment4.target=int\ formula(int,\ int,\ int,\ int)
+comment5.params=z
+comment5.target=void\ table(int)
+comment6.params=a\ b\ c
+comment6.target=double\ average(double,\ double,\ double)
+comment7.params=a\ b
+comment7.target=void\ swap(int,\ int)
+comment8.params=
+comment8.target=void\ face()
+comment9.params=array
+comment9.target=void\ intArray(int[])
+numComments=11
