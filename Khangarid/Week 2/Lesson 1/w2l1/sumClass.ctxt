@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=sumClass
+comment1.params=a
+comment1.target=void\ addGlobalSum(int)
+comment2.params=a
+comment2.target=int\ addLocalSum(int)
+comment3.params=
+comment3.target=int\ getSum()
+numComments=4
