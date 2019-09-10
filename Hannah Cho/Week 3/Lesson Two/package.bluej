@@ -1,9 +1,9 @@
 #BlueJ package file
-dependency1.from=TypeConversionTest
-dependency1.to=TypeConversion
+dependency1.from=ConditionalsTest
+dependency1.to=Conditionals
 dependency1.type=UsesDependency
-dependency2.from=ConditionalsTest
-dependency2.to=Conditionals
+dependency2.from=TypeConversionTest
+dependency2.to=TypeConversion
 dependency2.type=UsesDependency
 editor.fx.0.height=739
 editor.fx.0.width=816
