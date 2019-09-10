@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=ExerciseTwo
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ ExerciseTwo\ here.\r\n\r\n\ @author\ (Jason)\r\n\ @version\ (10.09.2019)\r\n
+comment1.params=s
+comment1.target=void\ ex1(java.lang.String)
+comment2.params=a\ b
+comment2.target=int\ getSum(int,\ int)
+comment3.params=c\ d
+comment3.target=int\ getQuotient(int,\ int)
+comment4.params=A\ B\ C\ D
+comment4.target=int\ getCalc(int,\ int,\ int,\ int)
+comment5.params=f
+comment5.target=void\ getMulti(int)
+comment6.params=z\ x\ p
+comment6.target=double\ getAvg(double,\ double,\ double)
+comment7.params=y\ m
+comment7.target=void\ swapNum(int,\ int)
+numComments=8
