@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=ExerciseOne
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ ExerciseOne\ here.\r\n\r\n\ @author\ (Tsengel)\r\n\ @version\ (11.09.2019)\r\n
+comment1.params=a
+comment1.target=void\ checkNumber(int)
+comment2.params=num1\ num2\ num3
+comment2.target=void\ largestNum(int,\ int,\ int)
+comment3.params=day
+comment3.target=void\ getWeek(int)
+comment4.params=
+comment4.target=void\ getNumbers()
+numComments=5
