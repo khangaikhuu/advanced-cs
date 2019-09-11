@@ -2,19 +2,24 @@
 dependency1.from=ExerciseOneTest
 dependency1.to=ExerciseOne
 dependency1.type=UsesDependency
-editor.fx.0.height=728
-editor.fx.0.width=683
-editor.fx.0.x=683
+editor.fx.0.height=0
+editor.fx.0.width=0
+editor.fx.0.x=0
 editor.fx.0.y=0
 objectbench.height=93
 objectbench.width=760
 package.divider.horizontal=0.6
-package.divider.vertical=0.8003992015968064
-package.editor.height=394
+<<<<<<< HEAD
+package.divider.vertical=0.801980198019802
+package.editor.height=398
+=======
+package.divider.vertical=0.8
+package.editor.height=393
+>>>>>>> 76d852b0465fa6b390c72355bc8145ec987ea159
 package.editor.width=670
-package.editor.x=533
-package.editor.y=94
-package.frame.height=600
+package.editor.x=452
+package.editor.y=101
+package.frame.height=604
 package.frame.width=800
 package.numDependencies=1
 package.numTargets=3
