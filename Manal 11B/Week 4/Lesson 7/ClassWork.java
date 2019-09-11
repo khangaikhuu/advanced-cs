@@ -50,7 +50,7 @@ public class ClassWork
     }
     public void weekday(int x){
         String[] week = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
-        System.out.println(week[x]);
+        System.out.println(week[x - 1]);
     }
     public void natural(){
         for (int i = 1; i < 11; i++){
