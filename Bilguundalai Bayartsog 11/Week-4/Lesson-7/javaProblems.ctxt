@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=javaProblems
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ javaProblems\ here.\r\n\r\n\ @author\ (Bilguundalai)\r\n\ @version\ (11/9/2019)\r\n
+comment1.params=num
+comment1.target=void\ checkNum(int)
+comment2.params=a\ b\ c
+comment2.target=void\ maxValue(int,\ int,\ int)
+comment3.params=b
+comment3.target=void\ floating(float)
+comment4.params=b
+comment4.target=void\ weekday(int)
+comment5.params=
+comment5.target=void\ naturalNumbers()
+numComments=6

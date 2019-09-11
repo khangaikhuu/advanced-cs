@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=lesson6
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ lesson6\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=a
+comment1.target=void\ positiver(int)
+comment2.params=a\ b\ c
+comment2.target=void\ greatest(int,\ int,\ int)
+comment3.params=a
+comment3.target=void\ numChecker(float)
+comment4.params=a
+comment4.target=void\ weekday(int)
+comment5.params=
+comment5.target=void\ natNums()
+comment6.params=a\ b\ c\ d\ e
+comment6.target=void\ sumAv(int,\ int,\ int,\ int,\ int)
+comment7.params=a
+comment7.target=void\ pattern(int)
+comment8.params=a
+comment8.target=void\ cuber(int)
+comment9.params=a
+comment9.target=void\ table(int)
+numComments=10
