@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=ExtraAssignment
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ ExtraAssignment\ here.\r\n\r\n\ @author\ (Erkhem)\r\n\ @version\ (9/9/19)\r\n
+comment1.params=arry
+comment1.target=int\ sumOfArry(int[])
+comment2.params=arry
+comment2.target=int\ productOfArry(int[])
+comment3.params=array
+comment3.target=double\ maxOfArry(double[])
+comment4.params=arry
+comment4.target=double\ minOfArry(double[])
+numComments=5
