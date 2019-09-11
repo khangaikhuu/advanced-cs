@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.target=ExerciseTwo
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ ExerciseTwo\ here.\r\n\r\n\ @author\ (Erkhem)\r\n\ @version\ (9/10/19)\r\n
+comment1.params=str
+comment1.target=java.lang.String\ concHello(java.lang.String)
+comment10.params=a
+comment10.target=void\ decToBinary(int)
+comment11.params=a
+comment11.target=int\ valueOfDigits(int)
+comment2.params=a\ b
+comment2.target=int\ sumOfTwo(int,\ int)
+comment3.params=a\ b
+comment3.target=int\ quotientOfTwo(int,\ int)
+comment4.params=a\ b\ c\ d
+comment4.target=int\ formulaOfFour(int,\ int,\ int,\ int)
+comment5.params=a
+comment5.target=void\ printMultTable(int)
+comment6.params=a\ b\ c
+comment6.target=int\ avgOfThree(int,\ int,\ int)
+comment7.params=a\ b
+comment7.target=void\ swapInput(int,\ int)
+comment8.params=
+comment8.target=void\ printFace()
+comment9.params=a
+comment9.target=int\ maxArrayElement(int[])
+numComments=12
