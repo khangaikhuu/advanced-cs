@@ -27,20 +27,16 @@ public class ExtraAssignment
         return sum;
    }
    
-   public double maxOfArry(double[] arry)
+   public double maxOfArry(double[] array)
    {
-     double chosen = 0;
-     for(int i=0 ; i<arry.length-1 ; i++)
+     double chosen = -1;
+     for(int i=0 ; i<array.length ; i++)
      {
-         if( arry[i+1]>arry[i])
+         if (chosen <= array[i])
          {
-             chosen = arry[i+1];
+             chosen = array[i];
          }
-         else
-         {
-             chosen = arry[i];
-         }
-        }
+     }
      return chosen;
     }
     public double minOfArry(double[] arry)
