@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=ExerciseOne
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ ExerciseOne\ here.\r\n\r\n\ @author\ (khulan)\r\n\ @version\ (09.12.19)\r\n
+comment1.params=
+comment1.target=void\ sumAverage()
+comment2.params=
+comment2.target=void\ specificValue()
+comment3.params=
+comment3.target=void\ getMinMax()
+comment4.params=inputArray
+comment4.target=int\ getMax(int[])
+comment5.params=inputArray
+comment5.target=int\ getMin(int[])
+numComments=6
