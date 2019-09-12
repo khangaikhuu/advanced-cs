@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=lesson4
+comment1.params=
+comment1.target=void\ exercise1()
+comment2.params=myArray\ x
+comment2.target=boolean\ value(int[],\ int)
+comment3.params=myArray\ x
+comment3.target=int\ exercise3(int[],\ int)
+comment4.params=myArray
+comment4.target=void\ exerciseFour(int[])
+comment5.params=array
+comment5.target=int\ exerciseFive(int[])
+numComments=6
