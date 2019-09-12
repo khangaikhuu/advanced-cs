@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=ExcerciseOne
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ ExcerciseOne\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=a\ b\ c
+comment1.target=void\ checkValue(int,\ int,\ int)
+comment2.params=s
+comment2.target=void\ checkFloat(float)
+comment3.params=num2
+comment3.target=void\ checkNum2(int)
+comment4.params=
+comment4.target=void\ checkNatural()
+comment5.params=num
+comment5.target=void\ checkNum(int)
+numComments=6
