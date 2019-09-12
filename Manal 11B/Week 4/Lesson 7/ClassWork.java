@@ -45,7 +45,7 @@ public class ClassWork
             System.out.println("small");
         }
         if (Math.abs(x) > 1000000){
-            System.out.println("small");
+            System.out.println("large");
         }
     }
     public void weekday(int x){
