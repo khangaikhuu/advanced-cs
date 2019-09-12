@@ -3,7 +3,7 @@
  * Write a description of class JavaProblems here.
  *
  * @author (Chingun)
- * @version (11.09.2011)
+ * @version (11.09.2019)
  */
 public class JavaProblems
 {
