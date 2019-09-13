@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=lesson8
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ lesson8\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=array
+comment1.target=int\ arrayAv(int[])
+comment2.params=array\ find
+comment2.target=boolean\ container(int[],\ int)
+comment3.params=array\ num
+comment3.target=int\ indexer(int[],\ int)
+comment4.params=array
+comment4.target=void\ maxMin(int[])
+comment5.params=array
+comment5.target=void\ large2(int[])
+comment6.params=array
+comment6.target=int\ duplicate(int[])
+numComments=7
