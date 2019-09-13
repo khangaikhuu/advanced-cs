@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=ExerciseOne
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ ExerciseOne\ here.\r\n\r\n\ @author\ (Hannah)\r\n\ @version\ (12.09.2019)\r\n
+comment1.params=
+comment1.target=void\ getAverage()
+comment2.params=num
+comment2.target=void\ checkArray(int)
+comment3.params=a\ b
+comment3.target=void\ findIndex(int[],\ int)
+comment4.params=numbers
+comment4.target=int\ value(int[])
+comment5.params=numbers
+comment5.target=int\ minValue(int[])
+comment6.params=
+comment6.target=void\ getSecondLargestElement()
+numComments=7
