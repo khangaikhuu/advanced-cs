@@ -89,7 +89,7 @@ public class JavaProblems
             s= array[1]; 
             return s;
         }
-        public int dupllicate(int[] array){ 
+        public int duplicate(int[] array){ 
             int d = 0; 
             for (int i = 0; i < array.length; i++){ 
                 for (int j = i + 1; j < array.length; j++){ 
