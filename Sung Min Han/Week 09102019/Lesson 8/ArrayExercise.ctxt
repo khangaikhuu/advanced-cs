@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=ArrayExercise
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ ArrayExercise\ here.\r\n\r\n\ @author\ (Sung\ Min)\r\n\ @version\ (9122019)\r\n
+comment1.params=
+comment1.target=void\ findAv()
+comment2.params=
+comment2.target=void\ findIndex()
+comment3.params=array
+comment3.target=int\ max(int[])
+comment4.params=array
+comment4.target=int\ min(int[])
+comment5.params=
+comment5.target=void\ findMaxMin()
+numComments=6
