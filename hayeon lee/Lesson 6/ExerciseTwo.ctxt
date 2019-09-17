@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=ExerciseTwo
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ ExerciseTwo\ here.\r\n\r\n\ @author\ (Hayeon\ Lee)\r\n\ @version\ (10/09/2019)\r\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=a\ b
+comment2.target=int\ getSum(int,\ int)
+comment3.params=c\ d
+comment3.target=double\ getDivision(int,\ int)
+comment4.params=a\ b\ c\ d
+comment4.target=int\ getOperations(int,\ int,\ int,\ int)
+comment5.params=
+comment5.target=void\ getMultiple()
+numComments=6
