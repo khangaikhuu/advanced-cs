@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=JavaArray
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ JavaArray\ here.\r\n\r\n\ @author\ (Hayeon\ Lee)\r\n\ @version\ (12/09/2019)\r\n
+comment1.params=
+comment1.target=void\ myAverage()
+comment2.params=
+comment2.target=void\ myValue()
+comment3.params=
+comment3.target=void\ myIndex()
+comment4.params=
+comment4.target=void\ maxMin()
+comment5.params=
+comment5.target=void\ secondEle()
+numComments=6
