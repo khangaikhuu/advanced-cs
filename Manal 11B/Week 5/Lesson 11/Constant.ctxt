@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=Constant
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Constant\ here.\r\n\r\n\ @author\ (Manal)\r\n\ @version\ (17.09.19)\r\n
+comment1.params=
+comment1.target=boolean\ compareArrays()
+comment2.params=r
+comment2.target=double\ area(int)
+comment3.params=b\ c
+comment3.target=void\ changeA(int,\ int)
+comment4.params=b
+comment4.target=void\ changeA(int)
+comment5.params=
+comment5.target=int\ getA()
+numComments=6
