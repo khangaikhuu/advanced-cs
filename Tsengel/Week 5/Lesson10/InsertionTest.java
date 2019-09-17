@@ -6,8 +6,8 @@ import org.junit.Test;
 /**
  * The test class OrganizeTest.
  *
- * @author  (your name)
- * @version (a version number or a date)
+ * @author  (Tsengel)
+ * @version (16.09.2019)
  */
 public class InsertionTest
 {
