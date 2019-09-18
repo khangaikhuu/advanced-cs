@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=ExerciseOne
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ ExerciseOne\ here.\r\n\r\n\ @author\ (Hayeon\ Lee)\r\n\ @version\ (18/09/2019)\r\n
+comment1.params=n
+comment1.target=int\ sum(int)
+comment2.params=n
+comment2.target=int\ powerOf10(int)
+comment3.params=n
+comment3.target=int\ powerOf10ForLoop(int)
+comment4.params=n
+comment4.target=int\ fibonacci(int)
+comment5.params=array
+comment5.target=int[]\ bubbleSort(int[])
+comment6.params=array\ from\ to
+comment6.target=int[]\ swap(int[],\ int,\ int)
+numComments=7
