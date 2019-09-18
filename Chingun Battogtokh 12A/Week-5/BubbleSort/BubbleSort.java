@@ -8,7 +8,7 @@
 public class BubbleSort
 {
     private int[] a; 
-    public int[] sort(int[] a) 
+    public static int[] sort(int[] a) 
     { 
         int temp = 0; 
         for(int i = 0; i<a.length;i++) 
