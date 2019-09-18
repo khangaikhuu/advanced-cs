@@ -21,8 +21,8 @@ public class javaProblems
          return -A + B * A + (C+D) % D - C + -A*A / D + A + C / A * 2 - D % A;
     }
     public void table(int x){
-        for (int i = 0; i < 10; i++){
-            System.out.println(x + i + " = " + (x * i));
+        for (int i = 1; i < 11; i++){
+            System.out.println(x * i);
         }
     }
     public double average(double x, double y, double z){
