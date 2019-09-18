@@ -1,4 +1,5 @@
 #BlueJ package file
+<<<<<<< HEAD
 dependency1.from=ConstantTest
 dependency1.to=Constant
 dependency1.type=UsesDependency
@@ -17,6 +18,26 @@ package.editor.height=331
 package.editor.width=670
 package.editor.x=430
 package.editor.y=189
+=======
+dependency1.from=BubbleSortTest
+dependency1.to=BubbleSort
+dependency1.type=UsesDependency
+dependency2.from=ConstantTest
+dependency2.to=Constant
+dependency2.type=UsesDependency
+editor.fx.0.height=739
+editor.fx.0.width=816
+editor.fx.0.x=552
+editor.fx.0.y=114
+objectbench.height=93
+objectbench.width=760
+package.divider.horizontal=0.6
+package.divider.vertical=0.8
+package.editor.height=393
+package.editor.width=670
+package.editor.x=78
+package.editor.y=78
+>>>>>>> 4ed699e2881d38160246a8ad534a1f6b7ad230e1
 package.frame.height=600
 package.frame.width=800
 package.numDependencies=2
@@ -29,40 +50,69 @@ readme.name=@README
 readme.width=47
 readme.x=10
 readme.y=10
+<<<<<<< HEAD
 target1.association=ConstantTest
+=======
+>>>>>>> 4ed699e2881d38160246a8ad534a1f6b7ad230e1
 target1.height=50
 target1.name=Constant
 target1.showInterface=false
 target1.type=ClassTarget
 target1.width=80
+<<<<<<< HEAD
 target1.x=70
 target1.y=10
 target2.association=BubbleSortTest
+=======
+target1.x=110
+target1.y=10
+>>>>>>> 4ed699e2881d38160246a8ad534a1f6b7ad230e1
 target2.height=50
 target2.name=BubbleSort
 target2.showInterface=false
 target2.type=ClassTarget
 target2.width=90
+<<<<<<< HEAD
 target2.x=190
+=======
+target2.x=200
+>>>>>>> 4ed699e2881d38160246a8ad534a1f6b7ad230e1
 target2.y=10
 target3.height=50
 target3.name=BubbleSortTest
 target3.showInterface=false
 target3.type=UnitTestTargetJunit4
+<<<<<<< HEAD
 target3.width=90
 target3.x=220
 target3.y=-20
+=======
+target3.width=120
+target3.x=70
+target3.y=70
+>>>>>>> 4ed699e2881d38160246a8ad534a1f6b7ad230e1
 target4.height=50
 target4.name=ConstantTest
 target4.showInterface=false
 target4.type=UnitTestTargetJunit4
+<<<<<<< HEAD
 target4.width=80
 target4.x=100
 target4.y=-20
+=======
+target4.width=110
+target4.x=180
+target4.y=70
+>>>>>>> 4ed699e2881d38160246a8ad534a1f6b7ad230e1
 target5.height=50
 target5.name=HW
 target5.showInterface=false
 target5.type=ClassTarget
 target5.width=80
+<<<<<<< HEAD
 target5.x=70
 target5.y=70
+=======
+target5.x=10
+target5.y=130
+>>>>>>> 4ed699e2881d38160246a8ad534a1f6b7ad230e1
