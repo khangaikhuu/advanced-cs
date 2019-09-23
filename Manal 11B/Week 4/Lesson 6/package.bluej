@@ -2,18 +2,26 @@
 dependency1.from=DrawIOTest
 dependency1.to=DrawIO
 dependency1.type=UsesDependency
+<<<<<<< HEAD
+editor.fx.0.height=736
+editor.fx.0.width=816
+editor.fx.0.x=836
+editor.fx.0.y=95
+objectbench.height=93
+=======
 editor.fx.0.height=0
 editor.fx.0.width=0
 editor.fx.0.x=0
 editor.fx.0.y=0
 objectbench.height=98
+>>>>>>> 512dd481a530fdd61cef08f22937b00b8b88b185
 objectbench.width=760
 package.divider.horizontal=0.6
 package.divider.vertical=0.79
 package.editor.height=388
 package.editor.width=670
-package.editor.x=685
-package.editor.y=20
+package.editor.x=718
+package.editor.y=256
 package.frame.height=600
 package.frame.width=800
 package.numDependencies=1
