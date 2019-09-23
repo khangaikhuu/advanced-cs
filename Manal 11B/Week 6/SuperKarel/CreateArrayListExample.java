@@ -16,4 +16,13 @@ public class CreateArrayListExample
         animals.add("Dog");
         return animals;
     }
+    public ArrayList addIndex(){
+        ArrayList<String> animals = new ArrayList<String>();
+        animals.add("Lion");
+        animals.add("Tiger");
+        animals.add("Cat");
+        animals.add("Dog");
+        animals.add(2, "Elephant");
+        return animals;
+    }
 }

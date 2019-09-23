@@ -23,5 +23,12 @@ public class CreateArrayListExampleTest
         expectedList.add("Cat");
         expectedList.add("Dog");
         assertEquals(expectedList, c.createArrayList());
+        ArrayList<String> expectedList1 = new ArrayList<String>();
+        expectedList1.add("Lion");
+        expectedList1.add("Tiger");
+        expectedList1.add("Elephant");
+        expectedList1.add("Cat");
+        expectedList1.add("Dog");
+        assertEquals(expectedList1, c.addIndex());
     }
 }
