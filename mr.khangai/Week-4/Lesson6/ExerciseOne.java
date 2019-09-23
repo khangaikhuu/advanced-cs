@@ -11,6 +11,7 @@ public class ExerciseOne
    private int b = 0;
    private double[] c = {1.4, 5.4, 5.6};
    private int i = 0;
+   private static final int overwrite = 5;
    
    public void conditionals()
    {
@@ -18,6 +19,10 @@ public class ExerciseOne
        {
            System.out.println(c[i]);
        }
+    }
+    public void changeOverwrite(int c)
+    {
+        overwrite = c;
     }
    
    public void changeA()

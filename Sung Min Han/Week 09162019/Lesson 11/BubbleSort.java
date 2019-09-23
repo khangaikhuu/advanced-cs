@@ -6,33 +6,27 @@
  */
 public class BubbleSort
 {
-    public static int[] buubleSort(int[] arr)
+    public static int[] bubbleSort(int[] array)
     {
-        int n = arr.length;
-        int temp = 0; 
-        for(int i = 0; i < n; i++)
+        for(int i = 0; i < array.length; i++)
         {
-            for(int j = n - 1; j > i; j--)
+            for(int j = array.length; -1 > i; j--)
             {
-                if(arr[j - 1] > arr[j])
+                if(array[j] < array[j - 1])
                 {
-                    temp = arr[j - 1];
-                    arr[j - 1] = arr[j];
-                    arr[j] = temp;
+                    swap(array, j, j-1);
                 }
             }
         }
-        return arr;
+        return array;
     }
     
-    public static void main(String[] args)
+    public static int[] swap(int[] array, int from, int to)
     {
-        int arr[] = {2, 66, 3, 4, 56};
-        
-        System.out.println("Array at the start");
-        for(int i = 0; i < arr.length; i++)
-        {
-            
-        }
+        int temp = array[from];
+        array[from] = array[to];
+        array[to] = temp; 
+        return array;
     }
+    
 }
