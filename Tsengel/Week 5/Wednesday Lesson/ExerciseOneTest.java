@@ -37,5 +37,7 @@ public class ExerciseOneTest
        assertEquals(3, ex3.sum(2));
        assertEquals(6, ex3.sum(3));
        assertEquals(10, ex3.sum(4));
+       assertEquals(15, ex3.sum(5));
+       assertEquals(21, ex3.sum(6));
     }
 }
