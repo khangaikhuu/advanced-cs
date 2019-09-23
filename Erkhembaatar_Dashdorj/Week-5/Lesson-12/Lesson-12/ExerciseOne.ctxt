@@ -9,4 +9,6 @@ comment3.params=n
 comment3.target=int\ sum(int)
 comment4.params=n
 comment4.target=int\ fibonnaci(int)
-numComments=5
+comment5.params=a\ l\ r\ left\ right
+comment5.target=void\ merge(int[],\ int[],\ int[],\ int,\ int)
+numComments=6

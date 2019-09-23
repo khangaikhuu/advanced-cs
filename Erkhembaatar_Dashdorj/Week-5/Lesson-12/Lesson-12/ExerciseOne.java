@@ -49,4 +49,27 @@ public class ExerciseOne
         }
         return fibonnaci(n-1)+fibonnaci(n-2);
     }
+    
+    public void merge(int[] a, int[] l, int[] r, int left, int right)
+    {
+        int i= 0;
+        int j = 0;
+        int k = 0;
+        while(i<left && j< right)
+        {
+            a[k++]=r[j++];
+            if(l[i]<= r[j])
+            {
+                a[k++] = l[i++];
+            }
+            else
+            {
+                  
+            }
+        }
+        while(i<left)
+        {
+            
+        }
+    }
 }
