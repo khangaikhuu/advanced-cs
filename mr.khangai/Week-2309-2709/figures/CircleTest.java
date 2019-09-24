@@ -13,6 +13,7 @@ import org.junit.Test;
  */
 public class CircleTest
 {
+<<<<<<< HEAD
     /**
      * Default constructor for test class CircleTest
      */
@@ -38,5 +39,12 @@ public class CircleTest
     @After
     public void tearDown()
     {
+=======
+    @Test
+    public void testSquare()
+    {
+        Circle c = new Circle();
+        c.makeVisible();
+>>>>>>> 270097942d73de4dcc4de4189b0e87d2b526b8d9
     }
 }

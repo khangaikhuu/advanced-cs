@@ -2,6 +2,7 @@
 comment0.target=TriangleTest
 comment0.text=\r\n\ The\ test\ class\ TriangleTest.\r\n\r\n\ @author\ \ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=
+<<<<<<< HEAD
 comment1.target=TriangleTest()
 comment1.text=\r\n\ Default\ constructor\ for\ test\ class\ TriangleTest\r\n
 comment2.params=
@@ -11,3 +12,7 @@ comment3.params=
 comment3.target=void\ tearDown()
 comment3.text=\r\n\ Tears\ down\ the\ test\ fixture.\r\n\r\n\ Called\ after\ every\ test\ case\ method.\r\n
 numComments=4
+=======
+comment1.target=void\ testSquare()
+numComments=2
+>>>>>>> 270097942d73de4dcc4de4189b0e87d2b526b8d9

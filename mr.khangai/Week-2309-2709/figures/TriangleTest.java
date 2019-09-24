@@ -13,6 +13,7 @@ import org.junit.Test;
  */
 public class TriangleTest
 {
+<<<<<<< HEAD
     /**
      * Default constructor for test class TriangleTest
      */
@@ -38,5 +39,12 @@ public class TriangleTest
     @After
     public void tearDown()
     {
+=======
+    @Test
+    public void testSquare()
+    {
+        Triangle sq = new Triangle();
+        sq.makeVisible();
+>>>>>>> 270097942d73de4dcc4de4189b0e87d2b526b8d9
     }
 }

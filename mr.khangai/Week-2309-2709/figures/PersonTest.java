@@ -13,6 +13,7 @@ import org.junit.Test;
  */
 public class PersonTest
 {
+<<<<<<< HEAD
     /**
      * Default constructor for test class PersonTest
      */
@@ -38,5 +39,12 @@ public class PersonTest
     @After
     public void tearDown()
     {
+=======
+    @Test
+    public void testSquare()
+    {
+        Person sq = new Person();
+        sq.makeVisible();
+>>>>>>> 270097942d73de4dcc4de4189b0e87d2b526b8d9
     }
 }
