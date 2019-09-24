@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Triangle
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Triangle\ here.\r\n\r\n\ @author\ (Hayeon\ Lee)\r\n\ @version\ (24/09/2019)\r\n
+comment0.text=\r\n\ A\ triangle\ that\ can\ be\ manipulated\ and\ that\ draws\ itself\ on\ a\ canvas.\r\n\ \r\n\ @author\ \ Michael\ K\u00F6lling\ and\ David\ J.\ Barnes\r\n\ @version\ 2016.02.29\r\n
 comment1.params=
 comment1.target=Triangle()
 comment1.text=\r\n\ Create\ a\ new\ triangle\ at\ default\ position\ with\ default\ color.\r\n

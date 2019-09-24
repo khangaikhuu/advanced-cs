@@ -1,10 +1,12 @@
 import java.awt.*;
+
 /**
- * Write a description of class Triangle here.
- *
- * @author (Hayeon Lee)
- * @version (24/09/2019)
+ * A triangle that can be manipulated and that draws itself on a canvas.
+ * 
+ * @author  Michael Kölling and David J. Barnes
+ * @version 2016.02.29
  */
+
 public class Triangle
 {
     private int height;
@@ -20,7 +22,7 @@ public class Triangle
     public Triangle()
     {
         height = 60;
-        width = 140;
+        width = 70;
         xPosition = 210;
         yPosition = 140;
         color = "green";
@@ -58,7 +60,7 @@ public class Triangle
      */
     public void moveLeft()
     {
-        moveHorizontal(-50);
+        moveHorizontal(-20);
     }
 
     /**
@@ -66,7 +68,7 @@ public class Triangle
      */
     public void moveUp()
     {
-        moveVertical(-100);
+        moveVertical(-20);
     }
 
     /**

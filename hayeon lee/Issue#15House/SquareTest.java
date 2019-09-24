@@ -6,12 +6,12 @@ import org.junit.Before;
 import org.junit.Test;
 
 /**
- * The test class TriangleTest.
+ * The test class SquareTest.
  *
  * @author  (your name)
  * @version (a version number or a date)
  */
-public class TriangleTest
+public class SquareTest
 {
     @Test
     public void testSquare()

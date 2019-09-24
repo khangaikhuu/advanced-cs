@@ -1,14 +1,12 @@
 import java.awt.*;
 import java.awt.geom.*;
-
 /**
- * A circle that can be manipulated and that draws itself on a canvas.
- * 
- * @author  Michael Kölling and David J. Barnes
- * @version 2016.02.29
+ * Write a description of class Circle1 here.
+ *
+ * @author (your name)
+ * @version (a version number or a date)
  */
-
-public class Circle
+public class Circle1
 {
     private int diameter;
     private int xPosition;
@@ -19,7 +17,7 @@ public class Circle
     /**
      * Create a new circle at default position with default color.
      */
-    public Circle()
+    public Circle1()
     {
         diameter = 68;
         xPosition = 230;

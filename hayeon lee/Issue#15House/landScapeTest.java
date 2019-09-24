@@ -6,17 +6,17 @@ import org.junit.Before;
 import org.junit.Test;
 
 /**
- * The test class TriangleTest.
+ * The test class landScapeTest.
  *
  * @author  (your name)
  * @version (a version number or a date)
  */
-public class TriangleTest
+public class landScapeTest
 {
     @Test
-    public void testSquare()
+    public void test()
     {
-        Square sq = new Square();
-        sq.makeVisible();
+        landScape c4 = new landScape(); 
+        c4.landScape();
     }
 }

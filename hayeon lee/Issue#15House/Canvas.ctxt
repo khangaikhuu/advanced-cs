@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Canvas
-comment0.text=\r\n\ Canvas\ for\ house.\r\n\r\n\ @author\ (hayeon\ Lee)\r\n\ @version\ (24/09/2019)\r\n
+comment0.text=\r\n\ Canvas\ is\ a\ class\ to\ allow\ for\ simple\ graphical\ drawing\ on\ a\ canvas.\r\n\ This\ is\ a\ modification\ of\ the\ general\ purpose\ Canvas,\ specially\ made\ for\r\n\ the\ BlueJ\ "shapes"\ example.\ \r\n\r\n\ @author\:\ Bruce\ Quig\r\n\ @author\:\ Michael\ K\u00F6lling\ (mik)\r\n\r\n\ @version\ 2016.02.29\r\n
 comment1.params=
 comment1.target=Canvas\ getCanvas()
 comment1.text=\r\n\ Factory\ method\ to\ get\ the\ canvas\ singleton\ object.\r\n
