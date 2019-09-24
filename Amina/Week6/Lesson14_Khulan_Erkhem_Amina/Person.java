@@ -7,7 +7,7 @@ import java.awt.*;
  * @version 2016.02.29
  */
 
-public class Person
+public class Person 
 {
     private int height;
     private int width;
