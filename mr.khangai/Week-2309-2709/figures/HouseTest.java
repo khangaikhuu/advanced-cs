@@ -16,4 +16,7 @@ public class HouseTest
     @Test
     public void HouseTest() 
     { 
+        House c4 = new House(); 
+        c4.House(); 
+    } 
 }
