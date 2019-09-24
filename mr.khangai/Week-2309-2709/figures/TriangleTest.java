@@ -16,7 +16,7 @@ public class TriangleTest
     @Test
     public void testSquare()
     {
-        Square sq = new Square();
+        Triangle sq = new Triangle();
         sq.makeVisible();
     }
 }

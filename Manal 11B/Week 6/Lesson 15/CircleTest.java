@@ -6,17 +6,17 @@ import org.junit.Before;
 import org.junit.Test;
 
 /**
- * The test class PersonTest.
+ * The test class CircleTest.
  *
  * @author  (your name)
  * @version (a version number or a date)
  */
-public class PersonTest
+public class CircleTest
 {
     @Test
     public void testSquare()
     {
-        Person sq = new Person();
-        sq.makeVisible();
+        Circle c = new Circle();
+        c.makeVisible();
     }
 }
