@@ -2,11 +2,16 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.List;
 import java.util.*;
+
 /**
- * Write a description of class House here.
+ * Canvas is a class to allow for simple graphical drawing on a canvas.
+ * This is a modification of the general purpose Canvas, specially made for
+ * the BlueJ "shapes" example. 
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author: Bruce Quig
+ * @author: Michael Kölling (mik)
+ *
+ * @version 2016.02.29
  */
 public class Canvas
 {
@@ -221,4 +226,5 @@ public class Canvas
             graphic.fill(shape);
         }
     }
+
 }
