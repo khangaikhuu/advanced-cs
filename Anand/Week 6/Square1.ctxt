@@ -1,8 +1,8 @@
 #BlueJ class context
-comment0.target=Square
+comment0.target=Square1
 comment0.text=\r\n\ A\ square\ that\ can\ be\ manipulated\ and\ that\ draws\ itself\ on\ a\ canvas.\r\n\ \r\n\ @author\ \ Michael\ K\u00F6lling\ and\ David\ J.\ Barnes\r\n\ @version\ 2016.02.29\r\n
 comment1.params=
-comment1.target=Square()
+comment1.target=Square1()
 comment1.text=\r\n\ Create\ a\ new\ square\ at\ default\ position\ with\ default\ color.\r\n
 comment10.params=distance
 comment10.target=void\ slowMoveHorizontal(int)
