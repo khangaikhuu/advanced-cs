@@ -36,5 +36,6 @@ public class CanvasTest
        sun1.changeSize(50);
        sun1.changeColor("yellow");
        sun1.moveHorizontal(100);
+       
    }
 }
