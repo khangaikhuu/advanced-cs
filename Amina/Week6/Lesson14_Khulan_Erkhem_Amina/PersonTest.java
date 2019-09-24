@@ -17,7 +17,16 @@ public class PersonTest
    public void personTest()
    {
        Person p1 = new Person();
+       p1.moveRight();
        p1.makeVisible();
+       
+       Person p2 = new Person();
+       p2.moveLeft();
+       p2.makeVisible();
+       p2.changeSize(40,20);
+       p2.moveDown();
+       
+       
        
    }
 }
