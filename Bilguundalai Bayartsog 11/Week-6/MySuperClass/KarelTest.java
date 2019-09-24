@@ -18,8 +18,6 @@ public class KarelTest
     {
         Karel karel = new Karel();
         assertEquals("Karel", karel.getMyName());
-        
-        
         ArrayList<String> list = new ArrayList<String>();
         assertEquals(new ArrayList(), list);
         karel.addElements();
@@ -27,9 +25,8 @@ public class KarelTest
         expectedList.add("Test");
         expectedList.add("Next");
         assertEquals(expectedList, karel.getMyArrayList());
-        removedList.add("Test");
-        expectedList.remove(1);
-        assertEquals(removedList, expectedList);
+        
+        
     }
     
 }
