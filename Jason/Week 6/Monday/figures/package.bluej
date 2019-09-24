@@ -2,6 +2,16 @@
 dependency1.from=Circle
 dependency1.to=Canvas
 dependency1.type=UsesDependency
+<<<<<<< HEAD:mr.khangai/Week-2309-2709/figures/package.bluej
+dependency10.from=Circle1Test
+dependency10.to=Circle1
+dependency10.type=UsesDependency
+dependency11.from=TriangleTest
+dependency11.to=Triangle
+dependency11.type=UsesDependency
+dependency12.from=PersonTest
+dependency12.to=Person
+=======
 dependency10.from=Person
 dependency10.to=Canvas
 dependency10.type=UsesDependency
@@ -10,6 +20,7 @@ dependency11.to=Square
 dependency11.type=UsesDependency
 dependency12.from=SquareTest
 dependency12.to=Circle
+>>>>>>> bf055e1e6d1c26bc3cdb6df2b26613d806c2a587:Jason/Week 6/Monday/figures/package.bluej
 dependency12.type=UsesDependency
 dependency13.from=CircleTest
 dependency13.to=Circle
@@ -29,6 +40,25 @@ dependency4.type=UsesDependency
 dependency5.from=Square1Test
 dependency5.to=Square
 dependency5.type=UsesDependency
+<<<<<<< HEAD:mr.khangai/Week-2309-2709/figures/package.bluej
+dependency6.from=CircleTest
+dependency6.to=Circle
+dependency6.type=UsesDependency
+dependency7.from=Circle1
+dependency7.to=Canvas
+dependency7.type=UsesDependency
+dependency8.from=Square1
+dependency8.to=Canvas
+dependency8.type=UsesDependency
+dependency9.from=Square1Test
+dependency9.to=Square
+dependency9.type=UsesDependency
+editor.fx.0.height=0
+editor.fx.0.width=0
+editor.fx.0.x=0
+editor.fx.0.y=0
+objectbench.height=94
+=======
 dependency6.from=Triangle
 dependency6.to=Canvas
 dependency6.type=UsesDependency
@@ -46,13 +76,14 @@ editor.fx.0.width=816
 editor.fx.0.x=392
 editor.fx.0.y=40
 objectbench.height=90
+>>>>>>> bf055e1e6d1c26bc3cdb6df2b26613d806c2a587:Jason/Week 6/Monday/figures/package.bluej
 objectbench.width=760
 package.divider.horizontal=0.6
 package.divider.vertical=0.8063872255489022
 package.editor.height=397
 package.editor.width=670
-package.editor.x=70
-package.editor.y=80
+package.editor.x=138
+package.editor.y=264
 package.frame.height=600
 package.frame.width=800
 package.numDependencies=14
