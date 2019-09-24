@@ -19,8 +19,10 @@ public class SquareTest
     }
 
     @Test
-    public void deb()
+    public void testCircle()
     {
+        Circle ci = new Circle();
+        ci.makeVisible();
     }
 }
 
