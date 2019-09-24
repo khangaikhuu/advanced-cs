@@ -5,74 +5,28 @@
  */
 package mergesort;
 
+import java.util.Arrays;
+
+
+
 /**
  *
  * @author justaguy
  */
-public class mergeSort {
-    
-    public int[] merge(int a[], int l, int m, int r) 
-{ 
-    int i, j, k; 
-    int n1 = m - l + 1; 
-    int n2 =  r - m; 
-  
-    int L[] =new int [n1];
-    int R[]=new int[n2]; 
-  
-    for (i = 0; i < n1; i++) 
-        L[i] = a[l + i]; 
-    for (j = 0; j < n2; j++) 
-        R[j] = a[m + 1+ j]; 
-  
-    i = 0; 
-    j = 0; 
-    k = l; 
-    while (i < n1 && j < n2) 
-    { 
-        if (L[i] <= R[j]) 
-        { 
-            a[k] = L[i]; 
-            i++; 
-        } 
-        else
-        { 
-            a[k] = R[j]; 
-            j++; 
-        } 
-        k++; 
-    } 
-  
-    while (i < n1) 
-    { 
-        a[k] = L[i]; 
-        i++; 
-        k++; 
-    } 
-  
-    
-    while (j < n2) 
-    { 
-        a[k] = R[j]; 
-        j++; 
-        k++; 
-    } 
-    return a;
-} 
-  
-public int[] mergeSort(int a[], int l, int r) 
-{ 
-    if (l < r) 
-    { 
-        int m = l+(r-l)/2; 
-  
-        mergeSort(a, l, m); 
-        mergeSort(a, m+1, r); 
-  
-        merge(a, l, m, r); 
-    } 
-    return a;
-} 
+public class MergeSort {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        int [] array ={9,6,5,8,7,1};
+        mergeSort ex = new mergeSort();
+        int [] a = ex.mergeSort(array,0,array.length-1);
+        for(int i = 0; i<array.length;i++)
+        {
+        System.out.println(a[i]);
+        }
     }
     
-    
+}
