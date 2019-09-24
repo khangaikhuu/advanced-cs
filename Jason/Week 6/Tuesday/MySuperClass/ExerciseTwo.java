@@ -15,9 +15,13 @@ public class ExerciseTwo
        myArrayList.add("Tiger");
        myArrayList.add("Cat");
        myArrayList.add("Dog");
+       myArrayList.set(2, "Elephat");
+       myArrayList.set(3, "Cat");
+       myArrayList.add("dog");
+       System.out.println(myArrayList);
    }
    public ArrayList getMyArrayList()
    {
        return myArrayList;
-    }
+   }
    }

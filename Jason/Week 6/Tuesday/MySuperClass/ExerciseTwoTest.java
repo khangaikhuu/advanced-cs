@@ -1,3 +1,6 @@
+ 
+
+
 import java.util.ArrayList;
 import java.util.List;
 import static org.junit.Assert.*;
@@ -16,13 +19,14 @@ public class ExerciseTwoTest
     @Test
     public void testMyExerciseTwo()
     {
-        ExerciseTwo e2 = new ExerciseTwo();
-        e2.addElements();
-        ArrayList<String> myArrayList = new ArrayList<String>();
-        myArrayList.add("Lion");
+       ExerciseTwo e2 = new ExerciseTwo();
+       e2.addElements();
+       ArrayList<String> myArrayList = new ArrayList<String>();
+       myArrayList.add("Lion");
        myArrayList.add("Tiger");
        myArrayList.add("Cat");
        myArrayList.add("Dog");
+       
     }
 }
 
