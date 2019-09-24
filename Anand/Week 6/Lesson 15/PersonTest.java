@@ -1,3 +1,4 @@
+
 import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
@@ -6,15 +7,15 @@ import org.junit.Test;
 /**
  * The test class PersonTest.
  *
- * @author  (Sung Min)
- * @version (9242019)
+ * @author  (your name)
+ * @version (a version number or a date)
  */
 public class PersonTest
 {
     @Test
-    public void testPerson()
+    public void testSquare()
     {
-        Person pr = new Person();
-        pr.makeVisible();
+        Person sq = new Person();
+        sq.makeVisible();
     }
 }
