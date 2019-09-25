@@ -10,16 +10,32 @@ import java.util.List;
 public class Karel extends SuperKarel
 {
     private String myName= "Karel";
-    private ArrayList<String> array = new ArrayList();
+    private int[] array = {1,2,3};
+    private ArrayList<String> ab= new ArrayList();
+    
+    public Karel()
+    {
+    }
+    
+    public Karel(String name)
+    {
+        myName = name;
+    }
+    
+    public Karel(String name, int[] a)
+    {
+        myName = name;
+        array = a;
+    }
     
     public void addElements()
     {
-        array.add("num");
-        array.add("not_num");
+        ab.add("num");
+        ab.add("not_num");
     }
     
     public ArrayList getMyArrayList()
     {
-        return array;
+        return ab;
     }
 }

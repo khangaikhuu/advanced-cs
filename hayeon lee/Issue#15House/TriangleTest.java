@@ -17,6 +17,7 @@ public class TriangleTest
     public void testSquare()
     {
         Square sq = new Square();
+        
         sq.makeVisible();
         SquareTwo sqt = new SquareTwo();
         sqt.makeVisible();
