@@ -24,7 +24,7 @@ public class Circle
         diameter = 68;
         xPosition = 230;
         yPosition = 90;
-        color = "blue";
+        color = "yellow";
     }
 
     /**
@@ -58,7 +58,7 @@ public class Circle
      */
     public void moveLeft()
     {
-        moveHorizontal(-20);
+        moveHorizontal(-40);
     }
 
     /**
