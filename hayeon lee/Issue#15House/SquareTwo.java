@@ -57,7 +57,7 @@ public class SquareTwo
      */
     public void moveLeft()
     {
-        moveHorizontal(-110);
+        moveHorizontal(10);
     }
 
     /**
@@ -65,7 +65,7 @@ public class SquareTwo
      */
     public void moveUp()
     {
-        moveVertical(-20);
+        moveVertical(50);
     }
 
     /**
