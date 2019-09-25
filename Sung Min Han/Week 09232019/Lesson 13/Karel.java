@@ -12,6 +12,22 @@ public class Karel extends SuperKarel
     private String myName = "Karel";
     private ArrayList<String> myArrayList = new ArrayList<String>();
     
+    public Karel()
+    {
+        
+    }
+    
+    public Karel(String name)
+    {
+        myName = name;
+    }
+    
+    public Karel(String name, int[] a)
+    {
+        myName = name;
+        myArray = a;
+    }
+    
     public void addElements()
     {
         myArrayList.add("Test");
