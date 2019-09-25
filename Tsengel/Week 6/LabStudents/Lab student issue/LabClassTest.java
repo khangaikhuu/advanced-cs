@@ -49,6 +49,7 @@ public class LabClassTest
        advComp.enrollStudent(Manal);
        advComp.enrollStudent(Bilguundalai);
        
+       
        assertEquals(15, advComp.numberOfStudents());
        
     }
