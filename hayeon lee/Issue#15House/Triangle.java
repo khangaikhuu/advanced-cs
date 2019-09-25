@@ -22,7 +22,7 @@ public class Triangle
     public Triangle()
     {
         height = 60;
-        width = 70;
+        width = 140;
         xPosition = 210;
         yPosition = 140;
         color = "green";
@@ -60,7 +60,7 @@ public class Triangle
      */
     public void moveLeft()
     {
-        moveHorizontal(-20);
+        moveHorizontal(-70);
     }
 
     /**
@@ -68,7 +68,7 @@ public class Triangle
      */
     public void moveUp()
     {
-        moveVertical(-20);
+        moveVertical(-80);
     }
 
     /**

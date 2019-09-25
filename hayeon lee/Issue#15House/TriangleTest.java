@@ -18,5 +18,16 @@ public class TriangleTest
     {
         Square sq = new Square();
         sq.makeVisible();
+        SquareTwo sqt = new SquareTwo();
+        sqt.makeVisible();
+        sqt.moveLeft();
+        sqt.moveUp();
+        Triangle tr = new Triangle();
+        tr.makeVisible();
+        tr.moveLeft();
+        tr.moveUp();
+        Circle cr = new Circle();
+        cr.makeVisible();
+        cr.moveUp();
     }
 }

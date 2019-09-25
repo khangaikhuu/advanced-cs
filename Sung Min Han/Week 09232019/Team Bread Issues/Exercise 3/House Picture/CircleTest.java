@@ -30,6 +30,7 @@ public class CircleTest
         cr.changeSize(65);
         cr.changeColor("yellow");
         
+        
         Square sq = new Square();
         sq.makeVisible();
         sq.moveDown();
