@@ -20,6 +20,7 @@ public class PersonTwo
     public PersonTwo()
     {
         height = 60;
+        
         width = 30;
         xPosition = 280;
         yPosition = 190;
