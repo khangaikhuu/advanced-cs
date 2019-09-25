@@ -1,14 +1,16 @@
 import java.awt.*;
 import java.awt.geom.*;
+
 /**
- * Write a description of class Circle here.
- *
- * @author (hayeonlee)
- * @version (24/09/2019)
+ * A circle that can be manipulated and that draws itself on a canvas.
+ * 
+ * @author  Michael Kölling and David J. Barnes
+ * @version 2016.02.29
  */
+
 public class Circle
 {
-   private int diameter;
+    private int diameter;
     private int xPosition;
     private int yPosition;
     private String color;
@@ -48,7 +50,7 @@ public class Circle
      */
     public void moveRight()
     {
-        moveHorizontal(10);
+        moveHorizontal(20);
     }
 
     /**
@@ -56,7 +58,7 @@ public class Circle
      */
     public void moveLeft()
     {
-        moveHorizontal(-20);
+        moveHorizontal(-40);
     }
 
     /**
@@ -64,7 +66,7 @@ public class Circle
      */
     public void moveUp()
     {
-        moveVertical(-50);
+        moveVertical(-20);
     }
 
     /**
