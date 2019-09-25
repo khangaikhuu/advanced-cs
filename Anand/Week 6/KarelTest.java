@@ -1,5 +1,3 @@
-package MySuperClass;
-
 
 import java.util.ArrayList;
 import static org.junit.Assert.*;
@@ -19,9 +17,7 @@ public class KarelTest
     public void myNameTest()
     {
         Karel karel = new Karel();
-        Karel karelOne = new Karel("New Karel");
-        int[]ar = {2, 4};
-        Karel karelTwo = new Karel("New karel", ar);
+        
         assertEquals("SuperKarel", karel.getMyName());
         ArrayList<String> list = new ArrayList<String>();
         assertEquals(new ArrayList(), list);
