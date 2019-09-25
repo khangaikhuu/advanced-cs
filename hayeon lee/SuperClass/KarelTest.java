@@ -25,6 +25,11 @@ public class KarelTest
         expectedList.add("Test");
         expectedList.add("Next");
         assertEquals(expectedList, karel.getMyArrayList());
+        ArrayList<String> removedList = new ArrayList<String>();
+        removedList.add("Test");
+        expectedList.remove(1);
+        
+        assertEquals(removedList, expectedList);
     }
     
 }
