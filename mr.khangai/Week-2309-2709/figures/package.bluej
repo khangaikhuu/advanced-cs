@@ -2,27 +2,15 @@
 dependency1.from=Circle
 dependency1.to=Canvas
 dependency1.type=UsesDependency
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> a9acb238e01226ac502151744b6086d1d12ea4e0
-dependency10.from=Circle1Test
-dependency10.to=Circle1
+dependency10.from=House
+dependency10.to=Square
 dependency10.type=UsesDependency
-dependency11.from=TriangleTest
+dependency11.from=House
 dependency11.to=Triangle
 dependency11.type=UsesDependency
-dependency12.from=PersonTest
-dependency12.to=Person
+dependency12.from=House
+dependency12.to=Circle
 dependency12.type=UsesDependency
->>>>>>> 270097942d73de4dcc4de4189b0e87d2b526b8d9
-<<<<<<< HEAD
->>>>>>> e6ee62ea9d4347ded7431c25d7b6d67cacc99310
-=======
->>>>>>> a9acb238e01226ac502151744b6086d1d12ea4e0
 dependency2.from=SquareTest
 dependency2.to=Square
 dependency2.type=UsesDependency
@@ -35,88 +23,34 @@ dependency4.type=UsesDependency
 dependency5.from=Person
 dependency5.to=Canvas
 dependency5.type=UsesDependency
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> a9acb238e01226ac502151744b6086d1d12ea4e0
-dependency6.from=Square1
-dependency6.to=Canvas
-=======
-dependency6.from=CircleTest
-dependency6.to=Circle
->>>>>>> 270097942d73de4dcc4de4189b0e87d2b526b8d9
+dependency6.from=landScapeTest
+dependency6.to=landScape
 dependency6.type=UsesDependency
-dependency7.from=Circle1
-dependency7.to=Canvas
+dependency7.from=landScape
+dependency7.to=Person
 dependency7.type=UsesDependency
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> e6ee62ea9d4347ded7431c25d7b6d67cacc99310
-=======
->>>>>>> a9acb238e01226ac502151744b6086d1d12ea4e0
-editor.fx.0.height=739
+dependency8.from=landScape
+dependency8.to=Circle
+dependency8.type=UsesDependency
+dependency9.from=HouseTest
+dependency9.to=House
+dependency9.type=UsesDependency
+editor.fx.0.height=738
 editor.fx.0.width=816
-editor.fx.0.x=104
-editor.fx.0.y=-4
-<<<<<<< HEAD
-<<<<<<< HEAD
-objectbench.height=95
+editor.fx.0.x=262
+editor.fx.0.y=0
+objectbench.height=66
 objectbench.width=760
 package.divider.horizontal=0.6
-package.divider.vertical=0.796
-package.editor.height=391
+package.divider.vertical=0.8542914171656687
+package.editor.height=421
 package.editor.width=670
 package.editor.x=70
 package.editor.y=80
 package.frame.height=600
 package.frame.width=800
-package.numDependencies=5
-package.numTargets=6
-=======
-=======
->>>>>>> a9acb238e01226ac502151744b6086d1d12ea4e0
-objectbench.height=93
-objectbench.width=760
-package.divider.horizontal=0.6
-package.divider.vertical=0.8
-package.editor.height=393
-package.editor.width=670
-package.editor.x=114
-package.editor.y=79
-package.frame.height=600
-package.frame.width=800
-package.numDependencies=7
-package.numTargets=11
-=======
-dependency8.from=Square1
-dependency8.to=Canvas
-dependency8.type=UsesDependency
-dependency9.from=Square1Test
-dependency9.to=Square
-dependency9.type=UsesDependency
-editor.fx.0.height=739
-editor.fx.0.width=816
-editor.fx.0.x=392
-editor.fx.0.y=40
-objectbench.height=94
-objectbench.width=760
-package.divider.horizontal=0.6
-package.divider.vertical=0.798
-package.editor.height=392
-package.editor.width=670
-package.editor.x=138
-package.editor.y=264
-package.frame.height=600
-package.frame.width=800
 package.numDependencies=12
-package.numTargets=13
->>>>>>> 270097942d73de4dcc4de4189b0e87d2b526b8d9
-<<<<<<< HEAD
->>>>>>> e6ee62ea9d4347ded7431c25d7b6d67cacc99310
-=======
->>>>>>> a9acb238e01226ac502151744b6086d1d12ea4e0
+package.numTargets=10
 package.showExtends=true
 package.showUses=true
 project.charset=UTF-8
@@ -125,14 +59,6 @@ readme.name=@README
 readme.width=47
 readme.x=10
 readme.y=10
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-target1.association=CircleTest
->>>>>>> e6ee62ea9d4347ded7431c25d7b6d67cacc99310
-=======
-target1.association=CircleTest
->>>>>>> a9acb238e01226ac502151744b6086d1d12ea4e0
 target1.height=50
 target1.name=Circle
 target1.naviview.expanded=true
@@ -141,12 +67,17 @@ target1.type=ClassTarget
 target1.width=80
 target1.x=170
 target1.y=160
-<<<<<<< HEAD
-<<<<<<< HEAD
+target10.height=50
+target10.name=HouseTest
+target10.showInterface=false
+target10.type=UnitTestTargetJunit4
+target10.width=80
+target10.x=350
+target10.y=210
 target2.height=50
 target2.name=SquareTest
 target2.showInterface=false
-target2.type=ClassTarget
+target2.type=UnitTestTargetJunit4
 target2.width=90
 target2.x=70
 target2.y=10
@@ -166,186 +97,42 @@ target4.type=ClassTarget
 target4.width=80
 target4.x=370
 target4.y=80
+target5.association=landScapeTest
 target5.height=50
-target5.name=Square
-target5.naviview.expanded=true
+target5.name=landScape
 target5.showInterface=false
 target5.type=ClassTarget
-target5.width=80
-target5.x=270
-target5.y=120
+target5.width=90
+target5.x=520
+target5.y=200
+target6.association=HouseTest
 target6.height=50
-target6.name=Person
-=======
-<<<<<<< HEAD
-=======
->>>>>>> a9acb238e01226ac502151744b6086d1d12ea4e0
-target10.association=PersonTest
-target10.height=50
-target10.name=Person
-target10.naviview.expanded=true
-target10.showInterface=false
-target10.type=ClassTarget
-target10.width=80
-target10.x=470
-target10.y=40
-target11.height=50
-target11.name=TriangleTest
-target11.showInterface=false
-target11.type=UnitTestTargetJunit4
-target11.width=80
-target11.x=400
-target11.y=50
-=======
-target10.height=50
-target10.name=TriangleTest
-target10.showInterface=false
-target10.type=UnitTestTargetJunit4
-target10.width=80
-target10.x=400
-target10.y=50
-target11.height=50
-target11.name=Circle1Test
-target11.showInterface=false
-target11.type=UnitTestTargetJunit4
-target11.width=80
-target11.x=200
-target11.y=260
-target12.height=50
-target12.name=CircleTest
-target12.showInterface=false
-target12.type=UnitTestTargetJunit4
-target12.width=80
-target12.x=200
-target12.y=130
-target13.association=PersonTest
-target13.height=50
-target13.name=Person
-target13.naviview.expanded=true
-target13.showInterface=false
-target13.type=ClassTarget
-target13.width=80
-target13.x=470
-target13.y=40
-target2.association=Circle1Test
->>>>>>> 270097942d73de4dcc4de4189b0e87d2b526b8d9
-target2.height=50
-target2.name=Circle1
-target2.showInterface=false
-target2.type=ClassTarget
-target2.width=80
-<<<<<<< HEAD
-target2.x=70
-target2.y=10
-=======
-target2.x=170
-target2.y=290
->>>>>>> 270097942d73de4dcc4de4189b0e87d2b526b8d9
-target3.height=50
-target3.name=PersonTest
-target3.showInterface=false
-target3.type=UnitTestTargetJunit4
-target3.width=80
-target3.x=500
-target3.y=10
-<<<<<<< HEAD
-=======
-target4.association=Square1Test
->>>>>>> 270097942d73de4dcc4de4189b0e87d2b526b8d9
-target4.height=50
-target4.name=Square1
-target4.showInterface=false
-target4.type=ClassTarget
-target4.width=80
-<<<<<<< HEAD
-target4.x=160
-target4.y=10
-target5.height=50
-target5.name=SquareTest
-target5.showInterface=false
-target5.type=UnitTestTargetJunit4
-target5.width=80
-target5.x=300
-target5.y=90
-target6.height=50
-target6.name=Canvas
-<<<<<<< HEAD
->>>>>>> e6ee62ea9d4347ded7431c25d7b6d67cacc99310
-=======
->>>>>>> a9acb238e01226ac502151744b6086d1d12ea4e0
-target6.naviview.expanded=true
+target6.name=House
 target6.showInterface=false
 target6.type=ClassTarget
 target6.width=80
-<<<<<<< HEAD
-<<<<<<< HEAD
-target6.x=470
-target6.y=40
-=======
-=======
->>>>>>> a9acb238e01226ac502151744b6086d1d12ea4e0
-target6.x=50
-target6.y=230
-target7.association=TriangleTest
+target6.x=320
+target6.y=240
 target7.height=50
-target7.name=Triangle
-=======
-target4.x=310
-target4.y=290
-target5.height=50
-target5.name=Square1Test
-target5.showInterface=false
-target5.type=UnitTestTargetJunit4
-target5.width=80
-target5.x=340
-target5.y=260
-target6.height=50
-target6.name=SquareTest
-target6.showInterface=false
-target6.type=UnitTestTargetJunit4
-target6.width=80
-target6.x=300
-target6.y=90
-target7.height=50
-target7.name=Canvas
->>>>>>> 270097942d73de4dcc4de4189b0e87d2b526b8d9
+target7.name=Square
 target7.naviview.expanded=true
 target7.showInterface=false
 target7.type=ClassTarget
 target7.width=80
-<<<<<<< HEAD
-target7.x=370
-target7.y=80
+target7.x=270
+target7.y=120
 target8.height=50
-target8.name=CircleTest
+target8.name=landScapeTest
 target8.showInterface=false
 target8.type=UnitTestTargetJunit4
-target8.width=80
-target8.x=200
-target8.y=130
-=======
-target7.x=50
-target7.y=230
-target8.association=TriangleTest
-target8.height=50
-target8.name=Triangle
-target8.naviview.expanded=true
-target8.showInterface=false
-target8.type=ClassTarget
-target8.width=80
-target8.x=370
-target8.y=80
->>>>>>> 270097942d73de4dcc4de4189b0e87d2b526b8d9
-target9.association=SquareTest
+target8.width=90
+target8.x=550
+target8.y=170
 target9.height=50
-target9.name=Square
+target9.name=Person
 target9.naviview.expanded=true
 target9.showInterface=false
 target9.type=ClassTarget
 target9.width=80
-target9.x=270
-target9.y=120
-<<<<<<< HEAD
->>>>>>> e6ee62ea9d4347ded7431c25d7b6d67cacc99310
-=======
->>>>>>> a9acb238e01226ac502151744b6086d1d12ea4e0
+target9.x=470
+target9.y=40
