@@ -43,8 +43,13 @@ public class TriangleTest
     @Test
     public void testSquare()
     {
+<<<<<<< HEAD
+        Triangle tr = new Triangle();
+        tr.makeVisible();
+=======
         Triangle sq = new Triangle();
         sq.makeVisible();
 >>>>>>> 270097942d73de4dcc4de4189b0e87d2b526b8d9
+>>>>>>> a7fe68df880f945092639f35fbe42388328cc7f5
     }
 }
