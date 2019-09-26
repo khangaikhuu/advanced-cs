@@ -1,11 +1,12 @@
+package SuperKarel;
+
 
 
 import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import java.util.ArrayList;
-import java.util.List;
+
 /**
  * The test class KarelTest.
  *
@@ -14,16 +15,8 @@ import java.util.List;
  */
 public class KarelTest
 {
-    @Test
-    public void test(){
-        Karel k = new Karel();
-        assertEquals("SuperKarel", k.getMyName());
-        ArrayList<String> list = new ArrayList<String>();
-        assertEquals(new ArrayList(), list);
-        k.addElement();
-        ArrayList<String> list1 = new ArrayList<String>();
-        list1.add("test");
-        list1.add("next");
-        assertEquals(list1, k.getArray());
-    }
+    Karel karel = new Karel();
+    Karel karelOne = new Karel("New Karel");
+    int[] ar = {2, 4};
+    Karel karelTwo = new Karel("New Karel", ar);
 }

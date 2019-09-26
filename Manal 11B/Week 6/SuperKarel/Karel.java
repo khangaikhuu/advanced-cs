@@ -1,3 +1,5 @@
+package SuperKarel;
+
 import java.util.ArrayList;
 import java.util.List;
 /**
@@ -21,4 +23,5 @@ public class Karel extends superKarel
     public ArrayList getArray(){
         return myArrayList;
     }
+
 }

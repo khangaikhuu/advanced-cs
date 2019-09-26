@@ -17,7 +17,10 @@ public class KarelTest
     @Test
     public void myNameTest()
     {
+        int[] ar = {2,4};
         Karel karel = new Karel();
+        Karel karelOne = new Karel("new karel");
+        Karel karelTwo = new Karel("New karel",ar);
         assertEquals("SuperKarel",karel.getMyName());
         ArrayList<String> array = new ArrayList();
         assertEquals(new ArrayList(), array);
