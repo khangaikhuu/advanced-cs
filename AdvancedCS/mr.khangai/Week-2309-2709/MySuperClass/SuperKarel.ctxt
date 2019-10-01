@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=SuperKarel
+comment0.text=\r\n\ I'm\ a\ SuperKarel\r\n\r\n\ @author\ (Mr.Khangaikhuu)\r\n\ @version\ (23.09.2019)\r\n
+comment1.params=
+comment1.target=java.lang.String\ getMyName()
+comment2.params=name
+comment2.target=void\ setMyName(java.lang.String)
+numComments=3
