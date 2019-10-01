@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=CircleTest
+comment0.text=\r\n\ The\ test\ class\ CircleTest.\r\n\r\n\ @author\ \ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+<<<<<<< HEAD
+comment1.target=CircleTest()
+comment1.text=\r\n\ Default\ constructor\ for\ test\ class\ CircleTest\r\n
+comment2.params=
+comment2.target=void\ setUp()
+comment2.text=\r\n\ Sets\ up\ the\ test\ fixture.\r\n\r\n\ Called\ before\ every\ test\ case\ method.\r\n
+comment3.params=
+comment3.target=void\ tearDown()
+comment3.text=\r\n\ Tears\ down\ the\ test\ fixture.\r\n\r\n\ Called\ after\ every\ test\ case\ method.\r\n
+numComments=4
+=======
+comment1.target=void\ testSquare()
+numComments=2
+>>>>>>> 270097942d73de4dcc4de4189b0e87d2b526b8d9

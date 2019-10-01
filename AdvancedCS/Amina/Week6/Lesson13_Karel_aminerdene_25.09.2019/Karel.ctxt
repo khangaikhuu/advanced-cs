@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=Karel
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Karel\ here.\r\n\r\n\ @author\ (amina)\r\n\ @version\ (09.23.19)\r\n
+comment1.params=
+comment1.target=Karel()
+comment2.params=name\ a
+comment2.target=Karel(java.lang.String,\ int[])
+comment3.params=name
+comment3.target=Karel(java.lang.String)
+comment4.params=
+comment4.target=void\ addElements()
+comment5.params=
+comment5.target=java.util.ArrayList\ getMyArrayList()
+numComments=6
