@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/TeamBAM/TeamBAM.iml" filepath="$PROJECT_DIR$/TeamBAM/TeamBAM.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TeamBREAD/TeamBREAD.iml" filepath="$PROJECT_DIR$/TeamBREAD/TeamBREAD.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TeamKEA/TeamKEA.iml" filepath="$PROJECT_DIR$/TeamKEA/TeamKEA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TeamKHANKHUU/TeamKHANKHUU.iml" filepath="$PROJECT_DIR$/TeamKHANKHUU/TeamKHANKHUU.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TeamSLUM/TeamSLUM.iml" filepath="$PROJECT_DIR$/TeamSLUM/TeamSLUM.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/advanced-cs.iml" filepath="$PROJECT_DIR$/.idea/advanced-cs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Team2/team2.iml" filepath="$PROJECT_DIR$/Team2/team2.iml" />
+    </modules>
+  </component>
+</project>
