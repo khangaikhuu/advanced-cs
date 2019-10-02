@@ -16,6 +16,7 @@
 
 package asu.simple;
 
+import asu.simple.service.WelcomeController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -36,6 +37,9 @@ public class SampleSimpleApplication implements CommandLineRunner {
 
 	@Autowired
 	private HelloWorldService helloWorldService;
+
+	@Autowired
+	private WelcomeController welcomeController;
 
 	@Override
 	public void run(String... args) {
