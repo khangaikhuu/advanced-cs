@@ -6,11 +6,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="advanced-cs" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="advanced-cs" target="1.5" />
+      <module name="team2" target="1.6" />
+      <module name="TeamBAM" target="1.6" />
+      <module name="TeamBREAD" target="1.6" />
+      <module name="TeamKEA" target="1.6" />
+      <module name="TeamKHANKHUU" target="1.6" />
+      <module name="TeamSLUM" target="1.6" />
     </bytecodeTargetLevel>
   </component>
 </project>
