@@ -17,6 +17,7 @@
         <module name="Hannah" />
         <module name="Hayeon" />
         <module name="Bilguundalai" />
+        <module name="Chingun" />
         <module name="Juan" />
         <module name="AminErdene" />
         <module name="Manal" />
@@ -29,6 +30,7 @@
       <module name="Anand" target="1.5" />
       <module name="Anudari" target="1.5" />
       <module name="Bilguundalai" target="1.5" />
+      <module name="Chingun" target="1.5" />
       <module name="Erkhembaatar" target="1.5" />
       <module name="Hannah" target="1.5" />
       <module name="Hayeon" target="1.5" />
