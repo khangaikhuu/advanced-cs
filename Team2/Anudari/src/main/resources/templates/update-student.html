@@ -1,0 +1,81 @@
+2
+<html xmlns:th="http://www.thymeleaf.org">
+3
+​
+4
+<head>
+    5
+    <meta charset="utf-8">
+    6
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    7
+    <title>Update User</title>
+    8
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    9
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    10
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    11
+</head>
+12
+​
+13
+<body>
+14
+<div class="container my-5">
+    15
+    <h3> Update Student</h3>
+    16
+    <div class="card">
+        17
+        <div class="card-body">
+            18
+            <div class="col-md-8">
+                19
+                <form action="#" th:action="@{/students/update/{id}(id=${student.id})}" th:object="${student}" method="post">
+                    20
+                    <div class="row">
+                        21
+                        <div class="form-group col-md-6">
+                            22
+                            <label for="name" class="col-form-label">Name</label> <input type="text" th:field="*{name}" class="form-control" id="name" placeholder="Name"> <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}" class="text-danger"></span>
+                            23
+                        </div>
+                        24
+                        <div class="form-group col-md-8">
+                            25
+                            <label for="email" class="col-form-label">Email</label> <input type="text" th:field="*{email}" class="form-control" id="email" placeholder="Email"> <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="text-danger"></span>
+                            26
+                        </div>
+                        27
+                        <div class="form-group col-md-8">
+                            28
+                            <label for="phoneNo" class="col-form-label">Phone No</label> <input type="text" th:field="*{phoneNo}" class="form-control" id="phoneNo" placeholder="phoneNo"> <span th:if="${#fields.hasErrors('phoneNo')}" th:errors="phoneNo" class="text-danger"></span>
+                            29
+                        </div>
+                        30
+                        ​
+                        31
+                        <div class="form-group col-md-8">
+                            32
+                            <input type="submit" class="btn btn-primary" value="Update Student">
+                            33
+                        </div>
+                        34
+                    </div>
+                    35
+                </form>
+                36
+            </div>
+            37
+        </div>
+        38
+    </div>
+    39
+</div>
+40
+</body>
+41
+​
+42
