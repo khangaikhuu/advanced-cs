@@ -1,8 +1,0 @@
-#BlueJ class context
-comment0.target=typeConversionTest
-comment0.text=\r\n\ The\ test\ class\ type_conversionTest.\r\n\r\n\ @author\ \ (Juan)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-comment1.params=
-comment1.target=void\ testGetA()
-comment2.params=
-comment2.target=void\ testCast()
-numComments=3
