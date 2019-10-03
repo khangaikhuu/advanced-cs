@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ClojureProjectResolveSettings">
+    <currentScheme>IDE</currentScheme>
+  </component>
+  <component name="JavaScriptSettings">
+    <option name="languageLevel" value="ES6" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/Team2/pom.xml" />
+        <option value="$PROJECT_DIR$/TeamBAM/pom.xml" />
+        <option value="$PROJECT_DIR$/TeamBREAD/pom.xml" />
+        <option value="$PROJECT_DIR$/TeamKEA/pom.xml" />
+        <option value="$PROJECT_DIR$/TeamKHANKHUU/pom.xml" />
+        <option value="$PROJECT_DIR$/TeamSLUM/pom.xml" />
+      </set>
+    </option>
+  </component>
+</project>
