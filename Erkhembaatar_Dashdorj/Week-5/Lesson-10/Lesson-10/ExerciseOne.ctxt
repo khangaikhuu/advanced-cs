@@ -1,8 +1,0 @@
-#BlueJ class context
-comment0.target=ExerciseOne
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ ExerciseOne\ here.\r\n\r\n\ @author\ (Erkhem)\r\n\ @version\ (1.0)\r\n
-comment1.params=
-comment1.target=void\ sort()
-comment2.params=
-comment2.target=int[]\ getSort()
-numComments=3
