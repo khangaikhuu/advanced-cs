@@ -12,5 +12,15 @@
         <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/Team2/pom.xml" />
+        <option value="$PROJECT_DIR$/TeamBAM/pom.xml" />
+        <option value="$PROJECT_DIR$/TeamBREAD/pom.xml" />
+        <option value="$PROJECT_DIR$/TeamKEA/pom.xml" />
+        <option value="$PROJECT_DIR$/TeamKHANKHUU/pom.xml" />
+        <option value="$PROJECT_DIR$/TeamSLUM/pom.xml" />
+      </set>
+    </option>
   </component>
 </project>
