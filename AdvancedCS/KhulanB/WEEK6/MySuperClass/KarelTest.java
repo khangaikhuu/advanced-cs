@@ -5,7 +5,6 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import java.util.ArrayList;
-
 /**
  * The test class KarelTest.
  *
@@ -15,13 +14,11 @@ import java.util.ArrayList;
 public class KarelTest
 {
    @Test 
-   public void testMyName()
-   {
+   public void testMyArrayList()
+    {
        Karel karel = new Karel();
-       assertEquals("SuperKarel", karel.getMyName());
-       Karel karelOne = new Karel ("New Karel");
-       int[] array = {1,2,3};
-       Karel karelTwo = new Karel("New Karel", array);
+       assertEquals("Superkarel", karel.getMyArrayList());
+       
        ArrayList<String> list = new ArrayList<String>();
        assertEquals(new ArrayList(), list);
        karel.addElements();
@@ -29,5 +26,9 @@ public class KarelTest
        expectedList.add("Test");
        expectedList.add("Next");
        assertEquals(expectedList, karel.getMyArrayList());
+       ArrayList<String> removedList = new ArrayList<String>();
+       removedList.add("Test");
+       expectedList.remove(1);
+       assertEquals(removedList, expectedList);
     }
 }
