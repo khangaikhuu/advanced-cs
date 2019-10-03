@@ -1,28 +1,16 @@
 import java.util.ArrayList;
-
 /**
  * Write a description of class Karel here.
  *
- * @author (Khulan)
- * @version (09.23.19)
+ * @author (your name)
+ * @version (a version number or a date)
  */
-public class Karel extends SuperKarel
+public class Karel
 {
-   private String myName = "Karel";
+   private String myName = "SuperKarel";
    private int[] array = {1,2,3};
+  
    private ArrayList<String> myArrayList = new ArrayList<String>();
-public Karel()
-{
-}
-   public Karel (String name, int[] a)
-{
-  myName = name;
-  array = a;
-}
-public Karel(String name)
-{
-    myName = name;
- }
    public void addElements()
 {
     myArrayList.add("Test");
