@@ -1,4 +1,5 @@
 package mn.asu.crud.repository;
+
 import java.util.List;
 
 import mn.asu.crud.entity.Student;
