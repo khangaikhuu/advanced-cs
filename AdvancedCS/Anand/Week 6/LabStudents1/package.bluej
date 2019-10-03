@@ -8,14 +8,22 @@ dependency2.type=UsesDependency
 dependency3.from=LabClassTest
 dependency3.to=LabClass
 dependency3.type=UsesDependency
+<<<<<<< HEAD:Anand/Week 6/LabStudents1/package.bluej
+objectbench.height=89
+objectbench.width=760
+package.divider.horizontal=0.6
+package.divider.vertical=0.808
+package.editor.height=397
+=======
 objectbench.height=140
 objectbench.width=760
 package.divider.horizontal=0.6
 package.divider.vertical=0.706
 package.editor.height=346
+>>>>>>> d484768c5a2db6be3d24bfb615368eda3c823ce3:AdvancedCS/Anand/Week 6/LabStudents1/package.bluej
 package.editor.width=670
-package.editor.x=52
-package.editor.y=52
+package.editor.x=163
+package.editor.y=77
 package.frame.height=600
 package.frame.width=800
 package.numDependencies=3
@@ -33,19 +41,33 @@ target1.name=LabClass
 target1.showInterface=false
 target1.type=ClassTarget
 target1.width=80
+<<<<<<< HEAD:Anand/Week 6/LabStudents1/package.bluej
+target1.x=220
+target1.y=70
+=======
 target1.x=210
 target1.y=200
+>>>>>>> d484768c5a2db6be3d24bfb615368eda3c823ce3:AdvancedCS/Anand/Week 6/LabStudents1/package.bluej
 target2.height=50
 target2.name=Student
 target2.showInterface=false
 target2.type=ClassTarget
 target2.width=80
 target2.x=40
+<<<<<<< HEAD:Anand/Week 6/LabStudents1/package.bluej
+target2.y=130
+=======
 target2.y=270
+>>>>>>> d484768c5a2db6be3d24bfb615368eda3c823ce3:AdvancedCS/Anand/Week 6/LabStudents1/package.bluej
 target3.height=50
 target3.name=LabClassTest
 target3.showInterface=false
 target3.type=UnitTestTargetJunit4
 target3.width=80
+<<<<<<< HEAD:Anand/Week 6/LabStudents1/package.bluej
+target3.x=250
+target3.y=40
+=======
 target3.x=240
 target3.y=170
+>>>>>>> d484768c5a2db6be3d24bfb615368eda3c823ce3:AdvancedCS/Anand/Week 6/LabStudents1/package.bluej
