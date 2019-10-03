@@ -9,12 +9,12 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>team2</module>
+        <module>Team2</module>
         <module>TeamBAM</module>
-        <module>TeamSLUM</module>
+        <module>TeamSlam</module>
         <module>TeamKEA</module>
-        <module>TeamBREAD</module>
-        <module>TeamKHANKHUU</module>
+        <module>TeamKhanKhuu</module>
+        <module>TeamBread</module>
     </modules>
 
 
