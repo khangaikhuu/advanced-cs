@@ -9,5 +9,5 @@
 *.idea
 *.iml
 *.jar
-*/target/
+/target
 
