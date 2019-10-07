@@ -10,6 +10,7 @@
         <module name="Anudari" />
         <module name="Anand" />
         <module name="Erkhembaatar" />
+        <module name="Mr.Khangai" />
         <module name="Jason" />
         <module name="SungMin" />
         <module name="MrKhangai" />
@@ -39,6 +40,7 @@
       <module name="Khangarid" target="1.8" />
       <module name="Khulan" target="1.8" />
       <module name="Manal" target="1.5" />
+      <module name="Mr.Khangai" target="1.8" />
       <module name="MrKhangai" target="1.8" />
       <module name="SungMin" target="1.5" />
       <module name="Team2" target="1.5" />
@@ -64,6 +66,7 @@
       <module name="Juan" options="-parameters" />
       <module name="Khangarid" options="-parameters" />
       <module name="Khulan" options="-parameters" />
+      <module name="Mr.Khangai" options="-parameters" />
       <module name="MrKhangai" options="-parameters" />
     </option>
   </component>
