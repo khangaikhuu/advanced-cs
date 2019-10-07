@@ -7,12 +7,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/")
-public class NavigationBarController {
 
-    @GetMapping("index")
+public class HomePageController {
+
+    @GetMapping("HomePage")
     public String showUpdateForm(Model model) {
-        return "NavigationBar";
+        return "HomePage";
     }
 }
-
-
