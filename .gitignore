@@ -8,3 +8,6 @@
 *.vscode
 *.idea
 *.iml
+*.jar
+*target*
+
