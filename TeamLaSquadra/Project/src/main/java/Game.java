@@ -10,7 +10,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 
-public class game extends Application
+public class Game extends Application
 {
     public static void main(String [] args)
     {
@@ -31,11 +31,10 @@ public class game extends Application
         exitButton.setFont(Font.font("Arial", FontWeight.BOLD, 100));
 
         BackgroundImage background= new BackgroundImage(new Image("https://www.historyonthenet.com/wp-content/uploads/2014/11/450223-M-0000R-001.jpg",32,32,false,true),
-                BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT,
-                new BackgroundSize(1920,500,false,false,false,false));
+                BackgroundRepeat.REPEAT, BackgroundRepeat.REPEAT, BackgroundPosition.CENTER,
+                new BackgroundSize(10,10,false,false,false,false));
 
         vLayout.setBackground(new Background(background));
-
 
         vLayout.setAlignment(Pos.CENTER);
         vLayout.getChildren().add(startButton);
@@ -55,6 +54,11 @@ public class game extends Application
         Label LockedStalinLabel = new Label();
 
 
+
+    }
+    public void prologue()
+    {
+        Label GamePrologue = new Label("This story depicts the rise and fall of one of the main belligerents in the most bloody struggle in human history. This game is made for educational purposes only.");
 
     }
 }
