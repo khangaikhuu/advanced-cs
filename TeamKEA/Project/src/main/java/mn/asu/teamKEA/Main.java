@@ -11,7 +11,7 @@ public class Main {
 
         textField.createTitle("Let's learn French", 450, -100 , 1000, 700);
         button.createStartButton(430,550,150,70);
-        frame.createStartFrame(button.getStartButton(), textField.getTitle());
+        frame.createStartFrame(button.getStartButton(), textField.getTitle(), 1599, 900, "Welcome to French Flashcards!");
     }
 
 
