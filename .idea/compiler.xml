@@ -7,39 +7,52 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Khangarid" />
+        <module name="Project (2) (org.springframework.boot)" />
         <module name="Anudari" />
         <module name="Anand" />
         <module name="Erkhembaatar" />
-        <module name="SungMin" />
+        <module name="Project (1)" />
         <module name="Jason" />
+        <module name="SungMin" />
         <module name="MrKhangai" />
+        <module name="AminErdene" />
         <module name="Khulan" />
         <module name="Hannah" />
         <module name="Hayeon" />
         <module name="Bilguundalai" />
         <module name="Chingun" />
         <module name="Juan" />
-        <module name="AminErdene" />
+        <module name="Mr.Khangai" />
         <module name="Manal" />
         <module name="Tsengel" />
+      </profile>
+      <profile name="Annotation profile for advanced-cs" enabled="true">
+        <sourceOutputDir name="../../Team2/Project/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../Team2/Project/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Project (3)" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="advanced-cs" target="1.5" />
       <module name="AminErdene" target="1.5" />
-      <module name="Anand" target="1.5" />
-      <module name="Anudari" target="1.5" />
-      <module name="Bilguundalai" target="1.5" />
-      <module name="Chingun" target="1.5" />
-      <module name="Erkhembaatar" target="1.5" />
-      <module name="Hannah" target="1.5" />
-      <module name="Hayeon" target="1.5" />
+      <module name="Anand" target="1.8" />
+      <module name="Anudari" target="1.8" />
+      <module name="Bilguundalai" target="1.8" />
+      <module name="Chingun" target="1.8" />
+      <module name="Erkhembaatar" target="1.8" />
+      <module name="Hannah" target="1.8" />
+      <module name="Hayeon" target="1.8" />
       <module name="Jason" target="1.5" />
-      <module name="Juan" target="1.5" />
-      <module name="Khangarid" target="1.5" />
-      <module name="Khulan" target="1.5" />
-      <module name="Manal" target="1.5" />
-      <module name="MrKhangai" target="1.5" />
+      <module name="Juan" target="1.8" />
+      <module name="Khangarid" target="1.8" />
+      <module name="Khulan" target="1.8" />
+      <module name="Manal" target="1.8" />
+      <module name="Mr.Khangai" target="1.8" />
+      <module name="MrKhangai" target="1.8" />
+      <module name="Project (1)" target="1.5" />
+      <module name="Project (2) (org.springframework.boot)" target="1.8" />
+      <module name="Project (3)" target="1.5" />
       <module name="SungMin" target="1.5" />
       <module name="Team2" target="1.5" />
       <module name="team2" target="1.6" />
@@ -53,5 +66,23 @@
       <module name="TeamSLUM" target="1.6" />
       <module name="Tsengel" target="1.5" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Anand" options="-parameters" />
+      <module name="Anudari" options="-parameters" />
+      <module name="Bilguundalai" options="-parameters" />
+      <module name="Chingun" options="-parameters" />
+      <module name="Erkhembaatar" options="-parameters" />
+      <module name="Hannah" options="-parameters" />
+      <module name="Hayeon" options="-parameters" />
+      <module name="Juan" options="-parameters" />
+      <module name="Khangarid" options="-parameters" />
+      <module name="Khulan" options="-parameters" />
+      <module name="Manal" options="-parameters" />
+      <module name="Mr.Khangai" options="-parameters" />
+      <module name="MrKhangai" options="-parameters" />
+      <module name="Project (2) (org.springframework.boot)" options="-parameters" />
+    </option>
   </component>
 </project>
