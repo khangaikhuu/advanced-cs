@@ -1,10 +1,10 @@
-package mn.asu.erkhembaatar.startWindow;
+package mn.asu.teamKEA.startWindow;
 
 import javax.swing.*;
 
 public class Title {
 
-    private JLabel title = new JLabel();
+    public String title;
     public void createTitle(String text, int x , int y, int width, int height )
     {
         title.setText(text);
@@ -13,6 +13,5 @@ public class Title {
 
     public JLabel getTitle()
     {
-        return title;
-    }
+
 }
