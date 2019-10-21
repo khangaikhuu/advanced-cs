@@ -1,17 +1,16 @@
 package mn.asu.teamKEA.startWindow;
 
 import javax.swing.*;
+public class StartTitle {
 
-public class Title {
+    public JLabel Title = new JLabel();
 
-    public String title;
-    public void createTitle(String text, int x , int y, int width, int height )
+
+
+    public StartTitle(String text, int x, int y, int width, int height)
     {
-        title.setText(text);
-        title.setBounds(x,y,width,height);
+        Title.setText(text);
+        Title.setBounds(x,y,width,height);
     }
-
-    public JLabel getTitle()
-    {
 
 }

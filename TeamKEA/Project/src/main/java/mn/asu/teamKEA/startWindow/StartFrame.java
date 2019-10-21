@@ -1,24 +1,20 @@
-package mn.asu.erkhembaatar.startWindow;
+package mn.asu.teamKEA.startWindow;
 
 import mn.asu.erkhembaatar.flashCard.firstPage.FirstPageFrame;
 
 import javax.swing.*;
 
-public class StartFrame extends FirstPageFrame {
+public class StartFrame {
 
-    private JFrame startFrame = new JFrame();
-    public void createStartFrame(JButton button , JLabel label , int width , int height, String title )
+    public JFrame Frame = new JFrame();
+    public StartFrame(JButton button , JLabel label , int width , int height, String title )
     {
-        startFrame.setTitle(title);
-        startFrame.setSize(width, height);
-        startFrame.setLayout(null);
-        startFrame.setVisible(true);
-        startFrame.add(button);
-        startFrame.add(label);
+        Frame.setTitle(title);
+        Frame.setSize(width, height);
+        Frame.setLayout(null);
+        Frame.setVisible(true);
+        Frame.add(button);
+        Frame.add(label);
     }
 
-    public JFrame getStartFrame()
-    {
-        return startFrame;
-    }
 }

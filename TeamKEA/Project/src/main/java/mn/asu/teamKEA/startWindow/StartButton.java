@@ -1,17 +1,13 @@
-package mn.asu.erkhembaatar.startWindow;
+package mn.asu.teamKEA.startWindow;
 
 import javax.swing.*;
 
 public class StartButton {
 
-    private JButton startButton = new JButton("start");
+    public JButton Button = new JButton("start");
 
-    public void createStartButton(int x, int y, int width , int height)
+    public StartButton(int x, int y, int width , int height)
     {
-        startButton.setBounds(x, y, width, height);
-    }
-    public JButton getStartButton()
-    {
-        return startButton;
+        Button.setBounds(x, y, width, height);
     }
 }
