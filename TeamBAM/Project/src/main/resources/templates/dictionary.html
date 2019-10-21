@@ -4,9 +4,18 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Dictionary (50 words)</title>
+    <title>Basic Dictionary</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="img/fav.png" type="image/png"/>
     <style>
+    #OverviewText4 {
+    position: relative;
+    }
+    #OverviewText4 img {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    }
     body {
       margin: 0;
       font-family: sans-serif;
@@ -44,9 +53,16 @@
     <!-- <link rel="stylesheet" href="../css/shards.min.css"> -->
 </head>
 
-<body>
+<body bgcolor="#3399ff">
+<div id = "OverviewText4">
+    <a href="/menu/menu">
+        <img th:src="@{/img/logo.png}" width="5%" alt="memorynotfound logo"/>
+    </a>
+</div>
 <div class="menu">
-    <img src="englishYou.jpg" alt="Flowers in Chania">
+    <a href="/menu/menu">
+
+    </a>
     <div class="topnav">
         <a id="home" href="/menu/quiz">Word Quiz</a>
         <a class="active" id = "dictionary"href="/menu/dictionary">Dictionary (50 words)</a>
