@@ -10,10 +10,10 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 
 public class Setup {
-    public void characterSelect(StackPane root, Button startButton, Button exitButton, HBox hLayout, VBox vLayout) throws FileNotFoundException {
+    public HBox characterSelect() throws FileNotFoundException {
 
+        HBox hLayout = new HBox();
 
-        vLayout.getChildren().removeAll(startButton,exitButton);
         Button HitlerButton = new Button();
         Button LockedStalinButton = new Button();
         hLayout.getChildren().add(HitlerButton);
@@ -38,9 +38,7 @@ public class Setup {
         HitlerButton.setGraphic(HitlerView);
         LockedStalinButton.setGraphic(StalinView);
         hLayout.setAlignment(Pos.CENTER);
-        root.getChildren().add(hLayout);
 
-        Prologue prologue = new Prologue();
-        prologue.prologue(root, HitlerButton, LockedStalinButton,hLayout);
+        return hLayout;
     }
 }
