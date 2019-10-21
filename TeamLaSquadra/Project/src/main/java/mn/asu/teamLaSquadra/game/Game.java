@@ -24,16 +24,7 @@ public class Game extends Application
     private Setup setup = new Setup();
     private Prologue prologue = new Prologue();
 
-    public void main(String [] args) throws FileNotFoundException {
-        launch(args);
-        root.getChildren().remove(vLayout);
-        root.getChildren().add(setup.characterSelect());
 
-        root.getChildren().remove(setup.characterSelect());
-        root.getChildren().add(prologue.prologue());
-
-
-    }
 
     @Override
     public void start(Stage primaryStage) throws FileNotFoundException {
@@ -56,6 +47,14 @@ public class Game extends Application
         root.getChildren().add(vLayout);
         primaryStage.setScene(scene);
         primaryStage.show();
+        root.getChildren().remove(vLayout);
+
+        HBox charLayout  =setup.characterSelect();
+        root.getChildren().add(charLayout);
+
+        root.getChildren().remove(charLayout);
+        root.getChildren().add(prologue.prologue());
+
     }
 
     }
