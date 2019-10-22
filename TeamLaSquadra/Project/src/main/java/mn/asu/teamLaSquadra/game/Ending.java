@@ -14,14 +14,12 @@ public class Ending
     private Button exitButton;
     private Label ending;
 
-    public VBox ending()
+    public VBox ending(String epilogue)
     {
     exitButton = new Button("Exit");
     VBox vLayout = new VBox();
     HBox hLayout = new HBox();
-    ending = new Label("World War 2 ends with the unconditional surrender of the Axis Powers" +
-            "\nthus ending the most violent struggle in human history. Adolf Hitler commits suicide, The Japanese surrender after" +
-            "\n two nuclear as well as Italy surrendering and switching sides.");
+    ending = new Label(epilogue);
     ending.setFont(Font.font("Arial", FontWeight.BOLD, 25));
     exitButton.setFont(Font.font("Arial", FontWeight.BOLD, 50));
 
