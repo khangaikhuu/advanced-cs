@@ -1,10 +1,8 @@
-package mn.asu.khulan;
-import javax.swing.*;
+package mn.asu.crud.khulan;
 
+import javax.swing.*;
+import java.awt.*;
 import java.io.IOException;
-import java.awt.Graphics;
-import java.awt.Image;
-import java.awt.Toolkit;
 
 public class ELearningPanel extends JFrame {
 
