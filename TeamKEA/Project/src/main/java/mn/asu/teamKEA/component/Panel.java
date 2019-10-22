@@ -1,9 +1,7 @@
 package mn.asu.teamKEA.component;
 
 
-
 import javax.swing.*;
-import java.awt.*;
 
 public class Panel {
 
@@ -11,10 +9,14 @@ public class Panel {
     public Panel(JButton button , JLabel label , int width , int height)
     {
         Panel.setSize(width, height);
-        Panel.setLayout(CardLayout);
+        Panel.setLayout(null);
         Panel.setVisible(true);
         Panel.add(button);
         Panel.add(label);
+    }
+    public void setVisible(boolean tf)
+    {
+        Panel.setVisible(tf);
     }
 
 }

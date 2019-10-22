@@ -9,28 +9,48 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+
 public class Main {
     public static void main(String[] args) {
         StartWindow();
     }
 
-
-
-
-
+    public static Frame frame = new Frame(1600, 900, "French Flashcards");
 
     public static void StartWindow() {
-        Button startButton = new Button(430, 550, 150, 70);
+        Button startButton = new Button(430, 550, 150, 70, "Start");
         Title startTitle = new Title("Lets learn French", 450, -100, 1000, 700);
         Panel startPanel = new Panel(startButton.Button, startTitle.Title, 1600, 900);
-        Frame startFrame = new Frame (startPanel.Panel ,1600 , 900, "Welcome to French Flashcards");
+        frame.changePanel(startPanel.Panel);
+
+        startButton.buttonAction(startPanel);
+        if (startButton.nextPanel == true) {
+            FirstSide();
+        }
     }
 
-    public static void FirstSide()
-    {
-        Button firstSideButton = new Button(430, 550, 150, 70);
-        Title firstSideTitle = new Title("Lets learn French", 450, -100, 1000, 700);
-        Panel firstSidePanel= new Panel(firstSideButton.Button, firstSideTitle.Title, 1600, 900);
+    public static void FirstSide() {
+        Button firstSideButton = new Button(430, 550, 150, 70, "French Word");
+        Title firstSideTitle = new Title("French Word", 450, -100, 1000, 700);
+        Panel firstSidePanel = new Panel(firstSideButton.Button, firstSideTitle.Title, 1600, 900);
+        frame.changePanel(firstSidePanel.Panel);
+
+        firstSideButton.buttonAction(firstSidePanel);
+        if (firstSideButton.nextPanel == false) {
+            SecondSide();
+        }
     }
 
+    public static void SecondSide() {
+        Button secondSideButton = new Button(430, 550, 150, 70, "French Definition");
+        Title secondSideTitle = new Title("Word Definition", 450, -100, 1000, 700);
+        Panel secondSidePanel = new Panel(secondSideButton.Button, secondSideTitle.Title, 1600, 900);
+        frame.changePanel(secondSidePanel.Panel);
+
+        secondSideButton.buttonAction(secondSidePanel);
+        if (secondSideButton.nextPanel == false) {
+            FirstSide();
+        }
+
+    }
 }
