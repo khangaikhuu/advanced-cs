@@ -10,25 +10,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Main {
-<<<<<<< HEAD
     public static void main(String[] args)
     {
-        JFrame frame = new JFrame();
-        JLabel title = new JLabel("Let's Learn French");
-        title.setBounds(450, -100, 1000, 700);
-        frame.add(title);
-        JButton startButton = new JButton("Start");
-        startButton.setBounds(430,550,150,70);
-        frame.add(startButton);
-        frame.setSize(1600, 900);
-        frame.setLayout(null);
-=======
-    public static void main(String[] args) {
         StartWindow();
     }
 
 
->>>>>>> 8f760fcba0862f3fa47836d1b5c5253b57b5caa1
 
 
 
@@ -38,6 +25,11 @@ public class Main {
         Title startTitle = new Title("Lets learn French", 450, -100, 1000, 700);
         Panel startPanel = new Panel(startButton.Button, startTitle.Title, 1600, 900);
         Frame startFrame = new Frame (startPanel.Panel ,1600 , 900, "Welcome to French Flashcards");
+        startButton.buttonAction(startPanel);
+        if(startButton.nextPanel == false )
+        {
+            FirstSide();
+        }
     }
 
     public static void FirstSide()
