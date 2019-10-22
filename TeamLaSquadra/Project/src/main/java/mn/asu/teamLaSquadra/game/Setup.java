@@ -1,5 +1,7 @@
 package mn.asu.teamLaSquadra.game;
 
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
@@ -10,12 +12,19 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 
 public class Setup {
-    public HBox characterSelect() throws FileNotFoundException {
+
+    private boolean next = false;
+
+
+    public boolean characterSelect(StackPane root) throws FileNotFoundException {
 
         HBox hLayout = new HBox();
 
         Button HitlerButton = new Button();
+
         Button LockedStalinButton = new Button();
+
+
         hLayout.getChildren().add(HitlerButton);
         hLayout.getChildren().add(LockedStalinButton);
 
@@ -39,6 +48,9 @@ public class Setup {
         LockedStalinButton.setGraphic(StalinView);
         hLayout.setAlignment(Pos.CENTER);
 
-        return hLayout;
+        root.getChildren().add(hLayout);
+
+
+        return next;
     }
 }

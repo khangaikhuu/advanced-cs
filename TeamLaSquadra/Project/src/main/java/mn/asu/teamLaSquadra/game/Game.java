@@ -1,6 +1,8 @@
 package mn.asu.teamLaSquadra.game;
 
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
@@ -21,9 +23,11 @@ public class Game extends Application
     private Button startButton;
     private Button exitButton;
     private Setup setup = new Setup();
-    private Prologue prologue = new Prologue();
+
     private Choice choice = new Choice();
     private Ending ending = new Ending();
+    private Prologue prologue = new Prologue();
+    private boolean next = false;
 
     @Override
     public void start(Stage primaryStage) throws FileNotFoundException {
@@ -36,6 +40,19 @@ public class Game extends Application
         startButton.setFont(Font.font("Arial", FontWeight.BOLD, 100));
         exitButton.setFont(Font.font("Arial", FontWeight.BOLD, 100));
 
+        startButton.setOnAction(new EventHandler<ActionEvent>() {
+             public void handle(ActionEvent e) {
+                 root.getChildren().remove(vLayout);
+                 HBox charLayout  = null;
+                 try {
+                     next = setup.characterSelect(root);
+                 } catch (FileNotFoundException ex) {
+                     ex.printStackTrace();
+                 }
+
+            }
+        });
+
         //sets all items in vertical layout to center
         vLayout.setAlignment(Pos.CENTER);
 
@@ -45,18 +62,15 @@ public class Game extends Application
         root.getChildren().add(vLayout);
         primaryStage.setScene(scene);
         primaryStage.show();
-        root.getChildren().remove(vLayout);
 
-        HBox charLayout  =setup.characterSelect();
-        root.getChildren().add(charLayout);
 
-        root.getChildren().remove(charLayout);
-
-        VBox prologueLayout = prologue.prologue();
-        root.getChildren().add(prologueLayout);
         root.getChildren().remove(prologueLayout);
 
         VBox vChoice = choice.firstChoice(root);
+
+        Image sceneKampf;
+        choice.nextChoice(sceneKampf = new Image(new FileInputStream("C:/Users/G8/Desktop/advanced-cs/TeamLaSquadra/Project/src/main/resources/prison.png")),"You have written a new page in your book. You write about your aspirations and hopes about the country.","Ok","Quit");
+
         root.getChildren().remove(vChoice);
 
         VBox endingLayout = ending.ending("World War 2 ends with the unconditional surrender of the Axis Powers" +

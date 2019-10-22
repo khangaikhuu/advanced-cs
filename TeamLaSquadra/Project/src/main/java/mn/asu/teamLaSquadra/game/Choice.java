@@ -21,6 +21,7 @@ public class Choice
     private Button choiceOne;
     private Button choiceTwo;
 
+
     public VBox firstChoice(StackPane root) throws FileNotFoundException {
 
         VBox vChoice = new VBox();
