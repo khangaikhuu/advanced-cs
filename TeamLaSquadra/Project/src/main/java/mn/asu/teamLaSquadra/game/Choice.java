@@ -3,6 +3,7 @@ package mn.asu.teamLaSquadra.game;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
@@ -20,8 +21,9 @@ public class Choice
     private Button choiceOne;
     private Button choiceTwo;
 
-    public VBox firstChoice() throws FileNotFoundException {
-        VBox vLayout = new VBox();
+    public VBox firstChoice(StackPane root) throws FileNotFoundException {
+
+        VBox vChoice = new VBox();
         HBox hLayout = new HBox();
         choiceOne = new Button("Write more for your book, Mein Kampf");
         choiceTwo = new Button("Take the day off, and hit the sack");
@@ -43,10 +45,10 @@ public class Choice
         hLayout.setAlignment(Pos.CENTER);
 
         hLayout.getChildren().addAll(choiceOne, choiceTwo);
-        vLayout.getChildren().addAll(storyImage, storyInfo, hLayout);
-        vLayout.setAlignment(Pos.CENTER);
-
-        return vLayout;
+        vChoice.getChildren().addAll(storyImage, storyInfo, hLayout);
+        vChoice.setAlignment(Pos.CENTER);
+        root.getChildren().add(vChoice);
+        return vChoice;
     }
 
     public void nextChoice(Image nextScene, String textInfo,String buttonDes1, String buttonDes2)
