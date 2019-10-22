@@ -3,16 +3,19 @@ package mn.asu.teamLaSquadra.game;
 import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.*;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 import javafx.scene.control.Button;
+
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 
 public class Game extends Application
 {
-    private Pane root = new StackPane();
+    private StackPane root = new StackPane();
     private Scene scene= new Scene(root, 1910, 1070);
     private VBox vLayout;
     private Button startButton;
@@ -52,11 +55,13 @@ public class Game extends Application
         VBox prologueLayout = prologue.prologue();
         root.getChildren().add(prologueLayout);
         root.getChildren().remove(prologueLayout);
-        VBox choiceLayout = choice.firstChoice();
-        root.getChildren().add(choiceLayout);
-        root.getChildren().remove(choiceLayout);
-        VBox endingLayout = ending.ending();
+
+        VBox vChoice = choice.firstChoice(root);
+        Image nextScene;
+        choice.nextChoice(nextScene = new Image(new FileInputStream("C:\\Users\\G8\\Pictures\\box.jpg")),"cute pupper","kick it","love it");
+        VBox endingLayout = prologue.prologue();
         root.getChildren().add(endingLayout);
+
 
     }
 
