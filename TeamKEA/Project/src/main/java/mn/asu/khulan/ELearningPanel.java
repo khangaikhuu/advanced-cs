@@ -1,4 +1,4 @@
-package mn.asu.khulan;
+/*package mn.asu.khulan;
 
 import sun.awt.HToolkit;
 
@@ -35,3 +35,4 @@ public class ELearningPanel {
         }
     }
 }
+*/
