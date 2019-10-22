@@ -57,9 +57,12 @@ public class Game extends Application
         root.getChildren().remove(prologueLayout);
 
         VBox vChoice = choice.firstChoice(root);
-        Image nextScene;
-        choice.nextChoice(nextScene = new Image(new FileInputStream("C:\\Users\\G8\\Pictures\\box.jpg")),"cute pupper","kick it","love it");
-        VBox endingLayout = prologue.prologue();
+        root.getChildren().remove(vChoice);
+
+        VBox endingLayout = ending.ending("World War 2 ends with the unconditional surrender of the Axis Powers" +
+                "\nthus ending the most violent struggle in human history. Adolf Hitler commits suicide, The Japanese surrender after" +
+                "\n two nuclear as well as Italy surrendering and switching sides.");
+
         root.getChildren().add(endingLayout);
 
 
