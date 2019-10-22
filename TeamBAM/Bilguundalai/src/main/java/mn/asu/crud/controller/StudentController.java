@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/students/")
-public class StudentController {
+public class    StudentController {
 
     private final StudentRepository studentRepository;
 
