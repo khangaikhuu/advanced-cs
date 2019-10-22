@@ -16,4 +16,19 @@ public class Frame {
         Frame.add(p);
     }
 
+    public Frame(int width , int height, String title )
+    {
+        Frame.setTitle(title);
+        Frame.setSize(width, height);
+        Frame.setLayout(null);
+        Frame.setVisible(true);
+    }
+
+    public void changePanel(JPanel p)
+    {
+        Frame.add(p);
+    }
+
+
+
 }
