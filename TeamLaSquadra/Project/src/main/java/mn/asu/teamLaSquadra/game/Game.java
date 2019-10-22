@@ -3,28 +3,24 @@ package mn.asu.teamLaSquadra.game;
 import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 import javafx.scene.control.Button;
-import javafx.scene.image.Image;
-
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 
 public class Game extends Application
 {
     private Pane root = new StackPane();
-    private Scene scene= new Scene(root, 500, 500);
+    private Scene scene= new Scene(root, 1910, 1070);
     private VBox vLayout;
     private Button startButton;
     private Button exitButton;
     private Setup setup = new Setup();
     private Prologue prologue = new Prologue();
-
-
+    private Choice choice = new Choice();
+    private Ending ending = new Ending();
 
     @Override
     public void start(Stage primaryStage) throws FileNotFoundException {
@@ -32,7 +28,6 @@ public class Game extends Application
         vLayout = new VBox();
         startButton = new Button("START");
         exitButton = new Button("EXIT");
-        HBox hLayout = new HBox();
 
         //enlarges buttons by making text larger
         startButton.setFont(Font.font("Arial", FontWeight.BOLD, 100));
@@ -53,7 +48,15 @@ public class Game extends Application
         root.getChildren().add(charLayout);
 
         root.getChildren().remove(charLayout);
-        root.getChildren().add(prologue.prologue());
+
+        VBox prologueLayout = prologue.prologue();
+        root.getChildren().add(prologueLayout);
+        root.getChildren().remove(prologueLayout);
+        VBox choiceLayout = choice.firstChoice();
+        root.getChildren().add(choiceLayout);
+        root.getChildren().remove(choiceLayout);
+        VBox endingLayout = ending.ending();
+        root.getChildren().add(endingLayout);
 
     }
 
