@@ -13,7 +13,7 @@ public class ExampleText  extends JFrame implements ActionListener {
         //ex.createSelectionFrame();
         JFrame f = new JFrame();
 
-        ExampleBackground ok = new ExampleBackground("C:\\Users\\G12\\Desktop\\paris.jpg");
+        ExampleBackground ok = new ExampleBackground("C:\\Users\\G12\\Pictures\\paris.jpg\\");
         f.getContentPane().add(ok);
         f.show();
         f.setSize(1600,900);
