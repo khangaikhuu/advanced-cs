@@ -90,7 +90,7 @@ public class Choice
         storyInfo.setText(textInfo);
         choiceOne.setText(buttonDes1);
         choiceTwo.setText(buttonDes2);
-        if(buttonCounter1==1 && buttonCounter2==0)
+        if(buttonCounter1==2 && buttonCounter2==0)
         {
             Image sceneKampf;
             try {
@@ -101,7 +101,7 @@ public class Choice
             }
         }
 
-        if(buttonCounter1==0&&buttonCounter2==1)
+        if(buttonCounter1==1&&buttonCounter2==2)
         {
             Image sceneKampf;
             try {
@@ -110,13 +110,19 @@ public class Choice
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
-        }
 
-        if(buttonCounter1 == 1 && buttonCounter2 == 0)
+        }
+        if(buttonCounter1==1&&buttonCounter2==2)
         {
             Image sceneKampf;
-            nextChoice(sceneKampf = new Image(new FileInputStream("C:/Users/G8/Desktop/advanced-cs/TeamLaSquadra/Project/src/main/resources/prison.png")), "You have writte and hopes about the country.", "no", "yes");
+            try {
+                nextChoice(sceneKampf = new Image(new FileInputStream("C:\\Users\\G8\\Downloads\\prison.jpeg")),
+                        "Get out of bed.", "just lie there", "exit");
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
         }
+
     }
 
 
