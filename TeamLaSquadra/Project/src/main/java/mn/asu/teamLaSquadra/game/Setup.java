@@ -13,12 +13,13 @@ import java.io.FileNotFoundException;
 
 public class Setup {
 
-    private boolean next = false;
+    private HBox hLayout;
+    private StackPane mainRoot;
+    private Prologue prologue = new Prologue();
 
+    public void characterSelect(StackPane root) throws FileNotFoundException {
 
-    public boolean characterSelect(StackPane root) throws FileNotFoundException {
-
-        HBox hLayout = new HBox();
+        hLayout = new HBox();
 
         Button HitlerButton = new Button();
 
@@ -48,9 +49,16 @@ public class Setup {
         LockedStalinButton.setGraphic(StalinView);
         hLayout.setAlignment(Pos.CENTER);
 
+
+
         root.getChildren().add(hLayout);
 
-
-        return next;
+        mainRoot = root;
+        HitlerButton.setOnAction(new EventHandler<ActionEvent>() {
+            public void handle(ActionEvent actionEvent) {
+                mainRoot.getChildren().remove(hLayout);
+                prologue.prologue(mainRoot);
+            }
+        });
     }
 }

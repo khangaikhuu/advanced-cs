@@ -1,5 +1,7 @@
 package mn.asu.teamLaSquadra.game;
 
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
@@ -20,9 +22,9 @@ public class Choice
     private Label storyInfo;
     private Button choiceOne;
     private Button choiceTwo;
+    private int buttonCounter1=0;
 
-
-    public VBox firstChoice(StackPane root) throws FileNotFoundException {
+    public void firstChoice(StackPane root) throws FileNotFoundException {
 
         VBox vChoice = new VBox();
         HBox hLayout = new HBox();
@@ -49,15 +51,33 @@ public class Choice
         vChoice.getChildren().addAll(storyImage, storyInfo, hLayout);
         vChoice.setAlignment(Pos.CENTER);
         root.getChildren().add(vChoice);
-        return vChoice;
+
+        //button handler
+        choiceOne.setOnAction(new EventHandler<ActionEvent>() {
+            public void handle(ActionEvent actionEvent) {
+                //second choice
+                Image sceneKampf;
+                try {
+                    nextChoice(sceneKampf = new Image(new FileInputStream("C:/Users/G8/Desktop/advanced-cs/TeamLaSquadra/Project/src/main/resources/prison.png")), "You have written a new page in your book. You write about your aspirations and hopes about the country.", "Ok", "Quit");
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        });
     }
 
-    public void nextChoice(Image nextScene, String textInfo,String buttonDes1, String buttonDes2)
-    {
+    private void nextChoice(Image nextScene, String textInfo,String buttonDes1, String buttonDes2) throws FileNotFoundException {
+        buttonCounter1++;
         sceneView.setImage(nextScene);
         storyInfo.setText(textInfo);
         choiceOne.setText(buttonDes1);
         choiceTwo.setText(buttonDes2);
+        if(buttonCounter1==1)
+        {
+            Image sceneKampf;
+            nextChoice(sceneKampf = new Image(new FileInputStream("C:/Users/G8/Desktop/advanced-cs/TeamLaSquadra/Project/src/main/resources/prison.png")), "You have writte and hopes about the country.", "no", "yes");
+        }
     }
 
 
