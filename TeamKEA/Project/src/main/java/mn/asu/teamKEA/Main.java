@@ -15,15 +15,15 @@ public class Main {
         StartWindow();
     }
 
-    public static Frame frame = new Frame(1600, 900, "French Flashcards");
+
 
     public static void StartWindow() {
         Button startButton = new Button(430, 550, 150, 70, "Start");
         Title startTitle = new Title("Lets learn French", 450, -100, 1000, 700);
         Panel startPanel = new Panel(startButton.Button, startTitle.Title, 1600, 900);
-        frame.changePanel(startPanel.Panel);
+        Frame startFrame = new Frame(startPanel.Panel ,1600, 900, "French Flashcards");
 
-        startButton.buttonAction(startPanel);
+        startButton.buttonAction(startFrame.Frame);
         if (startButton.nextPanel == true) {
             FirstSide();
         }
@@ -33,10 +33,11 @@ public class Main {
         Button firstSideButton = new Button(430, 550, 150, 70, "French Word");
         Title firstSideTitle = new Title("French Word", 450, -100, 1000, 700);
         Panel firstSidePanel = new Panel(firstSideButton.Button, firstSideTitle.Title, 1600, 900);
-        frame.changePanel(firstSidePanel.Panel);
+        Frame firstFrame = new Frame(firstSidePanel.Panel , 1600 , 900 , "French Word");
 
-        firstSideButton.buttonAction(firstSidePanel);
-        if (firstSideButton.nextPanel == false) {
+
+        firstSideButton.buttonAction(firstFrame.Frame);
+        if (firstSideButton.nextPanel == true) {
             SecondSide();
         }
     }
@@ -45,10 +46,11 @@ public class Main {
         Button secondSideButton = new Button(430, 550, 150, 70, "French Definition");
         Title secondSideTitle = new Title("Word Definition", 450, -100, 1000, 700);
         Panel secondSidePanel = new Panel(secondSideButton.Button, secondSideTitle.Title, 1600, 900);
-        frame.changePanel(secondSidePanel.Panel);
 
-        secondSideButton.buttonAction(secondSidePanel);
-        if (secondSideButton.nextPanel == false) {
+        Frame secondFrame = new Frame(secondSidePanel.Panel , 1600 , 900 , "French Word");
+
+        secondSideButton.buttonAction(secondFrame.Frame);
+        if (secondSideButton.nextPanel == true) {
             FirstSide();
         }
 

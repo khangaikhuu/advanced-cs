@@ -15,11 +15,11 @@ public class Button {
         Button.setText(name);
     }
 
-    public void buttonAction(final Panel offPanel)
+    public void buttonAction(JFrame offFrame)
     {
         Button.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                offPanel.setVisible(false);
+                offFrame.setVisible(false);
                 nextPanel= true;
 
             }

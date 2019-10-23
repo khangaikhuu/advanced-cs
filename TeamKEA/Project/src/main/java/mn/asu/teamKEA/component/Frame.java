@@ -24,6 +24,9 @@ public class Frame {
         Frame.setVisible(true);
     }
 
+
+
+
     public void changePanel(JPanel p)
     {
         Frame.add(p);
