@@ -15,6 +15,7 @@ public class MainButton {
     {
         Button.setBounds(x, y, width, height);
         Button.setText(name);
+        Button.setOpaque(false);
     }
 
     public void buttonAction(JButton button , JLabel label)
