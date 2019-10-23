@@ -9,13 +9,18 @@ import java.io.IOException;
 public class MainPanel {
 
     public JPanel Panel = new JPanel();
-    public MainPanel(JButton button , JLabel label , int width , int height)
-    {
+    public MainPanel(JButton button , JLabel label , int width , int height) throws IOException {
         Panel.setSize(width, height);
         Panel.setLayout(null);
         Panel.setVisible(true);
+
         Panel.add(button);
         Panel.add(label);
+        ExampleBackground pic = new ExampleBackground("C:\\Users\\G12\\Pictures\\paris.jpg\\");
+        Panel.add(pic);
+        Panel.setComponentZOrder(pic, 2);
+        Panel.setComponentZOrder(button, 1);
+        Panel.setComponentZOrder(label, 0);
     }
 
     public MainPanel(int width , int height) {
@@ -25,12 +30,14 @@ public class MainPanel {
     }
 
 
-   public void redraw(JButton Button , JLabel Label, ExampleBackground picture) throws IOException {
+   public void redraw(JButton button , JLabel Label, ExampleBackground picture) throws IOException {
        Panel.removeAll();
        Panel.add(picture);
-       Panel.add(Button , Label);
+       Panel.add(button , Label);
 
-
+       Panel.setComponentZOrder(picture, 2);
+       Panel.setComponentZOrder(button, 1);
+       Panel.setComponentZOrder(Label, 0);
        Panel.revalidate();
        Panel.repaint();
    }
