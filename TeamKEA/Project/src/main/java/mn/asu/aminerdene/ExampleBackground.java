@@ -7,15 +7,15 @@ import java.io.File;
 import java.io.IOException;
 
 public class ExampleBackground extends JPanel {
-    private Image backgroundImage;
+    public Image backgroundImage;
 
-    ExampleBackground(String fileName) throws IOException {
+    public ExampleBackground(String fileName) throws IOException {
         backgroundImage = ImageIO.read(new File(fileName));
         Dimension size = new Dimension(1600, 900);
         setPreferredSize(size);
         setMinimumSize(size);
         setMaximumSize(size);
-        setSize(size);
+        setSize(1600, 900);
         setLayout(null);
         setBackground(null);
     }

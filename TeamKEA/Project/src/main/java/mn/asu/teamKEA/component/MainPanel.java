@@ -1,7 +1,10 @@
 package mn.asu.teamKEA.component;
 
 
+import mn.asu.aminerdene.ExampleBackground;
+
 import javax.swing.*;
+import java.io.IOException;
 
 public class MainPanel {
 
@@ -22,13 +25,23 @@ public class MainPanel {
     }
 
 
-   public void redraw(JButton Button , JLabel Label)
-   {
+   public void redraw(JButton Button , JLabel Label, ExampleBackground picture) throws IOException {
        Panel.removeAll();
+       Panel.add(picture);
        Panel.add(Button , Label);
+
+
        Panel.revalidate();
        Panel.repaint();
    }
+
+    public void redraw(JButton Button , JLabel Label)
+    {
+        Panel.removeAll();
+        Panel.add(Button , Label);
+        Panel.revalidate();
+        Panel.repaint();
+    }
 
     public void setVisible(boolean tf)
     {
