@@ -1,5 +1,7 @@
 package mn.asu.teamLaSquadra.game;
 
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
@@ -20,8 +22,10 @@ public class Choice
     private Label storyInfo;
     private Button choiceOne;
     private Button choiceTwo;
+    private int buttonCounter1=0;
+    private int buttonCounter2 = 0;
 
-    public VBox firstChoice(StackPane root) throws FileNotFoundException {
+    public void firstChoice(StackPane root) throws FileNotFoundException {
 
         VBox vChoice = new VBox();
         HBox hLayout = new HBox();
@@ -48,15 +52,77 @@ public class Choice
         vChoice.getChildren().addAll(storyImage, storyInfo, hLayout);
         vChoice.setAlignment(Pos.CENTER);
         root.getChildren().add(vChoice);
-        return vChoice;
+
+        //button handler
+        choiceOne.setOnAction(new EventHandler<ActionEvent>() {
+            public void handle(ActionEvent actionEvent) {
+                buttonCounter1++;
+                //second choice
+                Image sceneKampf;
+                try {
+                    nextChoice(sceneKampf = new Image(new FileInputStream("C:/Users/G8/Desktop/advanced-cs/TeamLaSquadra/Project/src/main/resources/prison.png")),
+                            "You couldn't sleep last night, because you didn't write.", "just lie there", "exit");
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        });
+        choiceTwo.setOnAction(new EventHandler<ActionEvent>() {
+            public void handle(ActionEvent actionEvent) {
+                buttonCounter2++;
+                //second choice
+                Image sceneKampf;
+                try {
+                    nextChoice(sceneKampf = new Image(new FileInputStream("C:/Users/G8/Desktop/advanced-cs/TeamLaSquadra/Project/src/main/resources/prison.png")),
+                            "You couldn't sleep last night, because you didn't write.", "just lie there", "exit");
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        });
     }
 
-    public void nextChoice(Image nextScene, String textInfo,String buttonDes1, String buttonDes2)
-    {
+    private void nextChoice(Image nextScene, String textInfo,String buttonDes1, String buttonDes2) throws FileNotFoundException {
+
         sceneView.setImage(nextScene);
         storyInfo.setText(textInfo);
         choiceOne.setText(buttonDes1);
         choiceTwo.setText(buttonDes2);
+        if(buttonCounter1==2 && buttonCounter2==0)
+        {
+            Image sceneKampf;
+            try {
+                nextChoice(sceneKampf = new Image(new FileInputStream("C:/Users/G8/Desktop/advanced-cs/TeamLaSquadra/Project/src/main/resources/prison.png")),
+                        "You have added a page on your book.", "exit", "sleep");
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+        }
+
+        if(buttonCounter1==1&&buttonCounter2==2)
+        {
+            Image sceneKampf;
+            try {
+                nextChoice(sceneKampf = new Image(new FileInputStream("C:/Users/G8/Desktop/advanced-cs/TeamLaSquadra/Project/src/main/resources/prison.png")),
+                        "You couldn't sleep last night, because you didn't write.", "just lie there", "exit");
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+
+        }
+        if(buttonCounter1==1&&buttonCounter2==2)
+        {
+            Image sceneKampf;
+            try {
+                nextChoice(sceneKampf = new Image(new FileInputStream("C:\\Users\\G8\\Downloads\\prison.jpeg")),
+                        "Get out of bed.", "just lie there", "exit");
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+        }
+
     }
 
 
