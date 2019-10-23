@@ -60,7 +60,8 @@ public class Choice
                 //second choice
                 Image sceneKampf;
                 try {
-                    nextChoice(sceneKampf = new Image(new FileInputStream("C:/Users/G8/Desktop/advanced-cs/TeamLaSquadra/Project/src/main/resources/prison.png")), "You have written a new page in your book. You write about your aspirations and hopes about the country.", "Ok", "Quit");
+                    nextChoice(sceneKampf = new Image(new FileInputStream("C:/Users/G8/Desktop/advanced-cs/TeamLaSquadra/Project/src/main/resources/prison.png")),
+                            "You couldn't sleep last night, because you didn't write.", "just lie there", "exit");
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 }
@@ -73,7 +74,8 @@ public class Choice
                 //second choice
                 Image sceneKampf;
                 try {
-                    nextChoice(sceneKampf = new Image(new FileInputStream("C:/Users/G8/Desktop/advanced-cs/TeamLaSquadra/Project/src/main/resources/prison.png")), "choice2.", "choice2", "choice");
+                    nextChoice(sceneKampf = new Image(new FileInputStream("C:/Users/G8/Desktop/advanced-cs/TeamLaSquadra/Project/src/main/resources/prison.png")),
+                            "You couldn't sleep last night, because you didn't write.", "just lie there", "exit");
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 }
@@ -88,6 +90,28 @@ public class Choice
         storyInfo.setText(textInfo);
         choiceOne.setText(buttonDes1);
         choiceTwo.setText(buttonDes2);
+        if(buttonCounter1==1 && buttonCounter2==0)
+        {
+            Image sceneKampf;
+            try {
+                nextChoice(sceneKampf = new Image(new FileInputStream("C:/Users/G8/Desktop/advanced-cs/TeamLaSquadra/Project/src/main/resources/prison.png")),
+                        "You have added a page on your book.", "exit", "sleep");
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+        }
+
+        if(buttonCounter1==0&&buttonCounter2==1)
+        {
+            Image sceneKampf;
+            try {
+                nextChoice(sceneKampf = new Image(new FileInputStream("C:/Users/G8/Desktop/advanced-cs/TeamLaSquadra/Project/src/main/resources/prison.png")),
+                        "You couldn't sleep last night, because you didn't write.", "just lie there", "exit");
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+        }
+
         if(buttonCounter1 == 1 && buttonCounter2 == 0)
         {
             Image sceneKampf;
