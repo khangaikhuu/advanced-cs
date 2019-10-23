@@ -4,10 +4,10 @@ package mn.asu.teamKEA.component;
 import javax.swing.*;
 import java.awt.*;
 
-public class Frame {
+public class MainFrame {
 
     public JFrame Frame = new JFrame();
-    public Frame(JPanel p ,int width , int height, String title )
+    public MainFrame(JPanel p , int width , int height, String title )
     {
         Frame.setTitle(title);
         Frame.setSize(width, height);
@@ -16,7 +16,7 @@ public class Frame {
         Frame.add(p);
     }
 
-    public Frame(int width , int height, String title )
+    public MainFrame(int width , int height, String title )
     {
         Frame.setTitle(title);
         Frame.setSize(width, height);
