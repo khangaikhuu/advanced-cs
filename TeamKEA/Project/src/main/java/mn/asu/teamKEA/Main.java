@@ -5,13 +5,22 @@ import mn.asu.teamKEA.component.MainButton;
 import mn.asu.teamKEA.component.MainFrame;
 import mn.asu.teamKEA.component.MainPanel;
 import mn.asu.teamKEA.component.MainLabel;
-
 import java.io.IOException;
 
 
 public class Main {
-    public Main() throws IOException {
-    }
+    // Static Fields
+    public static MainButton startButton = new MainButton(430, 550, 150, 70, "Start");
+    public static MainLabel startLabel = new MainLabel("Lets learn French", 450, -100, 1000, 700);
+
+
+    public static MainButton firstSideButton = new MainButton(430, 550, 150, 70, "French Word");
+    public static MainLabel firstSideLabel = new MainLabel("French Word", 450, -100, 1000, 700);
+
+    public static MainButton secondSideButton = new MainButton(430, 550, 150, 70, "French Definition");
+    public static MainLabel secondSideLabel = new MainLabel("Word Definition", 450, -100, 1000, 700);
+   // Static Fields
+
 
     public static void main(String[] args) throws IOException {
         StartWindow();
@@ -31,16 +40,6 @@ public class Main {
     }
 
 
-    public static MainButton startButton = new MainButton(430, 550, 150, 70, "Start");
-    public static MainLabel startLabel = new MainLabel("Lets learn French", 450, -100, 1000, 700);
-
-
-    public static MainButton firstSideButton = new MainButton(430, 550, 150, 70, "French Word");
-    public static MainLabel firstSideLabel = new MainLabel("French Word", 450, -100, 1000, 700);
-
-
-    public static MainButton secondSideButton = new MainButton(430, 550, 150, 70, "French Definition");
-    public static MainLabel secondSideLabel = new MainLabel("Word Definition", 450, -100, 1000, 700);
 
 
     public static void StartWindow() throws IOException {
