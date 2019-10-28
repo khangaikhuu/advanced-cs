@@ -9,8 +9,8 @@ import static mn.asu.teamKEA.Main.mainPanel;
 
 public class MainButton {
 
+    public static boolean nextPanel = false;
     public JButton Button = new JButton();
-    public boolean nextPanel = false;
     public MainButton(int x, int y, int width , int height, String name)
     {
         Button.setBounds(x, y, width, height);
@@ -18,15 +18,27 @@ public class MainButton {
         Button.setOpaque(false);
     }
 
+
+
+
+
     public void buttonAction(JButton button , JLabel label)
     {
         Button.addActionListener(
-                new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent actionEvent) {
-                        mainPanel.redraw(button , label);
-                    }
-                }
+                actionEvent -> mainPanel.redraw(button , label)
         );
     }
+
+    public void buttonAction(JButton button, String text ) {
+        Button.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent e) {
+                button.setText(text);
+                mainPanel.redraw();
+                nextPanel = true;
+            }
+        });
+    }
+
+
 }

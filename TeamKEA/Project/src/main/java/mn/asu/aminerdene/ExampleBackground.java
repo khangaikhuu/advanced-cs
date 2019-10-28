@@ -11,7 +11,7 @@ public class ExampleBackground extends JPanel {
 
     public ExampleBackground(String fileName) throws IOException {
         backgroundImage = ImageIO.read(new File(fileName));
-        Dimension size = new Dimension(1600, 900);
+        Dimension size = new Dimension(300, 300);
         setPreferredSize(size);
         setMinimumSize(size);
         setMaximumSize(size);

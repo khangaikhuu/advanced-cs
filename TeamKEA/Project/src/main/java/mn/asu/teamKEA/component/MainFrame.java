@@ -14,6 +14,7 @@ public class MainFrame {
         Frame.setLayout(null);
         Frame.setVisible(true);
         Frame.add(p);
+        Frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
     public MainFrame(int width , int height, String title )

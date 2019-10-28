@@ -9,25 +9,12 @@ import java.io.IOException;
 
 
 public class Main {
-    // Static Fields
-    public static MainButton startButton = new MainButton(430, 550, 150, 70, "Start");
-    public static MainLabel startLabel = new MainLabel("Lets learn French", 450, -100, 1000, 700);
-
-
-    public static MainButton firstSideButton = new MainButton(430, 550, 150, 70, "French Word");
-    public static MainLabel firstSideLabel = new MainLabel("French Word", 450, -100, 1000, 700);
-
-    public static MainButton secondSideButton = new MainButton(430, 550, 150, 70, "French Definition");
-    public static MainLabel secondSideLabel = new MainLabel("Word Definition", 450, -100, 1000, 700);
-   // Static Fields
 
 
     public static void main(String[] args) throws IOException {
-        StartWindow();
+        FirstSide();
     }
 
-    public static MainPanel mainPanel = new MainPanel(1600, 900);
-    public static MainFrame mainFrame = new MainFrame(mainPanel.Panel ,1600, 900, "French Flashcards");
 
     public static ExampleBackground startBackground;
 
@@ -42,33 +29,85 @@ public class Main {
 
 
 
-    public static void StartWindow() throws IOException {
-
-
-        mainPanel.redraw(startButton.Button , startLabel.Label, startBackground);
-
-        FirstSide();
-    }
-
     public static void FirstSide() {
-        startButton.buttonAction(firstSideButton.Button, firstSideLabel.Label);
+        mainButton.buttonAction(mainButton.Button, "Word" /*firstSideLabel.Label*/);
+         if(MainButton.nextPanel) {
+             MainButton.nextPanel = false;
+            SecondSide();
+        }
 
-        SecondSide();
     }
+
+
 
     public static void SecondSide() {
 
+        mainButton.buttonAction(mainButton.Button, "Definition"  /*secondSideLabel.Label*/);
+        if(MainButton.nextPanel) {
 
-        firstSideButton.buttonAction(secondSideButton.Button, secondSideLabel.Label);
-
-        FirstSideRepeat();
-
+            MainButton.nextPanel = false;
+            FirstSideRepeat();
+        }
     }
 
     public static void FirstSideRepeat()
     {
-        secondSideButton.buttonAction(firstSideButton.Button, firstSideLabel.Label);
-        SecondSide();
+
+        mainButton.buttonAction(mainButton.Button, "Word" /*firstSideLabel.Label*/);
+        if(MainButton.nextPanel) {
+            MainButton.nextPanel = false;
+            SecondSide();
+        }
+
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // Static Fields
+    // Static Fields
+    // Static Fields
+    // Static Fields
+    // Static Fields
+
+
+    public static MainButton mainButton = new MainButton(430, 550, 150, 70, "Start");
+   // public static MainLabel startLabel = new MainLabel("Lets learn French", 450, -100, 1000, 700);
+
+
+    public static MainPanel mainPanel = new MainPanel(mainButton.Button /* startLabel.Label*/, 1600, 900);
+    public static MainFrame mainFrame = new MainFrame(mainPanel.Panel ,1600, 900, "French Flashcards");
+
+   // public static MainLabel firstSideLabel = new MainLabel("French Word", 450, -100, 1000, 700);
+
+   // public static MainLabel secondSideLabel = new MainLabel("Word Definition", 450, -100, 1000, 700);
+    // Static Fields
+    // Static Fields
+    // Static Fields
+    // Static Fields
+    // Static Fields
 }
