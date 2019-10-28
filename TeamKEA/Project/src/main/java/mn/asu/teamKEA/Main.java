@@ -33,7 +33,7 @@ public class Main {
 
     static {
         try {
-            startBackground = new ExampleBackground("C:\\Users\\G12\\Pictures\\paris.jpg\\");
+            startBackground = new ExampleBackground("static/Pariss.JPG");
         } catch (IOException e) {
             e.printStackTrace();
         }

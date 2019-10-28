@@ -2,6 +2,7 @@ package mn.asu.aminerdene;
 
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
@@ -13,11 +14,15 @@ public class ExampleText  extends JFrame implements ActionListener {
         //ex.createSelectionFrame();
         JFrame f = new JFrame();
 
-        ExampleBackground ok = new ExampleBackground("C:\\Users\\G12\\Pictures\\paris.jpg\\");
+        ExampleBackground ok = new ExampleBackground("static/Pariss.JPG");
+
+        f.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         f.getContentPane().add(ok);
         f.show();
         f.setSize(1600,900);
     }
+
+
     @Override
     public void actionPerformed(ActionEvent actionEvent) {
         JTextField t;
