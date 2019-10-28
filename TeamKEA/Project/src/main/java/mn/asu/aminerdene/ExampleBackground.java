@@ -10,7 +10,8 @@ public class ExampleBackground extends JPanel {
     public Image backgroundImage;
 
     public ExampleBackground(String fileName) throws IOException {
-        backgroundImage = ImageIO.read(new File(fileName));
+        File file = new File(getClass().getClassLoader().getResource(fileName).getFile());
+        backgroundImage = ImageIO.read(file);
         Dimension size = new Dimension(1600, 900);
         setPreferredSize(size);
         setMinimumSize(size);
