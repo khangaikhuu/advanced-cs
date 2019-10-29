@@ -19,6 +19,9 @@ public class KarelTest
    {
        Karel karel = new Karel();
        assertEquals("SuperKarel", karel.getMyName());
+       Karel karelOne = new Karel ("New Karel");
+       int[] array = {1,2,3};
+       Karel karelTwo = new Karel("New Karel", array);
        ArrayList<String> list = new ArrayList<String>();
        assertEquals(new ArrayList(), list);
        karel.addElements();

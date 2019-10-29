@@ -7,3 +7,7 @@
 /AdvancedCS/Juan/Week-5/buttonTest/dist/
 *.vscode
 *.idea
+*.iml
+*.jar
+*target*
+
