@@ -24,6 +24,27 @@ import java.io.IOException;
 
 
 public class Main {
+<<<<<<< HEAD
+    public static void main(String[] args) {
+<<<<<<< HEAD
+        JFrame frame = new JFrame();
+        JLabel title = new JLabel("Let's Learn French");
+        title.setBounds(450, -100, 1000, 700);
+        frame.add(title);
+        JButton startButton = new JButton("Start");
+        startButton.setBounds(430, 550, 150, 70);
+        frame.add(startButton);
+        frame.setSize(1600, 900);
+        frame.setLayout(null);
+
+    }
+=======
+        StartWindow();
+    }
+
+    public static Frame frame = new Frame(1600, 900, "French Flashcards");
+>>>>>>> 777b6f37a79b2d4d81ef7602daec18ea350f5c82
+=======
 
 
     public static void main(String[] args) throws IOException {
@@ -31,6 +52,7 @@ public class Main {
         FirstSide();
     }
 
+>>>>>>> 24c2b9caf4ce9e0e89f209ecd5a6053f0acab2e8
 
 
 
