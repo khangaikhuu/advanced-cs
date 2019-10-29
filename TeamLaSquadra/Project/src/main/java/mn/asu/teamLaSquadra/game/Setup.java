@@ -1,5 +1,7 @@
 package mn.asu.teamLaSquadra.game;
 
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
@@ -8,19 +10,28 @@ import javafx.scene.layout.*;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.net.URL;
 
 public class Setup {
-    public HBox characterSelect() throws FileNotFoundException {
 
-        HBox hLayout = new HBox();
+    private HBox hLayout;
+    private StackPane mainRoot;
+    private Prologue prologue = new Prologue();
+
+    public void characterSelect(StackPane root) throws FileNotFoundException {
+
+        hLayout = new HBox();
 
         Button HitlerButton = new Button();
+
         Button LockedStalinButton = new Button();
+
+
         hLayout.getChildren().add(HitlerButton);
         hLayout.getChildren().add(LockedStalinButton);
 
-        Image HitlerImage = new Image(new FileInputStream("C:/Users/G8/Desktop/advanced-cs/TeamLaSquadra/Project/src/main/resources/hitler.png"));
-        Image StalinImage = new Image(new FileInputStream("C:/Users/G8/Desktop/advanced-cs/TeamLaSquadra/Project/src/main/resources/stalin.png"));
+        Image HitlerImage = new Image(new FileInputStream("Project/src/main/resources/hitler.png"));
+        Image StalinImage = new Image(new FileInputStream("Project/src/main/resources/stalin.png"));
 
         ImageView HitlerView = new ImageView();
         ImageView StalinView = new ImageView();
@@ -39,6 +50,16 @@ public class Setup {
         LockedStalinButton.setGraphic(StalinView);
         hLayout.setAlignment(Pos.CENTER);
 
-        return hLayout;
+
+
+        root.getChildren().add(hLayout);
+
+        mainRoot = root;
+        HitlerButton.setOnAction(new EventHandler<ActionEvent>() {
+            public void handle(ActionEvent actionEvent) {
+                mainRoot.getChildren().remove(hLayout);
+                prologue.prologue(mainRoot);
+            }
+        });
     }
 }
