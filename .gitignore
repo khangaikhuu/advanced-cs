@@ -1,1 +1,9 @@
 *.class
+/AdvancedCS/Juan/Week-5/Homework17092019/nbproject/private/
+/AdvancedCS/Juan/Week-5/Homework17092019/build/
+/AdvancedCS/Juan/Week-5/Homework17092019/dist/
+/AdvancedCS/Juan/Week-5/buttonTest/nbproject/private/
+/AdvancedCS/Juan/Week-5/buttonTest/build/
+/AdvancedCS/Juan/Week-5/buttonTest/dist/
+*.vscode
+*.idea
