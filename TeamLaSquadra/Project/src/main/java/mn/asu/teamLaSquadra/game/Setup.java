@@ -10,6 +10,7 @@ import javafx.scene.layout.*;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.net.URL;
 
 public class Setup {
 
@@ -29,8 +30,8 @@ public class Setup {
         hLayout.getChildren().add(HitlerButton);
         hLayout.getChildren().add(LockedStalinButton);
 
-        Image HitlerImage = new Image(new FileInputStream("C:/Users/G8/Desktop/advanced-cs/TeamLaSquadra/Project/src/main/resources/hitler.png"));
-        Image StalinImage = new Image(new FileInputStream("C:/Users/G8/Desktop/advanced-cs/TeamLaSquadra/Project/src/main/resources/stalin.png"));
+        Image HitlerImage = new Image(new FileInputStream("Project/src/main/resources/hitler.png"));
+        Image StalinImage = new Image(new FileInputStream("Project/src/main/resources/stalin.png"));
 
         ImageView HitlerView = new ImageView();
         ImageView StalinView = new ImageView();
