@@ -7,30 +7,26 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Khangarid" />
-        <module name="Project (2) (org.springframework.boot)" />
         <module name="Anudari" />
         <module name="Anand" />
         <module name="Erkhembaatar" />
-        <module name="Project (1)" />
+        <module name="Project (2) (org.springframework.boot)" />
+        <module name="Mr.Khangai" />
         <module name="Jason" />
+        <module name="Chingun" />
         <module name="SungMin" />
         <module name="MrKhangai" />
-        <module name="AminErdene" />
         <module name="Khulan" />
         <module name="Hannah" />
+        <module name="Project (3)" />
         <module name="Hayeon" />
         <module name="Bilguundalai" />
-        <module name="Chingun" />
+        <module name="Project (1)" />
+        <module name="Project (2)" />
         <module name="Juan" />
-        <module name="Mr.Khangai" />
+        <module name="AminErdene" />
         <module name="Manal" />
         <module name="Tsengel" />
-      </profile>
-      <profile name="Annotation profile for advanced-cs" enabled="true">
-        <sourceOutputDir name="../../Team2/Project/target/generated-sources/annotations" />
-        <sourceTestOutputDir name="../../Team2/Project/target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <module name="Project (3)" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -50,7 +46,8 @@
       <module name="Manal" target="1.8" />
       <module name="Mr.Khangai" target="1.8" />
       <module name="MrKhangai" target="1.8" />
-      <module name="Project (1)" target="1.5" />
+      <module name="Project (1)" target="1.8" />
+      <module name="Project (2)" target="1.5" />
       <module name="Project (2) (org.springframework.boot)" target="1.8" />
       <module name="Project (3)" target="1.5" />
       <module name="SungMin" target="1.5" />
@@ -64,7 +61,7 @@
       <module name="TeamKhanKhuu" target="1.5" />
       <module name="TeamSlam" target="1.5" />
       <module name="TeamSLUM" target="1.6" />
-      <module name="Tsengel" target="1.5" />
+      <module name="Tsengel" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -82,7 +79,9 @@
       <module name="Manal" options="-parameters" />
       <module name="Mr.Khangai" options="-parameters" />
       <module name="MrKhangai" options="-parameters" />
+      <module name="Project (1)" options="-parameters" />
       <module name="Project (2) (org.springframework.boot)" options="-parameters" />
+      <module name="Tsengel" options="-parameters" />
     </option>
   </component>
 </project>
