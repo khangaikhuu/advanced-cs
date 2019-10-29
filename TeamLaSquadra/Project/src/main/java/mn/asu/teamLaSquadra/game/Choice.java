@@ -56,16 +56,16 @@ public class Choice {
         choiceOne.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent actionEvent) {
 
-                if (buttonCounter1==0 && buttonCounter2==0)
-                {
+                if (buttonCounter1 == 0 && buttonCounter2 == 0) {
+                    buttonCounter1++;
                     //first choice
                     Image sceneKampf;
-                try {
-                    nextChoice(sceneKampf = new Image(new FileInputStream("Project/src/main/resources/prison.png")),
-                            "You couldn't sleep last night, because you didn't write.", "just lie there", "exit");
-                } catch (FileNotFoundException e) {
-                    e.printStackTrace();
-                }
+                    try {
+                        nextChoice(sceneKampf = new Image(new FileInputStream("Project/src/main/resources/prison.png")),
+                                "You couldn't sleep last night, because you didn't write.", "just lie there", "exit");
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
+                    }
                 }
                 buttonCounter1++;
                 try {
@@ -78,16 +78,16 @@ public class Choice {
         choiceTwo.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent actionEvent) {
 
-                if(buttonCounter1==0&&buttonCounter2==0)
-                {
-                //second choice
-                Image sceneKampf;
-                try {
-                    nextChoice(sceneKampf = new Image(new FileInputStream("Project/src/main/resources/prison.png")),
-                            "You couldn't sleep last night, because you didn't write.", "just lie there", "exit");
-                } catch (FileNotFoundException e) {
-                    e.printStackTrace();
-                }
+                if (buttonCounter1 == 0 && buttonCounter2 == 0) {
+                    buttonCounter2++;
+                    //second choice
+                    Image sceneKampf;
+                    try {
+                        nextChoice(sceneKampf = new Image(new FileInputStream("Project/src/main/resources/prison.png")),
+                                "You couldn't sleep last night, because you didn't write.", "just lie there", "exit");
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
+                    }
                 }
                 buttonCounter2++;
                 try {
@@ -140,8 +140,18 @@ public class Choice {
                 e.printStackTrace();
             }
         }
+
+            if (buttonCounter1 == 0 && buttonCounter2 == 2) {
+                Image sceneDayPrison;
+                try {
+                    nextChoice(sceneDayPrison = new Image(new FileInputStream("Project/src/main/resources/dayprison.png")),
+                            "The next day has arrived.", "get out of bed", "Sleep");
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
     }
-}
 
 
 
