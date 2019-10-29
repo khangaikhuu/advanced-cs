@@ -1,4 +1,7 @@
+package mn.asu.crud.khulan;
+
 import javax.swing.*;
+
 /**
  * Write a description of class FrameButton here.
  *
