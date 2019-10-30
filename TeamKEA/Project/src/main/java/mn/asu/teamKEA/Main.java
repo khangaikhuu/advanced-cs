@@ -1,12 +1,12 @@
 package mn.asu.teamKEA;
 
 import mn.asu.aminerdene.ExampleBackground;
-import mn.asu.teamKEA.component.MainButton;
-import mn.asu.teamKEA.component.MainFrame;
-import mn.asu.teamKEA.component.MainPanel;
-import mn.asu.teamKEA.component.MainLabel;
+import mn.asu.teamKEA.component.*;
 
 import javax.swing.*;
+
+import java.awt.*;
+
 import java.io.IOException;
 
 
@@ -27,14 +27,9 @@ import java.io.IOException;
 
 public class Main {
 
-
-
-
     public static void main(String[] args) throws IOException {
         mainButton.buttonAction(mainButton.Button, "Word", "Definition");
     }
-
-
 
 
 
@@ -74,31 +69,20 @@ public class Main {
 
 
 
-    public static ImageIcon paris = new ImageIcon("C:\\Users\\G12\\Pictures\\paris.jpg");
 
-
-
-    public static ExampleBackground startBackground;
-
-    static {
-        try {
-            startBackground = new ExampleBackground("static/Pariss.JPG");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+    public static UsedImageIcons allIcons = new UsedImageIcons();
 
 
 
 
 
-    public static MainButton mainButton = new MainButton(0, 0, 1600, 900, "Start", paris);
+    public static MainButton mainButton = new MainButton(0, 0, 960, 720, "Start", allIcons.chanter);
 
    // public static MainLabel startLabel = new MainLabel("Lets learn French", 450, -100, 1000, 700);
 
 
     public static MainPanel mainPanel = new MainPanel(mainButton.Button /* startLabel.Label*/, 1600, 900);
-    public static MainFrame mainFrame = new MainFrame(mainPanel.Panel ,1600, 900, "French Flashcards");
+    public static MainFrame mainFrame = new MainFrame(mainPanel.Panel ,1600 , 900 ,"French Flashcards");
 
    // public static MainLabel firstSideLabel = new MainLabel("French Word", 450, -100, 1000, 700);
 
