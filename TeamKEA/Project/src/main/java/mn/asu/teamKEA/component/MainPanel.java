@@ -45,11 +45,6 @@ public class MainPanel {
         Panel.repaint();
     }
 
-    public void redraw() {
-       // Panel.removeAll();
-        //Panel.add(Button);
-        Panel.validate();
-        Panel.repaint();
-    }
+
 
 }

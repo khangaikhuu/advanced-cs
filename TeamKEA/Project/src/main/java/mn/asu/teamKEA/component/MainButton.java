@@ -11,34 +11,47 @@ public class MainButton {
 
     public static boolean nextPanel = false;
     public JButton Button = new JButton();
-    public MainButton(int x, int y, int width , int height, String name)
+    public MainButton(int x, int y, int width , int height, String name, ImageIcon imageIcon)
     {
         Button.setBounds(x, y, width, height);
         Button.setText(name);
-        Button.setOpaque(false);
+        Button.setIcon(imageIcon);
     }
 
 
 
 
+    public static int i = 2;
 
-    public void buttonAction(JButton button , JLabel label)
-    {
-        Button.addActionListener(
-                actionEvent -> mainPanel.redraw(button , label)
-        );
-    }
+    public void buttonAction(JButton button, String text1, String text2) {
 
-    public void buttonAction(JButton button, String text ) {
+
         Button.addActionListener(new ActionListener() {
 
+
+
             public void actionPerformed(ActionEvent e) {
-                button.setText(text);
-                mainPanel.redraw();
-                nextPanel = true;
+
+                if(i%2==0)
+                {
+                    nextPanel = true;
+                    button.setText(text1);
+                    mainPanel.Panel.revalidate();
+                    mainPanel.Panel.repaint();
+                }
+                else
+                {
+
+                    nextPanel = true;
+                    button.setText(text2);
+                    mainPanel.Panel.revalidate();
+                    mainPanel.Panel.repaint();
+                }
+                i++;
             }
         });
     }
+
 
 
 }

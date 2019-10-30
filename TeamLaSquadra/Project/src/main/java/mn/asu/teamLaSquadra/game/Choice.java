@@ -23,13 +23,15 @@ public class Choice {
     private Button choiceTwo;
     private int buttonCounter1 = 0;
     private int buttonCounter2 = 0;
+    private ChoiceFinder choiceFinder;
+    private Boolean[] boolChoice = new Boolean[8] ;
 
     public void firstChoice(StackPane root) throws FileNotFoundException {
 
         VBox vChoice = new VBox();
         HBox hLayout = new HBox();
-        choiceOne = new Button("Write more for your book, Mein Kampf");
-        choiceTwo = new Button("Take the day off, and hit the sack");
+        choiceOne = new Button("Write");
+        choiceTwo = new Button("Sleep");
         Label storyImage = new Label();
         storyInfo = new Label("It is another quiet day. Most of the guards are out, and your cellmates are sleeping. What do you do?");
         Image firstScene = new Image(new FileInputStream("Project/src/main/resources/prison.png"));
@@ -56,20 +58,21 @@ public class Choice {
         choiceOne.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent actionEvent) {
 
-                if (buttonCounter1==0 && buttonCounter2==0)
-                {
+                if (boolChoice[0]) {
+
                     //first choice
                     Image sceneKampf;
-                try {
-                    nextChoice(sceneKampf = new Image(new FileInputStream("Project/src/main/resources/prison.png")),
-                            "You couldn't sleep last night, because you didn't write.", "just lie there", "exit");
-                } catch (FileNotFoundException e) {
-                    e.printStackTrace();
-                }
+                    try {
+                        nextChoice(sceneKampf = new Image(new FileInputStream("Project/src/main/resources/prison.png")),
+                                "You have added a page on your book.", "exit", "sleep");
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
+                    }
+                    boolChoice[0]=false;
                 }
                 buttonCounter1++;
                 try {
-                    thirdChoice();
+                    choiceFinder.choiceSelect(boolChoice);
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 }
@@ -78,20 +81,20 @@ public class Choice {
         choiceTwo.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent actionEvent) {
 
-                if(buttonCounter1==0&&buttonCounter2==0)
-                {
-                //second choice
-                Image sceneKampf;
-                try {
-                    nextChoice(sceneKampf = new Image(new FileInputStream("Project/src/main/resources/prison.png")),
-                            "You couldn't sleep last night, because you didn't write.", "just lie there", "exit");
-                } catch (FileNotFoundException e) {
-                    e.printStackTrace();
-                }
+                if (boolChoice[1]) {
+                    //second choice
+                    Image sceneKampf;
+                    try {
+                        nextChoice(sceneKampf = new Image(new FileInputStream("Project/src/main/resources/prison.png")),
+                                "You couldn't sleep last night, because you didn't write.", "just lie there", "exit");
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
+                    }
+                    boolChoice[1]=false;
                 }
                 buttonCounter2++;
                 try {
-                    thirdChoice();
+                    choiceFinder.choiceSelect(boolChoice);
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 }
@@ -99,7 +102,7 @@ public class Choice {
         });
     }
 
-    private void nextChoice(Image nextScene, String textInfo, String buttonDes1, String buttonDes2) throws FileNotFoundException {
+    public void nextChoice(Image nextScene, String textInfo, String buttonDes1, String buttonDes2) throws FileNotFoundException {
 
         sceneView.setImage(nextScene);
         storyInfo.setText(textInfo);
@@ -107,42 +110,7 @@ public class Choice {
         choiceTwo.setText(buttonDes2);
     }
 
-    private void thirdChoice() throws FileNotFoundException {
-
-
-        if (buttonCounter1 == 1 && buttonCounter2 == 0) {
-            Image sceneKampf;
-            try {
-                nextChoice(sceneKampf = new Image(new FileInputStream("Project/src/main/resources/prison.png")),
-                        "The next day in prison is here.", "get out of bed", "exit");
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            }
-        }
-
-        if (buttonCounter1 == 0 && buttonCounter2 == 1) {
-            Image sceneKampf;
-            try {
-                nextChoice(sceneKampf = new Image(new FileInputStream("Project/src/main/resources/prison.png")),
-                        "You have added a page on your book.", "exit", "sleep");
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            }
-        }
-
-
-        if (buttonCounter1 == 0 && buttonCounter2 == 2) {
-            Image sceneKampf;
-            try {
-                nextChoice(sceneKampf = new Image(new FileInputStream("Project/src/main/resources/prison.png")),
-                        "just lie there.", "just lie there", "exit");
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            }
-        }
-    }
 }
-
 
 
 

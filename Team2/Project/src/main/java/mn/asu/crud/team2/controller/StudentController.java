@@ -36,6 +36,13 @@ public class StudentController {
         model.addAttribute("students", studentRepository.findAll());
         return "index";
     }
+    @GetMapping("edit/{id}")
+    public String showUpdateForm(@PathVariable("id") long id, Model model) {
+        Student student = studentRepository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("Invalid student Id:" + id));
+        model.addAttribute("student", student);
+        return "update-student";
+    }
 
 
     @PostMapping("update/{id}")
