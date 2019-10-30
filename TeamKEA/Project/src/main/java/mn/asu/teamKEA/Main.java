@@ -5,6 +5,8 @@ import mn.asu.teamKEA.component.MainButton;
 import mn.asu.teamKEA.component.MainFrame;
 import mn.asu.teamKEA.component.MainPanel;
 import mn.asu.teamKEA.component.MainLabel;
+
+import javax.swing.*;
 import java.io.IOException;
 
 
@@ -24,35 +26,14 @@ import java.io.IOException;
 
 
 public class Main {
-<<<<<<< HEAD
-    public static void main(String[] args) {
-<<<<<<< HEAD
-        JFrame frame = new JFrame();
-        JLabel title = new JLabel("Let's Learn French");
-        title.setBounds(450, -100, 1000, 700);
-        frame.add(title);
-        JButton startButton = new JButton("Start");
-        startButton.setBounds(430, 550, 150, 70);
-        frame.add(startButton);
-        frame.setSize(1600, 900);
-        frame.setLayout(null);
 
-    }
-=======
-        StartWindow();
-    }
 
-    public static Frame frame = new Frame(1600, 900, "French Flashcards");
->>>>>>> 777b6f37a79b2d4d81ef7602daec18ea350f5c82
-=======
 
 
     public static void main(String[] args) throws IOException {
-        mainButton.buttonAction(mainButton.Button, "Word", "Definition"/*firstSideLabel.Label*/);
-        FirstSide();
+        mainButton.buttonAction(mainButton.Button, "Word", "Definition");
     }
 
->>>>>>> 24c2b9caf4ce9e0e89f209ecd5a6053f0acab2e8
 
 
 
@@ -93,6 +74,7 @@ public class Main {
 
 
 
+    public static ImageIcon paris = new ImageIcon("C:\\Users\\G12\\Pictures\\paris.jpg");
 
 
 
@@ -110,18 +92,7 @@ public class Main {
 
 
 
-
-
-
-
-    // Static Fields
-    // Static Fields
-    // Static Fields
-    // Static Fields
-    // Static Fields
-
-
-    public static MainButton mainButton = new MainButton(430, 550, 150, 70, "Start");
+    public static MainButton mainButton = new MainButton(0, 0, 1600, 900, "Start", paris);
 
    // public static MainLabel startLabel = new MainLabel("Lets learn French", 450, -100, 1000, 700);
 
@@ -132,9 +103,4 @@ public class Main {
    // public static MainLabel firstSideLabel = new MainLabel("French Word", 450, -100, 1000, 700);
 
    // public static MainLabel secondSideLabel = new MainLabel("Word Definition", 450, -100, 1000, 700);
-    // Static Fields
-    // Static Fields
-    // Static Fields
-    // Static Fields
-    // Static Fields
 }
