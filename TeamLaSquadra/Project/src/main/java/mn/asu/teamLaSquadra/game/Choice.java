@@ -24,6 +24,7 @@ public class Choice {
     private int buttonCounter1 = 0;
     private int buttonCounter2 = 0;
     private ChoiceFinder choiceFinder;
+    private Boolean[] boolChoice = new Boolean[8] ;
 
     public void firstChoice(StackPane root) throws FileNotFoundException {
 
@@ -57,7 +58,7 @@ public class Choice {
         choiceOne.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent actionEvent) {
 
-                if (buttonCounter1 == 0 && buttonCounter2 == 0) {
+                if (boolChoice[0]) {
 
                     //first choice
                     Image sceneKampf;
@@ -67,10 +68,11 @@ public class Choice {
                     } catch (FileNotFoundException e) {
                         e.printStackTrace();
                     }
+                    boolChoice[0]=false;
                 }
                 buttonCounter1++;
                 try {
-                    choiceFinder.choiceSelect();
+                    choiceFinder.choiceSelect(boolChoice);
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 }
@@ -79,7 +81,7 @@ public class Choice {
         choiceTwo.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent actionEvent) {
 
-                if (buttonCounter1 == 0 && buttonCounter2 == 1) {
+                if (boolChoice[1]) {
                     //second choice
                     Image sceneKampf;
                     try {
@@ -88,10 +90,11 @@ public class Choice {
                     } catch (FileNotFoundException e) {
                         e.printStackTrace();
                     }
+                    boolChoice[1]=false;
                 }
                 buttonCounter2++;
                 try {
-                    choiceFinder.choiceSelect();
+                    choiceFinder.choiceSelect(boolChoice);
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 }
