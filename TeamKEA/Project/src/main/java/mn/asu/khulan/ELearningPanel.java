@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-=======
 
-package mn.asu.khulan;
 /*package mn.asu.khulan;
->>>>>>> 970e113cb8dd13df5a0c137457298e61cc35679b
 
 import javax.swing.*;
 
@@ -59,7 +55,3 @@ public class ELearningPanel {
     }
 }
 */
-<<<<<<< HEAD
-
-=======
->>>>>>> 970e113cb8dd13df5a0c137457298e61cc35679b
