@@ -7,7 +7,10 @@ import mn.asu.teamKEA.component.MainPanel;
 import mn.asu.teamKEA.component.MainLabel;
 
 import javax.swing.*;
+<<<<<<< HEAD
 import java.awt.*;
+=======
+>>>>>>> 8c91623c7507b561c5eb5c8c7ddea080a24bfc11
 import java.io.IOException;
 
 
@@ -47,11 +50,11 @@ public class Main {
 
 
 =======
-
+1g
 
 
     public static void main(String[] args) throws IOException {
-        mainButton.buttonAction(mainButton.Button, "Word", "Definition"/*firstSideLabel.Label*/);
+        mainButton.buttonAction(mainButton.Button, "Word", "Definition");
     }
 
 >>>>>>> 970e113cb8dd13df5a0c137457298e61cc35679b
@@ -95,6 +98,7 @@ public class Main {
 
 
 
+    public static ImageIcon paris = new ImageIcon("C:\\Users\\G12\\Pictures\\paris.jpg");
 
 
 
@@ -112,7 +116,7 @@ public class Main {
 
 
 
-    public static MainButton mainButton = new MainButton(0, 0, 1600, 900, "Start");
+    public static MainButton mainButton = new MainButton(0, 0, 1600, 900, "Start", paris);
 
    // public static MainLabel startLabel = new MainLabel("Lets learn French", 450, -100, 1000, 700);
 

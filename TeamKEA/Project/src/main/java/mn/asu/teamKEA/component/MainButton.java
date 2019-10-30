@@ -11,10 +11,11 @@ public class MainButton {
 
     public static boolean nextPanel = false;
     public JButton Button = new JButton();
-    public MainButton(int x, int y, int width , int height, String name)
+    public MainButton(int x, int y, int width , int height, String name, ImageIcon imageIcon)
     {
         Button.setBounds(x, y, width, height);
         Button.setText(name);
+        Button.setIcon(imageIcon);
     }
 
 

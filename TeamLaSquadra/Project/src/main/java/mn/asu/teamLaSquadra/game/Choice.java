@@ -23,6 +23,7 @@ public class Choice {
     private Button choiceTwo;
     private int buttonCounter1 = 0;
     private int buttonCounter2 = 0;
+    private ChoiceFinder choiceFinder;
 
     public void firstChoice(StackPane root) throws FileNotFoundException {
 
@@ -69,7 +70,7 @@ public class Choice {
                 }
                 buttonCounter1++;
                 try {
-                    thirdChoice();
+                    choiceFinder.choiceSelect();
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 }
@@ -90,7 +91,7 @@ public class Choice {
                 }
                 buttonCounter2++;
                 try {
-                    thirdChoice();
+                    choiceFinder.choiceSelect();
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 }
@@ -98,7 +99,7 @@ public class Choice {
         });
     }
 
-    private void nextChoice(Image nextScene, String textInfo, String buttonDes1, String buttonDes2) throws FileNotFoundException {
+    public void nextChoice(Image nextScene, String textInfo, String buttonDes1, String buttonDes2) throws FileNotFoundException {
 
         sceneView.setImage(nextScene);
         storyInfo.setText(textInfo);
@@ -106,43 +107,7 @@ public class Choice {
         choiceTwo.setText(buttonDes2);
     }
 
-    private void thirdChoice() throws FileNotFoundException {
-
-
-        if (buttonCounter1 == 1 && buttonCounter2 == 1) {
-            Image sceneKampf;
-            try {
-                nextChoice(sceneKampf = new Image(new FileInputStream("Project/src/main/resources/prison.png")),
-                        "The next day in prison is here.", "get out of bed", "exit");
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            }
-            System.out.println(buttonCounter1);
-        }
-
-            if (buttonCounter1 == 2  && buttonCounter2 == 1) {
-                Image sceneDayPrison;
-                try {
-                    nextChoice(sceneDayPrison = new Image(new FileInputStream("Project/src/main/resources/dayprison.jpg")),
-                            "The guard is calling you out.", "yes", "exit");
-                } catch (FileNotFoundException e) {
-                    e.printStackTrace();
-                }
-            }
-
-        if (buttonCounter1 == 3  && buttonCounter2 == 1) {
-            Image sceneDayPrison;
-            try {
-                nextChoice(sceneDayPrison = new Image(new FileInputStream("Project/src/main/resources/leavingPrison.jpg")),
-                        "The Bavarian Supreme Cour has pardoned your treason, " +
-                                "/n and you are released from prison after only a year, in 20 December 1924.", "Pack up your stuff and leave", "Leave");
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            }
-        }
-        }
-    }
-
+}
 
 
 
