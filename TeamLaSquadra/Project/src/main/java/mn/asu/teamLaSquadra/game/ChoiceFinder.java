@@ -6,7 +6,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 
 public class ChoiceFinder {
-    public void choiceSelect() throws FileNotFoundException {
+    public void choiceSelect(boolean boolChoice[]) throws FileNotFoundException {
 
 
         if (buttonCounter1 == 1 && buttonCounter2 == 1) {
@@ -41,5 +41,6 @@ public class ChoiceFinder {
             }
         }
     }
+
 }
 }
