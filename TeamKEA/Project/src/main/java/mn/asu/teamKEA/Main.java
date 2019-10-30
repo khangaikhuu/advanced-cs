@@ -11,8 +11,24 @@ import java.awt.*;
 import java.io.IOException;
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 public class Main {
 
+<<<<<<< HEAD
     public static void main(String[] args) {
         JFrame frame = new JFrame();
         JLabel title = new JLabel("Let's Learn French");
@@ -24,6 +40,57 @@ public class Main {
         frame.setSize(1600, 900);
         frame.setLayout(null);
     }
+
+
+
+
+
+
+=======
+
+
+
+    public static void main(String[] args) throws IOException {
+        mainButton.buttonAction(mainButton.Button, "Word", "Definition"/*firstSideLabel.Label*/);
+    }
+
+>>>>>>> 970e113cb8dd13df5a0c137457298e61cc35679b
+
+
+
+
+
+    public static void FirstSide() {
+         if(MainButton.nextPanel) {
+             MainButton.nextPanel = false;
+            SecondSide();
+        }
+
+    }
+
+
+
+    public static void SecondSide() {
+
+
+        if(MainButton.nextPanel) {
+
+            MainButton.nextPanel = false;
+            FirstSide();
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -44,73 +111,9 @@ public class Main {
 
 
 
-    public static void FirstSide() {
-        mainButton.buttonAction(mainButton.Button, "Word" /*firstSideLabel.Label*/);
-         if(MainButton.nextPanel) {
-             MainButton.nextPanel = false;
-            SecondSide();
-        }
 
-    }
+    public static MainButton mainButton = new MainButton(0, 0, 1600, 900, "Start");
 
-
-
-    public static void SecondSide() {
-
-        mainButton.buttonAction(mainButton.Button, "Definition"  /*secondSideLabel.Label*/);
-        if(MainButton.nextPanel) {
-
-            MainButton.nextPanel = false;
-            FirstSideRepeat();
-        }
-    }
-
-    public static void FirstSideRepeat()
-    {
-
-        mainButton.buttonAction(mainButton.Button, "Word" /*firstSideLabel.Label*/);
-        if(MainButton.nextPanel) {
-            MainButton.nextPanel = false;
-            SecondSide();
-        }
-
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // Static Fields
-    // Static Fields
-    // Static Fields
-    // Static Fields
-    // Static Fields
-
-
-    public static MainButton mainButton = new MainButton(430, 550, 150, 70, "Start");
    // public static MainLabel startLabel = new MainLabel("Lets learn French", 450, -100, 1000, 700);
 
 
@@ -120,9 +123,4 @@ public class Main {
    // public static MainLabel firstSideLabel = new MainLabel("French Word", 450, -100, 1000, 700);
 
    // public static MainLabel secondSideLabel = new MainLabel("Word Definition", 450, -100, 1000, 700);
-    // Static Fields
-    // Static Fields
-    // Static Fields
-    // Static Fields
-    // Static Fields
 }

@@ -17,6 +17,12 @@ public class ExampleBackground extends JPanel {
         backgroundImage = ImageIO.read(file);
         Dimension size = new Dimension(1600, 900);
 
+        backgroundImage = ImageIO.read(new File(fileName));
+        Dimension size = new Dimension(300, 300);
+        File file = new File(getClass().getClassLoader().getResource(fileName).getFile());
+        backgroundImage = ImageIO.read(file);
+        Dimension size2 = new Dimension(1600, 900);
+
         setPreferredSize(size);
         setMinimumSize(size);
         setMaximumSize(size);
