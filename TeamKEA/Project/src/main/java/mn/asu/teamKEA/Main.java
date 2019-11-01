@@ -80,6 +80,7 @@ public class Main {
         }
     }
 
+
     public static MainButton mainButton = new MainButton(0, 0, 960, 720, "Start", allIcons.chanter);
     public static MainPanel mainPanel = new MainPanel(mainButton.Button /* startLabel.Label*/, 1600, 900);
     public static MainFrame mainFrame = new MainFrame(mainPanel.Panel ,1600 , 900 ,"French Flashcards");
