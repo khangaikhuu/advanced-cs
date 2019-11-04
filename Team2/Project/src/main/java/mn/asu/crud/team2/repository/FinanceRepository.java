@@ -8,5 +8,4 @@ import java.util.List;
 
 @Repository
 public interface FinanceRepository extends CrudRepository<FinanceEntity, Long> {
-    List<FinanceEntity> findByName(String name);
 }
