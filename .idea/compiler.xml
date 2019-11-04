@@ -6,27 +6,38 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Khangarid" />
+        <module name="Chingun" />
+        <module name="Manal" />
         <module name="Anudari" />
         <module name="Anand" />
         <module name="Erkhembaatar" />
         <module name="Project (2) (org.springframework.boot)" />
-        <module name="Mr.Khangai" />
+        <module name="Khangarid" />
         <module name="Jason" />
-        <module name="Chingun" />
         <module name="SungMin" />
         <module name="MrKhangai" />
+        <module name="AminErdene" />
         <module name="Khulan" />
         <module name="Hannah" />
-        <module name="Project (3)" />
         <module name="Hayeon" />
         <module name="Bilguundalai" />
         <module name="Project (1)" />
-        <module name="Project (2)" />
         <module name="Juan" />
-        <module name="AminErdene" />
-        <module name="Manal" />
+        <module name="Mr.Khangai" />
+        <module name="Project (3)" />
         <module name="Tsengel" />
+      </profile>
+      <profile name="Annotation profile for advanced-cs" enabled="true">
+        <sourceOutputDir name="../../Team2/Project/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../Team2/Project/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Project (2)" />
+      </profile>
+      <profile name="Annotation profile for Project (4)" enabled="true">
+        <sourceOutputDir name="../../TeamKEA/Project/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../TeamKEA/Project/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Project (4)" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -46,10 +57,11 @@
       <module name="Manal" target="1.8" />
       <module name="Mr.Khangai" target="1.8" />
       <module name="MrKhangai" target="1.8" />
-      <module name="Project (1)" target="1.8" />
-      <module name="Project (2)" target="1.5" />
+      <module name="Project (1)" target="1.5" />
+      <module name="Project (2)" target="1.8" />
       <module name="Project (2) (org.springframework.boot)" target="1.8" />
       <module name="Project (3)" target="1.5" />
+      <module name="Project (4)" target="8" />
       <module name="SungMin" target="1.5" />
       <module name="Team2" target="1.5" />
       <module name="team2" target="1.6" />
@@ -80,6 +92,7 @@
       <module name="Mr.Khangai" options="-parameters" />
       <module name="MrKhangai" options="-parameters" />
       <module name="Project (1)" options="-parameters" />
+      <module name="Project (2)" options="-parameters" />
       <module name="Project (2) (org.springframework.boot)" options="-parameters" />
       <module name="Tsengel" options="-parameters" />
     </option>

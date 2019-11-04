@@ -1,6 +1,7 @@
 package mn.asu.teamKEA;
 
 import mn.asu.aminerdene.ExampleBackground;
+import mn.asu.persistence.Words;
 import mn.asu.teamKEA.component.*;
 
 import javax.swing.*;
@@ -70,21 +71,38 @@ public class Main {
 
 
 
-    public static UsedImageIcons allIcons = new UsedImageIcons();
+    public static UsedImageIcons allIcons;
+    private static Words word1 = new Words(1, "hello", "bonjour", "greeting", "/static/Pariss.JPG");
+    private static Words word2 = new Words(2, "Good morning", "bonjour", "greeting", "/static/Pariss.JPG");
+    private static Words word3 = new Words(3, "Test", "bonjour", "greeting", "/static/Pariss.JPG");
 
-
-
+    static {
+        try {
+            allIcons = new UsedImageIcons();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
 
     public static MainButton mainButton = new MainButton(0, 0, 960, 720, "Start", allIcons.chanter);
-
-   // public static MainLabel startLabel = new MainLabel("Lets learn French", 450, -100, 1000, 700);
-
-
     public static MainPanel mainPanel = new MainPanel(mainButton.Button /* startLabel.Label*/, 1600, 900);
     public static MainFrame mainFrame = new MainFrame(mainPanel.Panel ,1600 , 900 ,"French Flashcards");
 
+
+
+
+
+
+
+
+
+
+
+
    // public static MainLabel firstSideLabel = new MainLabel("French Word", 450, -100, 1000, 700);
 
+
+    // public static MainLabel startLabel = new MainLabel("Lets learn French", 450, -100, 1000, 700);
    // public static MainLabel secondSideLabel = new MainLabel("Word Definition", 450, -100, 1000, 700);
 }
