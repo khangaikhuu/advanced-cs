@@ -1,6 +1,7 @@
 package mn.asu.teamKEA;
 
 import mn.asu.aminerdene.ExampleBackground;
+import mn.asu.persistence.Words;
 import mn.asu.teamKEA.component.*;
 
 import javax.swing.*;
@@ -71,6 +72,9 @@ public class Main {
 
 
     public static UsedImageIcons allIcons;
+    private static Words word1 = new Words(1, "hello", "bonjour", "greeting", "/static/Pariss.JPG");
+    private static Words word2 = new Words(2, "Good morning", "bonjour", "greeting", "/static/Pariss.JPG");
+    private static Words word3 = new Words(3, "Test", "bonjour", "greeting", "/static/Pariss.JPG");
 
     static {
         try {
