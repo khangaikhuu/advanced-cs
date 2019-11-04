@@ -12,13 +12,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class FinanceController {
 
     private final FinanceRepository financeRepository;
+
     @Autowired
     public FinanceController(FinanceRepository financeRepository) {
         this.financeRepository = financeRepository;
     }
+
     @GetMapping("/index")
     public String showFinancePage(Model model) {
         model.addAttribute("finances", financeRepository.findAll());
         return "Finance";
+    }
+
+    @GetMapping("/crud")
+    public String crudFinancePage(Model model) {
+        model.addAttribute("finances", financeRepository.findAll());
+        return "CRUDFinance";
     }
 }

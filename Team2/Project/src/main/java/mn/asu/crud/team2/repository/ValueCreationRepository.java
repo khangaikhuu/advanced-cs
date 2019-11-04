@@ -8,5 +8,4 @@ import java.util.List;
 
 @Repository
 public interface ValueCreationRepository extends CrudRepository<ValueCreationEntity, Long> {
-    List<ValueCreationEntity> findByName(String name);
 }
