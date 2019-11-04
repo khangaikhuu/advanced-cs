@@ -12,6 +12,7 @@ import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
+import javafx.stage.Stage;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -24,10 +25,19 @@ public class Choice {
     private int buttonCounter1 = 0;
     private int buttonCounter2 = 0;
     private ChoiceFinder choiceFinder;
-    private Boolean[] boolChoice = new Boolean[8] ;
+    private boolean boolChoice1 = true;
+    private boolean boolChoice2 = false;
+    private boolean boolChoice3 = false;
+    private boolean boolChoice4 = false;
+    private boolean boolChoice5 = false;
+    private boolean boolChoice6 = false;
+    private boolean boolChoice7 = false;
+    private boolean boolChoice8 = false;
+    private boolean boolChoice9 = false;
+
+
 
     public void firstChoice(StackPane root) throws FileNotFoundException {
-
         VBox vChoice = new VBox();
         HBox hLayout = new HBox();
         choiceOne = new Button("Write");
@@ -53,12 +63,12 @@ public class Choice {
         vChoice.getChildren().addAll(storyImage, storyInfo, hLayout);
         vChoice.setAlignment(Pos.CENTER);
         root.getChildren().add(vChoice);
-
         //button handler
         choiceOne.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent actionEvent) {
 
-                if (boolChoice[0]) {
+
+                if (boolChoice1) {
 
                     //first choice
                     Image sceneKampf;
@@ -68,11 +78,18 @@ public class Choice {
                     } catch (FileNotFoundException e) {
                         e.printStackTrace();
                     }
-                    boolChoice[0]=false;
+                    boolChoice1=false;
                 }
-                buttonCounter1++;
+
+                if(boolChoice1==false)
+                {
+                    boolChoice3=true;
+                }
+
+
+
                 try {
-                    choiceFinder.choiceSelect(boolChoice);
+                    choiceFinder.choiceSelect(boolChoice1,boolChoice2,boolChoice3,boolChoice4,boolChoice5,boolChoice6,boolChoice7,boolChoice8,boolChoice9,Button choiceOne);
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 }
@@ -81,7 +98,7 @@ public class Choice {
         choiceTwo.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent actionEvent) {
 
-                if (boolChoice[1]) {
+                if (boolChoice2) {
                     //second choice
                     Image sceneKampf;
                     try {
@@ -90,11 +107,19 @@ public class Choice {
                     } catch (FileNotFoundException e) {
                         e.printStackTrace();
                     }
-                    boolChoice[1]=false;
+                    boolChoice2=false;
                 }
-                buttonCounter2++;
+
+                if(boolChoice1==false)
+                {
+                    boolChoice4=true;
+                }
+
+
+
+
                 try {
-                    choiceFinder.choiceSelect(boolChoice);
+                    choiceFinder.choiceSelect(boolChoice1,boolChoice2,boolChoice3,boolChoice4,boolChoice5,boolChoice6,boolChoice7,boolChoice8,boolChoice9,Button choiceTwo);
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 }
