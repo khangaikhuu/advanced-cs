@@ -23,4 +23,11 @@ public class MarketingController {
         model.addAttribute("marketings", marketingRepository.findAll());
         return "Marketing";
     }
+
+    @GetMapping("/crud")
+    public String crudMarketingPage(Model model) {
+        model.addAttribute("marketings", marketingRepository.findAll());
+        return "CRUDMarketing";
+    }
+
 }

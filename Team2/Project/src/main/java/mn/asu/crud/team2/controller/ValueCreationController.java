@@ -23,4 +23,10 @@ public class ValueCreationController {
         model.addAttribute("valueCreations", valueCreationRepository.findAll());
         return "ValueCreation";
     }
+
+    @GetMapping("/crud")
+    public String crudValueCreationPage(Model model) {
+        model.addAttribute("valueCreations", valueCreationRepository.findAll());
+        return "CRUDValueCreation";
+    }
 }
