@@ -1,5 +1,6 @@
 package mn.asu.crud.team2.controller;
 
+import mn.asu.crud.team2.entity.BusinessEntity;
 import mn.asu.crud.team2.repository.BusinessRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -28,5 +29,10 @@ public class businessController {
     public String crudIndexPage(Model model) {
         model.addAttribute("indexs", businessRepository.findAll());
         return "CRUDIndex";
+    }
+
+    @GetMapping("/signup")
+    public String showSignUpForm(BusinessEntity businessEntity) {
+        return "Add-Business";
     }
 }

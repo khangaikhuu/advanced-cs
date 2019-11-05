@@ -23,7 +23,7 @@ public class MainButton {
 
     public static int i = 2;
 
-    public void buttonAction(JButton button, String text1, String text2) {
+    public void buttonAction(JButton button, String text1, String text2, ImageIcon imageIcon1, ImageIcon imageIcon2) {
 
 
         Button.addActionListener(new ActionListener() {
@@ -36,6 +36,7 @@ public class MainButton {
                 {
                     nextPanel = true;
                     button.setText(text1);
+                    button.setIcon(imageIcon1);
                     mainPanel.Panel.revalidate();
                     mainPanel.Panel.repaint();
                 }
@@ -44,6 +45,7 @@ public class MainButton {
 
                     nextPanel = true;
                     button.setText(text2);
+                    button.setIcon(imageIcon2);
                     mainPanel.Panel.revalidate();
                     mainPanel.Panel.repaint();
                 }
