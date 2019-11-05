@@ -18,34 +18,36 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 
 public class Choice {
+
     private ImageView sceneView;
     private Label storyInfo;
     private Button choiceOne;
     private Button choiceTwo;
+    private Label storyImage;
     private int buttonCounter1 = 0;
     private int buttonCounter2 = 0;
-    private ChoiceFinder choiceFinder;
-    private boolean boolChoice1 = true;
-    private boolean boolChoice2 = false;
-    private boolean boolChoice3 = false;
-    private boolean boolChoice4 = false;
-    private boolean boolChoice5 = false;
-    private boolean boolChoice6 = false;
-    private boolean boolChoice7 = false;
-    private boolean boolChoice8 = false;
-    private boolean boolChoice9 = false;
+    private int pressed;
+    private int pres;
+    private VBox vChoice;
+    private HBox hLayout;
+    public Choice()
+    {
+        sceneView = new ImageView();
+        storyInfo = new Label("It is another quiet day. Most of the guards are out, and your cellmates are sleeping. What do you do?");
+        choiceOne = new Button("Write");
+        choiceTwo = new Button("Sleep");
+        storyImage = new Label();
+        pressed = 0;
+        vChoice = new VBox();
+        hLayout  = new HBox();
+    }
+
 
 
 
     public void firstChoice(StackPane root) throws FileNotFoundException {
-        VBox vChoice = new VBox();
-        HBox hLayout = new HBox();
-        choiceOne = new Button("Write");
-        choiceTwo = new Button("Sleep");
-        Label storyImage = new Label();
-        storyInfo = new Label("It is another quiet day. Most of the guards are out, and your cellmates are sleeping. What do you do?");
+
         Image firstScene = new Image(new FileInputStream("Project/src/main/resources/prison.png"));
-        sceneView = new ImageView();
 
         storyInfo.setFont(Font.font("Arial", FontWeight.BOLD, 30));
         choiceOne.setFont(Font.font("Arial", FontWeight.BOLD, 30));
@@ -66,63 +68,65 @@ public class Choice {
         //button handler
         choiceOne.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent actionEvent) {
+                if(pressed==0)
+                {
+                    pressed=1;
+                }
 
+                switch (pres) {
+                    case 1:
+                        pressed = 3;
+                        break;
+                    case 2:
+                        pressed = 4;
+                        break;
+                    case 4:
+                        pressed = 6;
+                        break;
+                    case 6:
+                        pressed = 8;
+                        break;
+                }
 
-                if (boolChoice1) {
-
-                    //first choice
-                    Image sceneKampf;
                     try {
-                        nextChoice(sceneKampf = new Image(new FileInputStream("Project/src/main/resources/prison.png")),
-                                "You have added a page on your book.", "exit", "sleep");
+                        pres = choiceSelect(pressed, choiceOne);
                     } catch (FileNotFoundException e) {
                         e.printStackTrace();
                     }
-                    boolChoice1=false;
-                }
-
-                if(boolChoice1==false)
-                {
-                    boolChoice3=true;
-                }
 
 
-
-                try {
-                    choiceFinder.choiceSelect(boolChoice1,boolChoice2,boolChoice3,boolChoice4,boolChoice5,boolChoice6,boolChoice7,boolChoice8,boolChoice9,Button choiceOne);
-                } catch (FileNotFoundException e) {
-                    e.printStackTrace();
-                }
             }
         });
         choiceTwo.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent actionEvent) {
 
-                if (boolChoice2) {
-                    //second choice
-                    Image sceneKampf;
+                if(pressed==0)
+                {
+                    pressed=2;
+                }
+
+                switch (pres) {
+                    case 1:
+                        pressed = 4;
+                        break;
+                    case 2:
+                        pressed = 5;
+                        break;
+                    case 4:
+                        pressed = 7;
+                        break;
+                    case 6:
+                        pressed = 9;
+                        break;
+                }
+
                     try {
-                        nextChoice(sceneKampf = new Image(new FileInputStream("Project/src/main/resources/prison.png")),
-                                "You couldn't sleep last night, because you didn't write.", "just lie there", "exit");
+                        pres = choiceSelect(pressed, choiceTwo);
                     } catch (FileNotFoundException e) {
                         e.printStackTrace();
                     }
-                    boolChoice2=false;
-                }
-
-                if(boolChoice1==false)
-                {
-                    boolChoice4=true;
-                }
 
 
-
-
-                try {
-                    choiceFinder.choiceSelect(boolChoice1,boolChoice2,boolChoice3,boolChoice4,boolChoice5,boolChoice6,boolChoice7,boolChoice8,boolChoice9,Button choiceTwo);
-                } catch (FileNotFoundException e) {
-                    e.printStackTrace();
-                }
             }
         });
     }
@@ -133,6 +137,99 @@ public class Choice {
         storyInfo.setText(textInfo);
         choiceOne.setText(buttonDes1);
         choiceTwo.setText(buttonDes2);
+
+    }
+
+    private int choiceSelect(int input, Button exitButton) throws FileNotFoundException{
+
+        if(input==1)
+        {
+            Image sceneKampf;
+            try {
+                nextChoice(sceneKampf = new Image(new FileInputStream("Project/src/main/resources/prison.png")),
+                        "You have added a new page on your book.", "exit", "sleep");
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+
+            input=1;
+        }
+
+        if(input==2)
+        {
+            Image sceneKampf;
+            try {
+                nextChoice(sceneKampf = new Image(new FileInputStream("Project/src/main/resources/prison.png")),
+                        "You couldn't sleep because you didn't write last night.", "just lie there", "exit");
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+
+            input=2;
+        }
+
+        if(input==3)
+        {
+            Stage stage = (Stage) exitButton.getScene().getWindow();
+            stage.close();
+        }
+
+        if (input==4) {
+            Image sceneKampf;
+            try {
+                nextChoice(sceneKampf = new Image(new FileInputStream("Project/src/main/resources/prison.png")),
+                        "The next day in prison is here.", "get out of bed", "exit");
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+
+            input=4;
+        }
+
+        if(input==5)
+        {
+            Stage stage = (Stage) exitButton.getScene().getWindow();
+            stage.close();
+        }
+
+
+        if (input==6) {
+            Image sceneDayPrison;
+            try {
+                nextChoice(sceneDayPrison = new Image(new FileInputStream("Project/src/main/resources/dayprison.jpg")),
+                        "The guard is calling you out.", "yes", "exit");
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+            input=6;
+        }
+
+        if(input==7)
+        {
+            Stage stage = (Stage) exitButton.getScene().getWindow();
+            stage.close();
+        }
+
+        if (input==8) {
+            Image sceneDayPrison;
+            try {
+                nextChoice(sceneDayPrison = new Image(new FileInputStream("Project/src/main/resources/leavingPrison.jpg")),
+                        "The Bavarian Supreme Cour has pardoned your treason, \n" +
+                                "and you are released from prison after only a year\n" +
+                                ", in 20 December 1924.", "Pack up your stuff and leave", "Leave");
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+            pressed=8;
+        }
+
+        if(input==9)
+        {
+            Stage stage = (Stage) exitButton.getScene().getWindow();
+            stage.close();
+        }
+
+        return pressed;
     }
 
 }

@@ -4,7 +4,6 @@ package mn.asu.teamKEA.component;
 import mn.asu.aminerdene.ExampleBackground;
 
 import javax.swing.*;
-import java.awt.*;
 import java.io.IOException;
 
 public class MainPanel {
