@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Users</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    #OverviewText4 {
+    position: relative;
+    }
+    #OverviewText4 img {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    }
+    body {
+      background-color: turquoise !important;
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    .menu {
+      overflow: hidden;
+      background-color: orange;
+    }
+
+    .topnav a {
+
+      float: left;
+      color: black;
+      text-align: center;
+      margin-left: 450px;
+
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 20px;
+    }
+
+    .topnav a:hover {
+      background-color: ivory;
+      color: black;
+    }
+
+    .topnav a.active {
+      background-color: blue;
+      color: white;
+    }
+    .logo{
+      position: relative;
+      top: 40px;
+      left: 15px;
+    }
+    ul#hor li {
+      display:inline;
+    }
+    .logo .q #hor{
+      font-size: 150%;
+      font-family: "Times New Roman", sans-serif;
+    }
+    b {
+      border: 5px solid;
+    }
+    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="../css/shards.min.css"> -->
+</head>
+
+<body bgcolor="#3399ff">
+<div id = "OverviewText4">
+    <a href="/menu/menu">
+        <img th:src="@{/img/logo.png}" width="5%" alt="memorynotfound logo"/>
+    </a>
+</div>
+<div class="container my-2">
+    <div class="card">
+        <div class="card-body">
+            <div th:switch="${words}" class="container my-5">
+                <p class="my-5">
+                    <a href="/students/signup" class="btn btn-primary"><i
+                            class="fas fa-user-plus ml-2"> Add Word</i></a>
+                </p>
+                <div class="col-md-10">
+                    <h2 th:case="null">No Students yet!</h2>
+                    <div th:case="*">
+                        <table class="table table-striped table-responsive-md">
+                            <thead>
+                            <tr>
+                                <th>Word</th>
+                                <th>Translation</th>
+                                <th>Delete</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr th:each="student : ${words}">
+                                <td th:text="${student.name}"></td>
+                                <td th:text="${student.translation}"></td>
+                                <td><a th:href="@{/students/edit/{id}(id=${student.id})}" class="btn btn-primary"><i class="fas fa-user-edit ml-2"></i></a></td>
+                                <td><a th:href="@{/students/delete/{id}(id=${student.id})}" class="btn btn-primary"><i class="fas fa-user-times ml-2"></i></a></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
