@@ -75,25 +75,26 @@ public class Choice {
                     pressed=1;
                 }
 
-
-
-                try {
-                    pres = choiceFinder.choiceSelect(1,choiceOne);
-                } catch (FileNotFoundException e) {
-                    e.printStackTrace();
-                }
-
-                switch (pres)
-                {
-                    case 0:
-                        pressed=3;
+                switch (pres) {
+                    case 1:
+                        pressed = 3;
+                        break;
                     case 2:
-                        pressed=4;
+                        pressed = 4;
+                        break;
                     case 4:
-                        pressed=6;
+                        pressed = 6;
+                        break;
                     case 6:
-                        pressed=8;
+                        pressed = 8;
+                        break;
                 }
+
+                    try {
+                        pres = choiceSelect(pressed, choiceOne);
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
+                    }
 
 
             }
@@ -106,23 +107,28 @@ public class Choice {
                     pressed=2;
                 }
 
-                try {
-                    pres=choiceFinder.choiceSelect(pressed,choiceTwo);
-                } catch (FileNotFoundException e) {
-                    e.printStackTrace();
+                switch (pres) {
+                    case 1:
+                        pressed = 4;
+                        break;
+                    case 2:
+                        pressed = 5;
+                        break;
+                    case 4:
+                        pressed = 7;
+                        break;
+                    case 6:
+                        pressed = 9;
+                        break;
                 }
 
-                switch (pres)
-                {
-                    case 0:
-                        pressed=5;
-                    case 1:
-                        pressed=4;
-                    case 4:
-                        pressed=7;
-                    case 6:
-                        pressed=9;
-                }
+                    try {
+                        pres = choiceSelect(pressed, choiceTwo);
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
+                    }
+
+
             }
         });
     }
@@ -134,6 +140,98 @@ public class Choice {
         choiceOne.setText(buttonDes1);
         choiceTwo.setText(buttonDes2);
 
+    }
+
+    private int choiceSelect(int input, Button exitButton) throws FileNotFoundException{
+
+        if(input==1)
+        {
+            Image sceneKampf;
+            try {
+                nextChoice(sceneKampf = new Image(new FileInputStream("Project/src/main/resources/prison.png")),
+                        "You have added a new page on your book.", "exit", "sleep");
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+
+            input=1;
+        }
+
+        if(input==2)
+        {
+            Image sceneKampf;
+            try {
+                nextChoice(sceneKampf = new Image(new FileInputStream("Project/src/main/resources/prison.png")),
+                        "You couldn't sleep because you didn't write last night.", "just lie there", "exit");
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+
+            input=2;
+        }
+
+        if(input==3)
+        {
+            Stage stage = (Stage) exitButton.getScene().getWindow();
+            stage.close();
+        }
+
+        if (input==4) {
+            Image sceneKampf;
+            try {
+                nextChoice(sceneKampf = new Image(new FileInputStream("Project/src/main/resources/prison.png")),
+                        "The next day in prison is here.", "get out of bed", "exit");
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+
+            input=4;
+        }
+
+        if(input==5)
+        {
+            Stage stage = (Stage) exitButton.getScene().getWindow();
+            stage.close();
+        }
+
+
+        if (input==6) {
+            Image sceneDayPrison;
+            try {
+                nextChoice(sceneDayPrison = new Image(new FileInputStream("Project/src/main/resources/dayprison.jpg")),
+                        "The guard is calling you out.", "yes", "exit");
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+            input=6;
+        }
+
+        if(input==7)
+        {
+            Stage stage = (Stage) exitButton.getScene().getWindow();
+            stage.close();
+        }
+
+        if (input==8) {
+            Image sceneDayPrison;
+            try {
+                nextChoice(sceneDayPrison = new Image(new FileInputStream("Project/src/main/resources/leavingPrison.jpg")),
+                        "The Bavarian Supreme Cour has pardoned your treason, \n" +
+                                "and you are released from prison after only a year\n" +
+                                ", in 20 December 1924.", "Pack up your stuff and leave", "Leave");
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+            pressed=8;
+        }
+
+        if(input==9)
+        {
+            Stage stage = (Stage) exitButton.getScene().getWindow();
+            stage.close();
+        }
+
+        return pressed;
     }
 
 }
