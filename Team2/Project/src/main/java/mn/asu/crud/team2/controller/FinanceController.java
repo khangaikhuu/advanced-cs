@@ -29,4 +29,6 @@ public class FinanceController {
         model.addAttribute("finances", financeRepository.findAll());
         return "CRUDFinance";
     }
+
+
 }
