@@ -28,7 +28,6 @@ public class Game extends Application
     private Ending ending = new Ending();
     private Prologue prologue = new Prologue();
     private boolean next = false;
-    private Choice choice = new Choice();
 
     @Override
     public void start(Stage primaryStage) throws FileNotFoundException {
