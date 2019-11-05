@@ -30,8 +30,7 @@ public class Choice {
     private int pres;
     private VBox vChoice;
     private HBox hLayout;
-    private ChoiceFinder choiceFinder;
-    public Choice(ChoiceFinder choiceFinder)
+    public Choice()
     {
         sceneView = new ImageView();
         storyInfo = new Label("It is another quiet day. Most of the guards are out, and your cellmates are sleeping. What do you do?");
@@ -41,7 +40,6 @@ public class Choice {
         pressed = 0;
         vChoice = new VBox();
         hLayout  = new HBox();
-        this.choiceFinder = choiceFinder;
     }
 
 
