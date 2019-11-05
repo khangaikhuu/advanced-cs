@@ -2,17 +2,49 @@ package mn.asu.teamLaSquadra.game;
 
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
+import javafx.stage.Stage;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 
 public class ChoiceFinder {
-    private Choice choice;
-    public void choiceSelect(boolean choice1, boolean choice2, boolean choice3, boolean choice4, boolean choice5, boolean choice6, boolean choice7, boolean choice8, boolean choice9, Button exitButton) throws FileNotFoundException{
+    private Choice choice = new Choice(this);
+    private int pressed = 0;
+    public int choiceSelect(int input, Button exitButton) throws FileNotFoundException{
 
+        if(input==1)
+        {
+            Image sceneKampf;
+            try {
+                choice.nextChoice(sceneKampf = new Image(new FileInputStream("Project/src/main/resources/prison.png")),
+                        "You have added a new page on your book.", "exit", "sleep");
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
 
+            input=1;
+        }
 
-        if (choice4) {
+        if(input==2)
+        {
+            Image sceneKampf;
+            try {
+                choice.nextChoice(sceneKampf = new Image(new FileInputStream("Project/src/main/resources/prison.png")),
+                        "You couldn't sleep because you didn't write last night.", "just lie there", "exit");
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+
+            input=2;
+        }
+
+        if(input==3)
+        {
+            Stage stage = (Stage) exitButton.getScene().getWindow();
+            stage.close();
+        }
+
+        if (input==4) {
             Image sceneKampf;
             try {
                 choice.nextChoice(sceneKampf = new Image(new FileInputStream("Project/src/main/resources/prison.png")),
@@ -20,10 +52,18 @@ public class ChoiceFinder {
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
+
+            input=4;
+        }
+
+        if(input==5)
+        {
+            Stage stage = (Stage) exitButton.getScene().getWindow();
+            stage.close();
         }
 
 
-        if (choice6) {
+        if (input==6) {
             Image sceneDayPrison;
             try {
                 choice.nextChoice(sceneDayPrison = new Image(new FileInputStream("Project/src/main/resources/dayprison.jpg")),
@@ -31,9 +71,16 @@ public class ChoiceFinder {
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
+            input=6;
         }
 
-        if (choice8) {
+        if(input==7)
+        {
+            Stage stage = (Stage) exitButton.getScene().getWindow();
+            stage.close();
+        }
+
+        if (input==8) {
             Image sceneDayPrison;
             try {
                 choice.nextChoice(sceneDayPrison = new Image(new FileInputStream("Project/src/main/resources/leavingPrison.jpg")),
@@ -42,7 +89,16 @@ public class ChoiceFinder {
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
+            pressed=8;
         }
+
+        if(input==9)
+        {
+            Stage stage = (Stage) exitButton.getScene().getWindow();
+            stage.close();
+        }
+
+        return pressed;
     }
 
 }
