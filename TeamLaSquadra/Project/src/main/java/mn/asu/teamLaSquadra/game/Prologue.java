@@ -18,6 +18,7 @@ public class Prologue
     private StackPane prologueRoot;
     private Choice choice = new Choice();
 
+
     public void prologue(StackPane root)
     {
         Button ContinueButton = new Button("Continue");
