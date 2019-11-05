@@ -74,12 +74,20 @@
         <img th:src="@{/img/logo.png}" width="5%" alt="memorynotfound logo"/>
     </a>
 </div>
+<div class="menu">
+
+    <div class="topnav">
+        <a id="home" href="/menu/quiz">Word Quiz</a>
+        <a class="active" id="CrudWord"href="/words/signup">Add Word</a>
+        <a id="dictionary"href="/menu/dictionary">Dictionary (50 words)</a>
+    </div>
+</div>
 <div class="container my-2">
     <div class="card">
         <div class="card-body">
             <div th:switch="${words}" class="container my-5">
                 <p class="my-5">
-                    <a href="/students/signup" class="btn btn-primary"><i
+                    <a href="/words/signup" class="btn btn-primary"><i
                             class="fas fa-user-plus ml-2"> Add Word</i></a>
                 </p>
                 <div class="col-md-10">
@@ -94,11 +102,11 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <tr th:each="student : ${words}">
-                                <td th:text="${student.name}"></td>
-                                <td th:text="${student.translation}"></td>
-                                <td><a th:href="@{/students/edit/{id}(id=${student.id})}" class="btn btn-primary"><i class="fas fa-user-edit ml-2"></i></a></td>
-                                <td><a th:href="@{/students/delete/{id}(id=${student.id})}" class="btn btn-primary"><i class="fas fa-user-times ml-2"></i></a></td>
+                            <tr th:each="word : ${words}">
+                                <td th:text="${word.name}"></td>
+                                <td th:text="${word.translation}"></td>
+                                <td><a th:href="@{/words/edit/{id}(id=${word.id})}" class="btn btn-primary"><i class="fas fa-user-edit ml-2"></i></a></td>
+                                <td><a th:href="@{/words/delete/{id}(id=${word.id})}" class="btn btn-primary"><i class="fas fa-user-times ml-2"></i></a></td>
                             </tr>
                             </tbody>
                         </table>
