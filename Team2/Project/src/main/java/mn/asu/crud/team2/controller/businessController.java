@@ -23,4 +23,10 @@ public class businessController {
         model.addAttribute("indexs", businessRepository.findAll());
         return "index";
     }
+
+    @GetMapping("/crud")
+    public String crudIndexPage(Model model) {
+        model.addAttribute("indexs", businessRepository.findAll());
+        return "CRUDIndex";
+    }
 }
