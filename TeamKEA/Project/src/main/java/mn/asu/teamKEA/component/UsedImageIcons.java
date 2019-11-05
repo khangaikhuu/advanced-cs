@@ -5,7 +5,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.io.*;
 
-public class UsedImageIcons {
+public abstract class UsedImageIcons {
 
     public static Image ourImage;
     public static Image getImage(String filename) throws IOException {
@@ -32,5 +32,8 @@ public class UsedImageIcons {
     }
 
 
-
-}
+    ImageIcon imageIcon = new ImageIcon("static/Aimer.JPG");
+    Image image = imageIcon.getImage();
+    Image newing = image.getScaledInstance(120, 120,  java.awt.Image.SCALE_SMOOTH);
+    imageIcon = new ImageIcon(newing);
+        }
