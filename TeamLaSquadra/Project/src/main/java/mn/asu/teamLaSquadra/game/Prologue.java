@@ -16,7 +16,9 @@ import java.io.FileNotFoundException;
 public class Prologue
 {
     private StackPane prologueRoot;
-    private Choice choice = new Choice();
+    private ChoiceFinder choiceFinder = new ChoiceFinder();
+    private Choice choice = new Choice(choiceFinder);
+
 
     public void prologue(StackPane root)
     {

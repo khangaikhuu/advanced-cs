@@ -1,10 +1,8 @@
 package mn.asu.crud.team2.entity;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
+@Entity
 public class ValueCreationEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
