@@ -21,16 +21,50 @@ public class UsedImageIcons {
 
     }
 
-    public static ImageIcon chanter;
+    public static ImageIcon icon1;
 
     static {
         try {
-            chanter = new ImageIcon(getImage("static/Pariss.JPG"));
+            icon1 = new ImageIcon(getImage("static/Arriver.JPG"));
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
+    public static ImageIcon icon2;
 
 
+    static {
+        try {
+            icon2 = new ImageIcon(getImage("static/Aimer.JPG"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    public static ImageIcon paris;
+
+    static {
+        try {
+            paris = new ImageIcon(getImage("static/Pariss.jpg"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static ImageIcon imageIcon2;
+
+    static {
+        try {
+            imageIcon2 = new ImageIcon(getImage("static/Chanter.JPG"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static Image image = imageIcon2.getImage();
+    public static Image newImg = image.getScaledInstance(120, 120,  java.awt.Image.SCALE_SMOOTH);
+    public static ImageIcon chanter = new ImageIcon(newImg);
 }
+
+
+
