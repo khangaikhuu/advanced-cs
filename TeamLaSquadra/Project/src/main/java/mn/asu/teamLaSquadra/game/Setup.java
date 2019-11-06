@@ -3,10 +3,12 @@ package mn.asu.teamLaSquadra.game;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Pos;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
+import javafx.stage.Stage;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -14,13 +16,11 @@ import java.net.URL;
 
 public class Setup {
 
-    private HBox hLayout;
-    private StackPane mainRoot;
+    private HBox hLayout = new HBox();
     private Prologue prologue = new Prologue();
+    private Scene setupScene = new Scene(hLayout,1550,1070);
 
-    public void characterSelect(StackPane root) throws FileNotFoundException {
-
-        hLayout = new HBox();
+    public void characterSelect(final Stage primaryStage) throws FileNotFoundException {
 
         Button HitlerButton = new Button();
 
@@ -52,13 +52,11 @@ public class Setup {
 
 
 
-        root.getChildren().add(hLayout);
+        primaryStage.setScene(setupScene);
 
-        mainRoot = root;
         HitlerButton.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent actionEvent) {
-                mainRoot.getChildren().remove(hLayout);
-                prologue.prologue(mainRoot);
+                prologue.prologue(primaryStage);
             }
         });
     }
