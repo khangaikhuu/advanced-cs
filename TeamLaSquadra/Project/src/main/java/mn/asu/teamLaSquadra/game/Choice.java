@@ -144,7 +144,8 @@ public class Choice {
         {
             Image sceneKampf;
             try {
-                nextChoice(sceneKampf = new Image(new FileInputStream("Project/src/main/resources/prison.png")),
+
+                nextChoice(sceneKampf = new Image(new FileInputStream(getClass().getClassLoader().getResource("prison.png").getFile())),
                         "You have added a new page on your book.", "exit", "sleep");
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
@@ -157,7 +158,7 @@ public class Choice {
         {
             Image sceneKampf;
             try {
-                nextChoice(sceneKampf = new Image(new FileInputStream("Project/src/main/resources/prison.png")),
+                nextChoice(sceneKampf = new Image(new FileInputStream(getClass().getClassLoader().getResource("prison.png").getFile())),
                         "You couldn't sleep because you didn't write last night.", "just lie there", "exit");
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
@@ -175,7 +176,7 @@ public class Choice {
         if (input==4) {
             Image sceneKampf;
             try {
-                nextChoice(sceneKampf = new Image(new FileInputStream("Project/src/main/resources/prison.png")),
+                nextChoice(sceneKampf = new Image(new FileInputStream(getClass().getClassLoader().getResource("prison.png").getFile())),
                         "The next day in prison is here.", "get out of bed", "exit");
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
@@ -194,7 +195,7 @@ public class Choice {
         if (input==6) {
             Image sceneDayPrison;
             try {
-                nextChoice(sceneDayPrison = new Image(new FileInputStream("Project/src/main/resources/dayprison.jpg")),
+                nextChoice(sceneDayPrison = new Image(new FileInputStream(getClass().getClassLoader().getResource("dayprison.jpg").getFile())),
                         "The guard is calling you out.", "yes", "exit");
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
@@ -211,7 +212,7 @@ public class Choice {
         if (input==8) {
             Image sceneDayPrison;
             try {
-                nextChoice(sceneDayPrison = new Image(new FileInputStream("Project/src/main/resources/leavingPrison.jpg")),
+                nextChoice(sceneDayPrison = new Image(new FileInputStream(getClass().getClassLoader().getResource("leavingPrison.jpg").getFile())),
                         "The Bavarian Supreme Cour has pardoned your treason, \n" +
                                 "and you are released from prison after only a year\n" +
                                 ", in 20 December 1924.", "Pack up your stuff and leave", "Leave");
@@ -231,7 +232,3 @@ public class Choice {
     }
 
 }
-
-
-
-

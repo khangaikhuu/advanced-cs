@@ -30,8 +30,8 @@ public class Setup {
         hLayout.getChildren().add(HitlerButton);
         hLayout.getChildren().add(LockedStalinButton);
 
-        Image HitlerImage = new Image(new FileInputStream("Project/src/main/resources/hitler.png"));
-        Image StalinImage = new Image(new FileInputStream("Project/src/main/resources/stalin.png"));
+        Image HitlerImage = new Image(new FileInputStream(getClass().getClassLoader().getResource("hitler.png").getFile()));
+        Image StalinImage = new Image(new FileInputStream(getClass().getClassLoader().getResource("stalin.png").getFile()));
 
         ImageView HitlerView = new ImageView();
         ImageView StalinView = new ImageView();
