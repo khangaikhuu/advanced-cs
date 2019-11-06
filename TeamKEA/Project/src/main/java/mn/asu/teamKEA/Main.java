@@ -29,7 +29,7 @@ import java.io.IOException;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        mainButton.buttonAction(mainButton.Button, "Word", "Definition", allIcons.icon1 , allIcons.icon2);
+        mainButton.buttonAction(mainButton.Button, "Word", "Definition", allIcons.demander , allIcons.danser);
     }
 
 

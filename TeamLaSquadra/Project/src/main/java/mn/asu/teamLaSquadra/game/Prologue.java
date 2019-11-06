@@ -3,6 +3,7 @@ package mn.asu.teamLaSquadra.game;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Pos;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
@@ -10,19 +11,20 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
+import javafx.stage.Stage;
 
 import java.io.FileNotFoundException;
 
 public class Prologue
 {
-    private StackPane prologueRoot;
     private Choice choice = new Choice();
+    private VBox vLayout = new VBox();
+    private Scene prologueScene= new Scene(vLayout,1550,1070);
 
 
-    public void prologue(StackPane root)
+    public void prologue(final Stage primaryStage)
     {
         Button ContinueButton = new Button("Continue");
-        final VBox vLayout = new VBox();
         HBox hLayout = new HBox();
         Label prologue = new Label("This story depicts the rise and fall of one of the main belligerents in the most bloody struggle " +
                                     "\nin human history. This game is made for educational purposes only. Adolf Hitler was born in " +
@@ -41,13 +43,12 @@ public class Prologue
         vLayout.getChildren().addAll(prologue, hLayout);
         vLayout.setAlignment(Pos.CENTER);
 
-        root.getChildren().add(vLayout);
-        prologueRoot = root;
+        primaryStage.setScene(prologueScene);
+
         ContinueButton.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent actionEvent) {
-                prologueRoot.getChildren().remove(vLayout);
                 try {
-                    choice.firstChoice(prologueRoot);
+                    choice.firstChoice(primaryStage);
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 }

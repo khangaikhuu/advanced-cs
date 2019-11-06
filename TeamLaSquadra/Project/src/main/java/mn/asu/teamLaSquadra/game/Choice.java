@@ -2,10 +2,10 @@ package mn.asu.teamLaSquadra.game;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
@@ -24,12 +24,11 @@ public class Choice {
     private Button choiceOne;
     private Button choiceTwo;
     private Label storyImage;
-    private int buttonCounter1 = 0;
-    private int buttonCounter2 = 0;
     private int pressed;
     private int pres;
-    private VBox vChoice;
+    private VBox vChoice = new VBox();
     private HBox hLayout;
+    private Scene choiceScene = new Scene(vChoice,1550,1070);
     public Choice()
     {
         sceneView = new ImageView();
@@ -38,14 +37,13 @@ public class Choice {
         choiceTwo = new Button("Sleep");
         storyImage = new Label();
         pressed = 0;
-        vChoice = new VBox();
         hLayout  = new HBox();
     }
 
 
 
 
-    public void firstChoice(StackPane root) throws FileNotFoundException {
+    public void firstChoice(Stage primaryStage) throws FileNotFoundException {
 
         Image firstScene = new Image(new FileInputStream("Project/src/main/resources/prison.png"));
 
@@ -64,7 +62,7 @@ public class Choice {
         hLayout.getChildren().addAll(choiceOne, choiceTwo);
         vChoice.getChildren().addAll(storyImage, storyInfo, hLayout);
         vChoice.setAlignment(Pos.CENTER);
-        root.getChildren().add(vChoice);
+        primaryStage.setScene(choiceScene);
         //button handler
         choiceOne.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent actionEvent) {
@@ -146,7 +144,8 @@ public class Choice {
         {
             Image sceneKampf;
             try {
-                nextChoice(sceneKampf = new Image(new FileInputStream("Project/src/main/resources/prison.png")),
+
+                nextChoice(sceneKampf = new Image(new FileInputStream(getClass().getClassLoader().getResource("prison.png").getFile())),
                         "You have added a new page on your book.", "exit", "sleep");
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
@@ -159,7 +158,7 @@ public class Choice {
         {
             Image sceneKampf;
             try {
-                nextChoice(sceneKampf = new Image(new FileInputStream("Project/src/main/resources/prison.png")),
+                nextChoice(sceneKampf = new Image(new FileInputStream(getClass().getClassLoader().getResource("prison.png").getFile())),
                         "You couldn't sleep because you didn't write last night.", "just lie there", "exit");
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
@@ -177,7 +176,7 @@ public class Choice {
         if (input==4) {
             Image sceneKampf;
             try {
-                nextChoice(sceneKampf = new Image(new FileInputStream("Project/src/main/resources/prison.png")),
+                nextChoice(sceneKampf = new Image(new FileInputStream(getClass().getClassLoader().getResource("prison.png").getFile())),
                         "The next day in prison is here.", "get out of bed", "exit");
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
@@ -196,7 +195,7 @@ public class Choice {
         if (input==6) {
             Image sceneDayPrison;
             try {
-                nextChoice(sceneDayPrison = new Image(new FileInputStream("Project/src/main/resources/dayprison.jpg")),
+                nextChoice(sceneDayPrison = new Image(new FileInputStream(getClass().getClassLoader().getResource("dayprison.jpg").getFile())),
                         "The guard is calling you out.", "yes", "exit");
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
@@ -213,7 +212,7 @@ public class Choice {
         if (input==8) {
             Image sceneDayPrison;
             try {
-                nextChoice(sceneDayPrison = new Image(new FileInputStream("Project/src/main/resources/leavingPrison.jpg")),
+                nextChoice(sceneDayPrison = new Image(new FileInputStream(getClass().getClassLoader().getResource("leavingPrison.jpg").getFile())),
                         "The Bavarian Supreme Cour has pardoned your treason, \n" +
                                 "and you are released from prison after only a year\n" +
                                 ", in 20 December 1924.", "Pack up your stuff and leave", "Leave");
@@ -233,7 +232,3 @@ public class Choice {
     }
 
 }
-
-
-
-
