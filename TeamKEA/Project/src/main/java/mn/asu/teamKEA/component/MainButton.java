@@ -11,14 +11,12 @@ public class MainButton {
 
     public static boolean nextPanel = false;
     public JButton Button = new JButton();
-    public MainButton(int x, int y, int width , int height, String name, ImageIcon imageIcon)
-    {
+
+    public MainButton(int x, int y, int width, int height, String name, ImageIcon imageIcon) {
         Button.setBounds(x, y, width, height);
         Button.setText(name);
         Button.setIcon(imageIcon);
     }
-
-
 
 
     public static int i = 2;
@@ -29,19 +27,15 @@ public class MainButton {
         Button.addActionListener(new ActionListener() {
 
 
-
             public void actionPerformed(ActionEvent e) {
 
-                if(i%2==0)
-                {
+                if (i % 2 == 0) {
                     nextPanel = true;
                     button.setText(text1);
                     button.setIcon(imageIcon1);
                     mainPanel.Panel.revalidate();
                     mainPanel.Panel.repaint();
-                }
-                else
-                {
+                } else {
 
                     nextPanel = true;
                     button.setText(text2);
@@ -53,7 +47,4 @@ public class MainButton {
             }
         });
     }
-
-
-
 }
