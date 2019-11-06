@@ -51,19 +51,20 @@ public class UsedImageIcons {
         }
     }
 
-    public static ImageIcon imageIcon2;
+    public static ImageIcon PreImage;
 
     static {
         try {
-            imageIcon2 = new ImageIcon(getImage("static/Chanter.JPG"));
+            PreImage = new ImageIcon(getImage("static/Danser.JPG"));
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+    public static Image transform = PreImage.getImage();
+    public static Image scale= transform.getScaledInstance(120, 120,  java.awt.Image.SCALE_SMOOTH);
+    public static ImageIcon img  = new ImageIcon(scale);
 
-    public static Image image = imageIcon2.getImage();
-    public static Image newImg = image.getScaledInstance(120, 120,  java.awt.Image.SCALE_SMOOTH);
-    public static ImageIcon chanter = new ImageIcon(newImg);
+
 }
 
 
