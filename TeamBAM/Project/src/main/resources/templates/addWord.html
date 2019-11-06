@@ -74,22 +74,30 @@
         <img th:src="@{/img/logo.png}" width="5%" alt="memorynotfound logo"/>
     </a>
 </div>
+<div class="menu">
+
+    <div class="topnav">
+        <a id="home" href="/menu/quiz">Word Quiz</a>
+        <a class="active" id="CrudWord"href="/words/signup">Add Word</a>
+        <a id="dictionary"href="/menu/dictionary">Dictionary (50 words)</a>
+    </div>
+</div>
 <div class="container my-5">
     <h3> Add Word</h3>
     <div class="card">
         <div class="card-body">
             <div class="col-md-10">
-                <form action="#" th:action="@{/students/add}" th:object="${student}" method="post">
+                <form action="#" th:action="@{/words/add}" th:object="${words}" method="post">
                     <div class="row">
                         <div class="form-group col-md-8">
-                            <label for="name" class="col-form-label">Word</label> <input type="text" th:field="*{name}" class="form-control" id="name" placeholder="Name"> <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}" class="text-danger"></span>
+                            <label for="name" class="col-form-label">Word</label> <input type="text" th:field="*{name}" class="form-control" id="name" placeholder="Word"> <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}" class="text-danger"></span>
                         </div>
                         <div class="form-group col-md-8">
-                            <label for="email" class="col-form-label">Translation</label> <input type="text" th:field="*{email}" class="form-control" id="email" placeholder="Email"> <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="text-danger"></span>
+                            <label for="translation" class="col-form-label">Translation</label> <input type="text" th:field="*{translation}" class="form-control" id="translation" placeholder="Translation"> <span th:if="${#fields.hasErrors('translation')}" th:errors="*{translation}" class="text-danger"></span>
                         </div>
 
                         <div class="col-md-6">
-                            <input type="submit" class="btn btn-primary" value="Add Student">
+                            <input type="submit" class="btn btn-primary" value="Add Word">
                         </div>
 
                         <div class="form-group col-md-8"></div>
