@@ -28,7 +28,9 @@ public class Choice {
     private int pres;
     private VBox vChoice = new VBox();
     private HBox hLayout;
-    private Scene choiceScene = new Scene(vChoice,1550,1070);
+    private Scene choiceScene = new Scene(vChoice,1550,1000);
+    private Ending ending = new Ending();
+    private Stage endingStage;
     public Choice()
     {
         sceneView = new ImageView();
@@ -44,6 +46,8 @@ public class Choice {
 
 
     public void firstChoice(Stage primaryStage) throws FileNotFoundException {
+
+        endingStage=primaryStage;
 
         Image firstScene = new Image(new FileInputStream("Project/src/main/resources/prison.png"));
 
@@ -84,6 +88,8 @@ public class Choice {
                     case 6:
                         pressed = 8;
                         break;
+                    case 8:
+                        pressed=10;
                 }
 
                     try {
@@ -116,6 +122,8 @@ public class Choice {
                     case 6:
                         pressed = 9;
                         break;
+                    case 8:
+                        pressed = 11;
                 }
 
                     try {
@@ -228,7 +236,21 @@ public class Choice {
             stage.close();
         }
 
+        if (input==10)
+        {
+            ending.ending("World War 2 ends with the unconditional surrender of the Axis Powers" +
+                    "\nthus ending the most violent struggle in human history. Adolf Hitler commits suicide, The Japanese surrender after" +
+                    "\n two nuclear as well as Italy surrendering and switching sides.",endingStage);
+            pressed=10;
+        }
+
+        if (input==11)
+        {
+            ending.ending("Because you left your valuable book behind in prison you have no material to sway the public opinion, so you retire and become a simple salary man.",endingStage);
+            pressed=11;
+        }
         return pressed;
     }
+
 
 }

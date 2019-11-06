@@ -41,17 +41,8 @@ public class CrudController {
         return "addWord";
     }
 
-    @GetMapping("edit/{id}")
-    public String showUpdateForm(@PathVariable("id") long id, Model model) {
-        Words word = wordRepository.findById(id)
-                .orElseThrow(() -> new IllegalArgumentException("Invalid student Id:" + id));
-        model.addAttribute("word", word);
-        return "updateWord";
-    }
-
     @PostMapping("update/{id}")
-    public String updateStudent(@PathVariable("id") long id, @Valid Words words, BindingResult result,
-                                Model model) {
+    public String updateStudent(@PathVariable("id") long id, @Valid Words words, BindingResult result, Model model) {
         if (result.hasErrors()) {
             words.setId(id);
             return "updateWord";

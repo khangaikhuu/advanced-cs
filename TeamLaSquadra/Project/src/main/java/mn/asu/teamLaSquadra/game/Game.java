@@ -69,20 +69,6 @@ public class Game extends Application
         primaryStage.setFullScreen(true);
         primaryStage.show();
 
-        if(false) {
-            //first choice
-
-
-
-
-
-
-            VBox endingLayout = ending.ending("World War 2 ends with the unconditional surrender of the Axis Powers" +
-                    "\nthus ending the most violent struggle in human history. Adolf Hitler commits suicide, The Japanese surrender after" +
-                    "\n two nuclear as well as Italy surrendering and switching sides.");
-
-        }
-
     }
 
     }

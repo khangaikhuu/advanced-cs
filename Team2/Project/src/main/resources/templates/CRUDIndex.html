@@ -18,8 +18,8 @@
         <div class="card-body">
             <div th:switch="${indexs}" class="container my-5">
                 <p class="my-5">
-                    <a href="/students/signup" class="btn btn-primary"><i
-                            class="fas fa-user-plus ml-2"> Add Index</i></a>
+                    <a href="/business/signup" class="btn btn-primary"><i
+                            class="fas fa-user-plus ml-2"> Add Business</i></a>
                 </p>
                 <div class="col-md-10">
                     <h2 th:case="null">No Students yet!</h2>
@@ -35,11 +35,11 @@
                             </thead>
                             <tbody>
                             <tr th:each="Index : ${indexs}">
-                                <td th:text="${student.title}"></td>
-                                <td th:text="${student.content}"></td>
+                                <td th:text="${Index.title}"></td>
+                                <td th:text="${Index.content}"></td>
 
-                                <td><a th:href="@{/students/edit/{id}(id=${student.id})}" class="btn btn-primary"><i class="fas fa-user-edit ml-2"></i></a></td>
-                                <td><a th:href="@{/students/delete/{id}(id=${student.id})}" class="btn btn-primary"><i class="fas fa-user-times ml-2"></i></a></td>
+                                <td><a th:href="@{/students/edit/{id}(id=${Index.id})}" class="btn btn-primary"><i class="fas fa-user-edit ml-2"></i></a></td>
+                                <td><a th:href="@{/students/delete/{id}(id=${Index.id})}" class="btn btn-primary"><i class="fas fa-user-times ml-2"></i></a></td>
                             </tr>
                             </tbody>
                         </table>
