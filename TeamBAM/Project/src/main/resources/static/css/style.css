@@ -1,46 +1,44 @@
-    #OverviewText4 {
-    position: relative;
-    }
-    #OverviewText4 img {
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    }
-    body {
-      background-color: turquoise !important;
-      margin: 0;
-      font-family: sans-serif;
-    }
-
-    .menu {
-      overflow: hidden;
-      background-color: orange;
-    }
-
-    .topnav a {
-
-      float: left;
-      color: black;
-      text-align: center;
-      margin-left: 450px;
-
-      padding: 14px 16px;
-      text-decoration: none;
-      font-size: 20px;
-    }
-
-    .topnav a:hover {
-      background-color: ivory;
-      color: black;
-    }
-
-    .topnav a.active {
-      background-color: blue;
-      color: white;
-    }
-
-    div.c {
-      font-size: 500%;
-    }
-
+#OverviewText4 {
+position: relative;
 }
+#OverviewText4 img {
+position: absolute;
+top: 5px;
+left: 5px;
+}
+body {
+  background-color: turquoise !important;
+  margin: 0;
+  font-family: sans-serif;
+}
+.englishYou{
+    font-size: 600px;
+}
+.menu {
+  overflow: hidden;
+  background-color: orange;
+}
+
+.topnav a {
+
+  float: left;
+  color: black;
+  text-align: center;
+  margin-left: 450px;
+
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.topnav a:hover {
+  background-color: ivory;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: blue;
+  color: white;
+}
+
+
