@@ -26,6 +26,11 @@ public class Game extends Application
 
     private Ending ending = new Ending();
 
+    public static void main(String []args)
+    {
+        launch(args);
+    }
+
     @Override
     public void start(final Stage primaryStage) throws FileNotFoundException {
         //makes local variables to save space on the JVM
