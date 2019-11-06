@@ -29,7 +29,7 @@ import java.io.IOException;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        mainButton.buttonAction(mainButton.Button, "Word", "Definition", allIcons.demander , allIcons.danser);
+        mainButton.nextWord(mainButton.Button, "Word", "Definition", allIcons.demander , allIcons.danser);
     }
 
 
@@ -86,7 +86,8 @@ public class Main {
 
 
     public static MainButton mainButton = new MainButton(0, 0, 715, 536, "Start", allIcons.paris);
-    public static MainPanel mainPanel = new MainPanel(mainButton.Button /* startLabel.Label*/, 715, 536);
+    public static MainButton nextButton = new MainButton(680, 536 , 55 , 114 , "Next", allIcons.next);
+    public static MainPanel mainPanel = new MainPanel(mainButton.Button , nextButton.Button/* startLabel.Label*/, 715, 536);
     public static MainFrame mainFrame = new MainFrame(mainPanel.Panel ,735 , 650 ,"French Flashcards");
 
 
