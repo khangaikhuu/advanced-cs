@@ -77,6 +77,19 @@ public class UsedImageIcons {
     public static Image transform2 =PreImage1.getImage();
     public static Image scale2 = transform2.getScaledInstance(715, 536,  java.awt.Image.SCALE_SMOOTH);
     public static ImageIcon demander= new ImageIcon(scale2);
+
+    public static ImageIcon nextPre;
+
+    static {
+        try {
+            nextPre = new ImageIcon(getImage("Next.png"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    public static Image nextTransform =nextPre.getImage();
+    public static Image nextScale = nextTransform.getScaledInstance(55, 114,  java.awt.Image.SCALE_SMOOTH);
+    public static ImageIcon next= new ImageIcon(nextScale);
 }
 
 
