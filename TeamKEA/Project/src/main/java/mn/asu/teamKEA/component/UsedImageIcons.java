@@ -61,10 +61,22 @@ public class UsedImageIcons {
         }
     }
     public static Image transform = PreImage.getImage();
-    public static Image scale= transform.getScaledInstance(120, 120,  java.awt.Image.SCALE_SMOOTH);
-    public static ImageIcon img  = new ImageIcon(scale);
+    public static Image scale= transform.getScaledInstance(715, 536,  java.awt.Image.SCALE_SMOOTH);
+    public static ImageIcon danser = new ImageIcon(scale);
 
 
+    public static ImageIcon PreImage1;
+
+    static {
+        try {
+            PreImage1 = new ImageIcon(getImage("static/Demander.JPG"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    public static Image transform2 =PreImage1.getImage();
+    public static Image scale2 = transform2.getScaledInstance(715, 536,  java.awt.Image.SCALE_SMOOTH);
+    public static ImageIcon demander= new ImageIcon(scale2);
 }
 
 
