@@ -29,6 +29,7 @@ public class Choice {
     private VBox vChoice = new VBox();
     private HBox hLayout;
     private Scene choiceScene = new Scene(vChoice,1550,1070);
+    private Ending ending = new Ending();
     public Choice()
     {
         sceneView = new ImageView();
@@ -228,7 +229,19 @@ public class Choice {
             stage.close();
         }
 
+        if (input==10)
+        {
+            ending.ending("World War 2 ends with the unconditional surrender of the Axis Powers" +
+                    "\nthus ending the most violent struggle in human history. Adolf Hitler commits suicide, The Japanese surrender after" +
+                    "\n two nuclear as well as Italy surrendering and switching sides.");
+        }
+
+        if (input==11)
+        {
+            ending.ending("Because you left your valuable book behind in prison you have no material to sway the public opinion, so you retire and become a simple salary man.");
+        }
         return pressed;
     }
+
 
 }
