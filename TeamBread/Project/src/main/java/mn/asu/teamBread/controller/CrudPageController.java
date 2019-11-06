@@ -45,17 +45,17 @@ public class CrudPageController {
     }
     @GetMapping("delete/{id}")
     public String deleteStudent(@PathVariable("id") long id, Model model) {
-        Word student = wordRepository.findById(id)
+        Word word = wordRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("Invalid student Id:" + id));
-        WordRepository.delete(WordRepository);
-        model.addAttribute("students", WordRepository.findAll());
+        wordRepository.delete(word);
+        model.addAttribute("students", wordRepository.findAll());
         return "index";
     }
     @GetMapping("edit/{id}")
     public String showUpdateForm(@PathVariable("id") long id, Model model) {
-        Word student = WordRepository.findById(id)
-                .orElseThrow(() -> new IllegalArgumentException("Invalid student Id:" + id));
-        model.addAttribute("student", student);
-        return "update-student";
+        Word word = wordRepository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("Invalid word Id:" + id));
+        model.addAttribute("word", word);
+        return "update-word";
     }
 }
