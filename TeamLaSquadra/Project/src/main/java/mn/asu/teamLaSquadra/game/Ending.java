@@ -1,23 +1,28 @@
 package mn.asu.teamLaSquadra.game;
 
 import javafx.geometry.Pos;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
+import javafx.stage.Stage;
 
 
 public class Ending
 {
     private Button exitButton;
     private Label ending;
+    VBox vLayout = new VBox();
+    private Scene endingScene = new Scene(vLayout,1550,1070);
 
-    public VBox ending(String epilogue)
+
+    public void ending(String epilogue, Stage primaryStage)
     {
     exitButton = new Button("Exit");
-    VBox vLayout = new VBox();
+
     HBox hLayout = new HBox();
     ending = new Label(epilogue);
     ending.setFont(Font.font("Arial", FontWeight.BOLD, 25));
@@ -28,6 +33,6 @@ public class Ending
     vLayout.getChildren().addAll(ending, hLayout);
     vLayout.setAlignment(Pos.CENTER);
 
-    return vLayout;
+    primaryStage.setScene(endingScene);
     }
 }

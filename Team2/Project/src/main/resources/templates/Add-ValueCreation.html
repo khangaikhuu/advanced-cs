@@ -17,7 +17,7 @@
     <div class="card">
         <div class="card-body">
             <div class="col-md-10">
-                <form action="#" th:action="@{/valuecreation/add}" th:object="${valueCreationEntity}" method="post">
+                <form action="#" th:action="@{/value/add}" th:object="${valueCreationEntity}" method="post">
                     <div class="row">
                         <div class="form-group col-md-8">
                             <label for="title" class="col-form-label">Title</label> <input type="text" th:field="*{title}" class="form-control" id="title" placeholder="Title"> <span th:if="${#fields.hasErrors('title')}" th:errors="*{title}" class="text-danger"></span>

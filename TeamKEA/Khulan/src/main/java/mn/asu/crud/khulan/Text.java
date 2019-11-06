@@ -1,4 +1,5 @@
 package mn.asu.crud.khulan;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -8,8 +9,8 @@ public class Text extends JFrame implements ActionListener {
     static JFrame f;
     static JButton b;
     static JLabel l;
-    public static void main(String[] args)
-    {
+
+    public static void main(String[] args) {
         f = new JFrame("textfield");
         l = new JLabel("nothing entered");
         b = new JButton("submit");
@@ -25,6 +26,7 @@ public class Text extends JFrame implements ActionListener {
 
         f.show();
     }
+
     public void actionPerformed(ActionEvent actionEvent) {
         String s = actionEvent.getActionCommand();
         if (s.equals("submit")) {
