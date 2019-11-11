@@ -1,13 +1,8 @@
 package mn.asu.teamKEA;
-
-import mn.asu.aminerdene.ExampleBackground;
 import mn.asu.persistence.Words;
 import mn.asu.teamKEA.component.*;
 
 import javax.swing.*;
-
-import java.awt.*;
-
 import java.io.IOException;
 
 

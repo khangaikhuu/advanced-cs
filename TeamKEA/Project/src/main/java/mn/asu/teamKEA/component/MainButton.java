@@ -49,8 +49,7 @@ public class MainButton {
             }
         });
     }
-<<<<<<< HEAD
-=======
+
 
     public int set = 0;
 
@@ -72,5 +71,4 @@ public class MainButton {
 
     }
 
->>>>>>> f5d98355a7242be65cc55c9c0a5c7a6d791a3346
 }
