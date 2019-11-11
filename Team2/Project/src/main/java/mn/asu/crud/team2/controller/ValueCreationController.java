@@ -73,9 +73,9 @@ public class ValueCreationController {
     }
 
     @GetMapping("/delete/{id}")
-    public String deleteStudent(@PathVariable("id") long id, Model model) {
+    public String deleteValue(@PathVariable("id") long id, Model model) {
         ValueCreationEntity valueCreationEntity = valueCreationRepository.findById(id)
-                .orElseThrow(() -> new IllegalArgumentException("Invalid student Id:" + id));
+                .orElseThrow(() -> new IllegalArgumentException("Invalid value Id:" + id));
         valueCreationRepository.delete(valueCreationEntity);
         model.addAttribute("valueCreations", valueCreationRepository.findAll());
         return "CRUDValueCreation";
