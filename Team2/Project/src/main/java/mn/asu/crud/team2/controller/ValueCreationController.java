@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -49,4 +50,35 @@ public class ValueCreationController {
         valueCreationRepository.save(valueCreationEntity);
         return "redirect:crud";
     }
+    @GetMapping("/edit/{id}")
+    public String showUpdateForm(@PathVariable("id") long id, Model model) {
+        ValueCreationEntity valueCreation = valueCreationRepository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("Invalid student Id:" + id));
+        model.addAttribute("valueCreation", valueCreation);
+        return "Update-ValueCreation";
+    }
+
+
+    @PostMapping("/update/{id}")
+    public String updateValue(@PathVariable("id") long id, @Valid ValueCreationEntity valueCreation, BindingResult result,
+                                Model model) {
+        if (result.hasErrors()) {
+            valueCreation.setId(id);
+            return "Update-ValueCreation";
+        }
+
+        valueCreationRepository.save(valueCreation);
+        model.addAttribute("valueCreation", valueCreationRepository.findAll());
+        return "CRUDValueCreation";
+    }
+
+    @GetMapping("/delete/{id}")
+    public String deleteStudent(@PathVariable("id") long id, Model model) {
+        ValueCreationEntity valueCreationEntity = valueCreationRepository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("Invalid student Id:" + id));
+        valueCreationRepository.delete(valueCreationEntity);
+        model.addAttribute("valueCreations", valueCreationRepository.findAll());
+        return "CRUDValueCreation";
+    }
+
 }
