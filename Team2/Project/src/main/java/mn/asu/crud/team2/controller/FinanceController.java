@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -49,6 +50,37 @@ public class FinanceController {
 
         financeRepository.save(financeEntity);
         return "redirect:crud";
+    }
+
+    @GetMapping("/edit/{id}")
+    public String showUpdateForm(@PathVariable("id") long id, Model model) {
+        FinanceEntity finance = financeRepository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("Invalid student Id:" + id));
+        model.addAttribute("finance", finance);
+        return "Update-Finance";
+    }
+
+
+    @PostMapping("/update/{id}")
+    public String updateValue(@PathVariable("id") long id, @Valid FinanceEntity finance, BindingResult result,
+                              Model model) {
+        if (result.hasErrors()) {
+            finance.setId(id);
+            return "Update-Finance";
+        }
+
+        financeRepository.save(finance);
+        model.addAttribute("finance", financeRepository.findAll());
+        return "CRUDValueCreation";
+    }
+
+    @GetMapping("/delete/{id}")
+    public String deleteValue(@PathVariable("id") long id, Model model) {
+        FinanceEntity financeEntity = financeRepository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("Invalid value Id:" + id));
+        financeRepository.delete(financeEntity);
+        model.addAttribute("finances", financeRepository.findAll());
+        return "CRUDFinance";
     }
 
 }
