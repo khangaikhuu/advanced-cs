@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -48,5 +49,36 @@ public class businessController {
 
         businessRepository.save(businessEntity);
         return "redirect:crud";
+    }
+
+    @GetMapping("/edit/{id}")
+    public String showUpdateForm(@PathVariable("id") long id, Model model) {
+        BusinessEntity business = businessRepository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("Invalid business Id:" + id));
+        model.addAttribute("business", business);
+        return "Update-Business";
+    }
+
+
+    @PostMapping("/update/{id}")
+    public String updateBusiness(@PathVariable("id") long id, @Valid BusinessEntity business, BindingResult result,
+                              Model model) {
+        if (result.hasErrors()) {
+            business.setId(id);
+            return "Update-Business";
+        }
+
+        businessRepository.save(business);
+        model.addAttribute("business", businessRepository.findAll());
+        return "CRUDIndex";
+    }
+
+    @GetMapping("/delete/{id}")
+    public String deleteBusiness(@PathVariable("id") long id, Model model) {
+        BusinessEntity businessEntity = businessRepository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("Invalid business Id:" + id));
+        businessRepository.delete(businessEntity);
+        model.addAttribute("business", businessRepository.findAll());
+        return "CRUDIndex";
     }
 }
