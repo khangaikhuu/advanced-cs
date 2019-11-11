@@ -1,6 +1,6 @@
 package mn.asu.crud.team2.controller;
 
-import mn.asu.crud.team2.entity.FinanceEntity;
+
 import mn.asu.crud.team2.entity.MarketingEntity;
 import mn.asu.crud.team2.repository.MarketingRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,13 +16,13 @@ import javax.validation.Valid;
 @Controller
 @RequestMapping("/marketing")
 public class MarketingController {
+
     private final MarketingRepository marketingRepository;
 
     @Autowired
     public MarketingController(MarketingRepository marketingRepository) {
         this.marketingRepository = marketingRepository;
     }
-
 
     @GetMapping("/index")
     public String showMarketingPage(Model model) {
@@ -38,6 +38,10 @@ public class MarketingController {
 
     @GetMapping("/signup")
     public String showSignUpForm(MarketingEntity marketingEntity) {
+<<<<<<< HEAD
+        return "Add-Marketing";
+    }
+=======
 
         return "Add-Marketing";
     }
@@ -52,4 +56,5 @@ public class MarketingController {
         return "redirect:crud";
     }
 
+>>>>>>> 2d60dca94d1917fa02813b88217e72ce0c4d847b
 }

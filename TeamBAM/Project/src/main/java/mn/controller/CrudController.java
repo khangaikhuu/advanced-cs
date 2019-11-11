@@ -28,17 +28,25 @@ public class CrudController {
         return "CrudWord";
     }
     @PostMapping("add")
-    public String addStudent(@Valid Words word, BindingResult result, Model model) {
+    public String addStudent(@Valid Words words, BindingResult result, Model model) {
         if (result.hasErrors()) {
             return "addWord";
         }
 
-        wordRepository.save(word);
+        wordRepository.save(words);
         return "redirect:list";
     }
     @GetMapping("signup")
     public String addWordTwo(Words word) {
         return "addWord";
+    }
+
+    @GetMapping("edit/{id}")
+    public String showUpdateForm(@PathVariable("id") long id, Model model) {
+        Words words = wordRepository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("Invalid student Id:" + id));
+        model.addAttribute("words", words);
+        return "updateWord";
     }
 
     @PostMapping("update/{id}")

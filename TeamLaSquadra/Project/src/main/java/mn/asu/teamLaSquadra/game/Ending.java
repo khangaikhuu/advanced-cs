@@ -1,5 +1,7 @@
 package mn.asu.teamLaSquadra.game;
 
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -32,6 +34,13 @@ public class Ending
     hLayout.setAlignment(Pos.CENTER);
     vLayout.getChildren().addAll(ending, hLayout);
     vLayout.setAlignment(Pos.CENTER);
+
+    exitButton.setOnAction(new EventHandler<ActionEvent>() {
+        public void handle(ActionEvent event) {
+            Stage stage = (Stage) exitButton.getScene().getWindow();
+            stage.close();
+        }
+    });
 
     primaryStage.setScene(endingScene);
     }
