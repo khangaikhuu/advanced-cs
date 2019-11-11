@@ -1,7 +1,7 @@
 package mn.asu.crud.team2.controller;
 
 import mn.asu.crud.team2.entity.FinanceEntity;
-import mn.asu.crud.team2.entity.MarketingEntity;
+
 import mn.asu.crud.team2.repository.FinanceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
