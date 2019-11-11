@@ -1,6 +1,6 @@
 package mn.asu.crud.team2.controller;
 
-import mn.asu.crud.team2.entity.FinanceEntity;
+
 import mn.asu.crud.team2.entity.MarketingEntity;
 import mn.asu.crud.team2.repository.MarketingRepository;
 import org.springframework.beans.factory.annotation.Autowired;
