@@ -10,13 +10,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/marketing")
 public class MarketingController {
+
     private final MarketingRepository marketingRepository;
 
     @Autowired
     public MarketingController(MarketingRepository marketingRepository) {
         this.marketingRepository = marketingRepository;
     }
-
 
     @GetMapping("/index")
     public String showMarketingPage(Model model) {
@@ -30,4 +30,8 @@ public class MarketingController {
         return "CRUDMarketing";
     }
 
+    @GetMapping("/signup")
+    public String showSignUpForm(MarketingEntity marketingEntity) {
+        return "Add-Marketing";
+    }
 }
