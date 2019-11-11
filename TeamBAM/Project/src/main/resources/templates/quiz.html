@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Word Quiz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="img/fav.png" type="image/png"/>
+    <style>
+        #OverviewText4 {
+        position: relative;
+        }
+        #OverviewText4 img {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        }
+        body {
+         background-color: turquiose !important;
+         margin: 0;
+         font-family: sans-serif;
+        }
+
+        .menu {
+         overflow: hidden;
+         background-color: orange;
+        }
+
+        .topnav a {
+
+         float: left;
+         color: black;
+         text-align: center;
+         margin-left: 450px;
+
+         padding: 14px 16px;
+         text-decoration: none;
+         font-size: 20px;
+        }
+
+        .topnav a:hover {
+         background-color: ivory;
+         color: black;
+        }
+
+        .topnav a.active {
+         background-color: blue;
+         color: white;
+        }
+
+
+    </style>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+
+<body bgcolor="#3399ff">
+<div id = "OverviewText4">
+    <a href="/menu/menu">
+        <img th:src="@{/img/logo.png}" width="5%" alt="memorynotfound logo"/>
+    </a>
+</div>
+<div class="menu">
+    <div class="topnav">
+        <a class="active" id="home" href="/menu/quiz">Word Quiz</a>
+        <a id="CrudWord"href="/words/signup">Add Word</a>
+        <a id = "dictionary" href="/menu/dictionary">Dictionary (50 words)</a>
+    </div>
+</div>
+</body>
+</html>
