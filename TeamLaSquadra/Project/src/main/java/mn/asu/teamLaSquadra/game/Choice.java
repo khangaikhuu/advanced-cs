@@ -49,7 +49,7 @@ public class Choice {
 
         endingStage=primaryStage;
 
-        Image firstScene = new Image(new FileInputStream("Project/src/main/resources/prison.png"));
+        Image firstScene = new Image(new FileInputStream(getClass().getClassLoader().getResource("prison.png").getFile()));
 
         storyInfo.setFont(Font.font("Arial", FontWeight.BOLD, 30));
         choiceOne.setFont(Font.font("Arial", FontWeight.BOLD, 30));
