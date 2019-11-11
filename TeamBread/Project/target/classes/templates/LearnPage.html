@@ -80,8 +80,29 @@
         <li><a href="/improve/improvePage" class="navigation">Improve</a></li>
     </ul>
     <ul>
-        <textarea rows="20" cols="70">
-                </textarea>
+<!--        <textarea rows="20" cols="70">-->
+            <div th:switch="${words}" class="container my-5">
+                        <div class="col-md-10">
+                            <h2 th:case="null">No Students yet!</h2>
+                            <div th:case="*">
+                                <table class="table table-striped table-responsive-md">
+                                    <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr th:each="word : ${words}">
+                                        <td th:text="${word.name}"></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+<!--        </textarea>-->
+
     </ul>
 
         <a href="" class="previous round">&#8681;</a>

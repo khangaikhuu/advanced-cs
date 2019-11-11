@@ -2,10 +2,10 @@ package mn.asu.teamLaSquadra.game;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
@@ -24,12 +24,13 @@ public class Choice {
     private Button choiceOne;
     private Button choiceTwo;
     private Label storyImage;
-    private int buttonCounter1 = 0;
-    private int buttonCounter2 = 0;
     private int pressed;
     private int pres;
-    private VBox vChoice;
+    private VBox vChoice = new VBox();
     private HBox hLayout;
+    private Scene choiceScene = new Scene(vChoice,1550,1000);
+    private Ending ending = new Ending();
+    private Stage endingStage;
     public Choice()
     {
         sceneView = new ImageView();
@@ -38,16 +39,17 @@ public class Choice {
         choiceTwo = new Button("Sleep");
         storyImage = new Label();
         pressed = 0;
-        vChoice = new VBox();
         hLayout  = new HBox();
     }
 
 
 
 
-    public void firstChoice(StackPane root) throws FileNotFoundException {
+    public void firstChoice(Stage primaryStage) throws FileNotFoundException {
 
-        Image firstScene = new Image(new FileInputStream("Project/src/main/resources/prison.png"));
+        endingStage=primaryStage;
+
+        Image firstScene = new Image(new FileInputStream(getClass().getClassLoader().getResource("prison.png").getFile()));
 
         storyInfo.setFont(Font.font("Arial", FontWeight.BOLD, 30));
         choiceOne.setFont(Font.font("Arial", FontWeight.BOLD, 30));
@@ -64,7 +66,7 @@ public class Choice {
         hLayout.getChildren().addAll(choiceOne, choiceTwo);
         vChoice.getChildren().addAll(storyImage, storyInfo, hLayout);
         vChoice.setAlignment(Pos.CENTER);
-        root.getChildren().add(vChoice);
+        primaryStage.setScene(choiceScene);
         //button handler
         choiceOne.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent actionEvent) {
@@ -86,6 +88,8 @@ public class Choice {
                     case 6:
                         pressed = 8;
                         break;
+                    case 8:
+                        pressed=10;
                 }
 
                     try {
@@ -118,6 +122,8 @@ public class Choice {
                     case 6:
                         pressed = 9;
                         break;
+                    case 8:
+                        pressed = 11;
                 }
 
                     try {
@@ -146,7 +152,8 @@ public class Choice {
         {
             Image sceneKampf;
             try {
-                nextChoice(sceneKampf = new Image(new FileInputStream("Project/src/main/resources/prison.png")),
+
+                nextChoice(sceneKampf = new Image(new FileInputStream(getClass().getClassLoader().getResource("prison.png").getFile())),
                         "You have added a new page on your book.", "exit", "sleep");
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
@@ -159,7 +166,7 @@ public class Choice {
         {
             Image sceneKampf;
             try {
-                nextChoice(sceneKampf = new Image(new FileInputStream("Project/src/main/resources/prison.png")),
+                nextChoice(sceneKampf = new Image(new FileInputStream(getClass().getClassLoader().getResource("prison.png").getFile())),
                         "You couldn't sleep because you didn't write last night.", "just lie there", "exit");
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
@@ -177,7 +184,7 @@ public class Choice {
         if (input==4) {
             Image sceneKampf;
             try {
-                nextChoice(sceneKampf = new Image(new FileInputStream("Project/src/main/resources/prison.png")),
+                nextChoice(sceneKampf = new Image(new FileInputStream(getClass().getClassLoader().getResource("prison.png").getFile())),
                         "The next day in prison is here.", "get out of bed", "exit");
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
@@ -196,7 +203,7 @@ public class Choice {
         if (input==6) {
             Image sceneDayPrison;
             try {
-                nextChoice(sceneDayPrison = new Image(new FileInputStream("Project/src/main/resources/dayprison.jpg")),
+                nextChoice(sceneDayPrison = new Image(new FileInputStream(getClass().getClassLoader().getResource("dayprison.jpg").getFile())),
                         "The guard is calling you out.", "yes", "exit");
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
@@ -213,7 +220,7 @@ public class Choice {
         if (input==8) {
             Image sceneDayPrison;
             try {
-                nextChoice(sceneDayPrison = new Image(new FileInputStream("Project/src/main/resources/leavingPrison.jpg")),
+                nextChoice(sceneDayPrison = new Image(new FileInputStream(getClass().getClassLoader().getResource("leavingPrison.jpg").getFile())),
                         "The Bavarian Supreme Cour has pardoned your treason, \n" +
                                 "and you are released from prison after only a year\n" +
                                 ", in 20 December 1924.", "Pack up your stuff and leave", "Leave");
@@ -229,11 +236,21 @@ public class Choice {
             stage.close();
         }
 
+        if (input==10)
+        {
+            ending.ending("World War 2 ends with the unconditional surrender of the Axis Powers" +
+                    "\nthus ending the most violent struggle in human history. Adolf Hitler commits suicide, The Japanese surrender after" +
+                    "\n two nuclear as well as Italy surrendering and switching sides.",endingStage);
+            pressed=10;
+        }
+
+        if (input==11)
+        {
+            ending.ending("Because you left your valuable book behind in prison you have no material to sway the public opinion, so you retire and become a simple salary man.",endingStage);
+            pressed=11;
+        }
         return pressed;
     }
 
+
 }
-
-
-
-

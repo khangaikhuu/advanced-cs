@@ -1,7 +1,7 @@
-package mn.controller;
+package mn.asu.teamBread.controller;
 
-import mn.entity.Words;
-import mn.repository.WordRepository;
+import mn.asu.teamBread.entity.Word;
+import mn.asu.teamBread.repository.WordRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,51 +14,48 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import javax.validation.Valid;
 
 @Controller
-@RequestMapping("/words/")
-public class CrudController {
+@RequestMapping("/crud/")
+public class CrudPageController {
     private final WordRepository wordRepository;
+
     @Autowired
-    public CrudController(WordRepository wordRepository) {
+    public CrudPageController(WordRepository wordRepository) {
         this.wordRepository = wordRepository;
+    }
+
+    @GetMapping("signup")
+    public String showSignUpForm(Word word) {
+        return "AddWord";
     }
 
     @GetMapping("list")
     public String showUpdateForm(Model model) {
         model.addAttribute("words", wordRepository.findAll());
-        return "CrudWord";
+        return "CrudPage";
     }
+
     @PostMapping("add")
-    public String addStudent(@Valid Words word, BindingResult result, Model model) {
+    public String addStudent(@Valid Word student, BindingResult result, Model model) {
         if (result.hasErrors()) {
-            return "addWord";
+            return "AddWord";
         }
 
-        wordRepository.save(word);
+        wordRepository.save(student);
         return "redirect:list";
     }
-    @GetMapping("signup")
-    public String addWordTwo(Words word) {
-        return "addWord";
-    }
-
-    @PostMapping("update/{id}")
-    public String updateStudent(@PathVariable("id") long id, @Valid Words words, BindingResult result, Model model) {
-        if (result.hasErrors()) {
-            words.setId(id);
-            return "updateWord";
-        }
-
-        wordRepository.save(words);
-        model.addAttribute("words", wordRepository.findAll());
-        return "CrudWord";
-    }
-
     @GetMapping("delete/{id}")
     public String deleteStudent(@PathVariable("id") long id, Model model) {
-        Words words = wordRepository.findById(id)
+        Word word = wordRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("Invalid student Id:" + id));
-        wordRepository.delete(words);
-        model.addAttribute("words", wordRepository.findAll());
-        return "CrudWord";
+        wordRepository.delete(word);
+        model.addAttribute("students", wordRepository.findAll());
+        return "index";
+    }
+    @GetMapping("edit/{id}")
+    public String showUpdateForm(@PathVariable("id") long id, Model model) {
+        Word word = wordRepository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("Invalid word Id:" + id));
+        model.addAttribute("word", word);
+        return "update-word";
     }
 }
