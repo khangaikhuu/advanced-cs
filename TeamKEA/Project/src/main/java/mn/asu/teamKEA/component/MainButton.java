@@ -7,10 +7,11 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import java.util.Map;
 import java.util.Random;
 
-import static mn.asu.teamKEA.Main.allIcons;
-import static mn.asu.teamKEA.Main.mainPanel;
+import static mn.asu.teamKEA.Main.*;
+import static mn.asu.teamKEA.component.UsedImageIcons.*;
 
 public class MainButton {
 
@@ -25,57 +26,35 @@ public class MainButton {
     }
 
 
-    public static int i = 0;
+    public static int i = 2;
 
-    public void nextWord( String text,   ImageIcon imageIcon, ArrayList words) {
+    public void nextWord( String text,   ImageIcon imageIcon) {
 
 
         Button.addActionListener(new ActionListener() {
 
-
             public void actionPerformed(ActionEvent e) {
-                Random number = new Random();
-                int index = number.nextInt(words.size()-1);
-                if (i == 1) {
-                    Button.setIcon(null);
-                    Button.setText(text);
-                    mainPanel.Panel.revalidate();
-                    mainPanel.Panel.repaint();
-                    i=1;
-                } else if(i==1) {
+                if(i % 2 ==0) {
 
-                    Button.setText(null);
-                    Button.setIcon(imageIcon);
-                    mainPanel.Panel.revalidate();
-                    mainPanel.Panel.repaint();
-                    i=0;
-                }
-                else if(i==2)
-                {
                     Button.setIcon(null);
-                    Button.setText("Demander");
+                    Button.setText(database[i][0]);
                     mainPanel.Panel.revalidate();
                     mainPanel.Panel.repaint();
-                    i=3;
                 }
-                else if(i==3)
+                else
                 {
                     Button.setText(null);
-                    Button.setIcon(allIcons.demander);
+                    Button.setIcon(getIcon(database[i][1]));
                     mainPanel.Panel.revalidate();
                     mainPanel.Panel.repaint();
-                    i=2;
                 }
-
-
-
             }
         });
     }
 
 
-    public int set = 0;
 
+    public static int set = 0;
     public void nextSet()
     {
         nextButton.addActionListener(new ActionListener() {
@@ -83,11 +62,7 @@ public class MainButton {
             @Override
             public void actionPerformed(ActionEvent e) {
                 set++;
-                if(set==1)
-                {
 
-                    i=2;
-                }
             }
         });
 
