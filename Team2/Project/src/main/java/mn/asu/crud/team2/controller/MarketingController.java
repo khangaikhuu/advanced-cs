@@ -56,7 +56,7 @@ public class MarketingController {
     @GetMapping("/edit/{id}")
     public String showUpdateForm(@PathVariable("id") long id, Model model) {
         MarketingEntity marketing = marketingRepository.findById(id)
-                .orElseThrow(() -> new IllegalArgumentException("Invalid marketing Id:" + id));
+                .orElseThrow(() -> new IllegalArgumentException("Invalid student Id:" + id));
         model.addAttribute("marketing", marketing);
         return "Update-Marketing";
     }
@@ -80,7 +80,7 @@ public class MarketingController {
         MarketingEntity marketingEntity = marketingRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("Invalid marketing Id:" + id));
         marketingRepository.delete(marketingEntity);
-        model.addAttribute("marketing", marketingRepository.findAll());
+        model.addAttribute("marketings", marketingRepository.findAll());
         return "CRUDMarketing";
     }
 }
