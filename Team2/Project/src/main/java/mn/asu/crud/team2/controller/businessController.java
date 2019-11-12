@@ -27,7 +27,7 @@ public class businessController {
     @GetMapping("/index")
     public String showMarketingPage(Model model) {
         model.addAttribute("businesses", businessRepository.findAll());
-        return "Business";
+        return "index";
     }
 
     @GetMapping("/crud")
