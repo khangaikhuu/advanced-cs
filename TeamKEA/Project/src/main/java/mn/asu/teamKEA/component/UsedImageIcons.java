@@ -4,6 +4,8 @@ import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.io.*;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class UsedImageIcons {
 
@@ -87,9 +89,26 @@ public class UsedImageIcons {
             e.printStackTrace();
         }
     }
-    public static Image nextTransform =nextPre.getImage();
-    public static Image nextScale = nextTransform.getScaledInstance(55, 114,  java.awt.Image.SCALE_SMOOTH);
-    public static ImageIcon next= new ImageIcon(nextScale);
+    public static ImageIcon getIcon(Image i)
+    {
+        Image nextTransform =nextPre.getImage();
+        Image nextScale = nextTransform.getScaledInstance(54, 114,  java.awt.Image.SCALE_SMOOTH);
+        ImageIcon next= new ImageIcon(nextScale);
+        return next;
+    }
+
+
+
+
+    public void addValues() throws IOException {
+        UsedImageIcons.class.getClassLoader().getResources("*.jpg");
+        HashMap<String , ImageIcon> hm = new HashMap();
+
+    }
+
+
+
+
 }
 
 
