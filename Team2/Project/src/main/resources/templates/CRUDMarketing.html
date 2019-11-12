@@ -15,10 +15,10 @@
 <img th:src="@{/img/google.png}" width="20%" alt="memorynotfound logo"/>
 <div class="container my-2">
     <div class="card">
-        <div class="card-body">gi
+        <div class="card-body">
             <div th:switch="${marketings}" class="container my-5">
                 <p class="my-5">
-                    <a href="/marketings/signup" class="btn btn-primary"><i
+                    <a href="/marketing/signup" class="btn btn-primary"><i
                             class="fas fa-user-plus ml-2"> Add Marketing</i></a>
                 </p>
                 <div class="col-md-10">
@@ -38,8 +38,8 @@
                                 <td th:text="${marketing.title}"></td>
                                 <td th:text="${marketing.content}"></td>
 
-                                <td><a th:href="@{/marketings/edit/{id}(id=${marketing.id})}" class="btn btn-primary"><i class="fas fa-user-edit ml-2"></i></a></td>
-                                <td><a th:href="@{/marketings/delete/{id}(id=${marketing.id})}" class="btn btn-primary"><i class="fas fa-user-times ml-2"></i></a></td>
+                                <td><a th:href="@{/marketing/edit/{id}(id=${marketing.id})}" class="btn btn-primary"><i class="fas fa-user-edit ml-2"></i></a></td>
+                                <td><a th:href="@{/marketing/delete/{id}(id=${marketing.id})}" class="btn btn-primary"><i class="fas fa-user-times ml-2"></i></a></td>
                             </tr>
                             </tbody>
                         </table>

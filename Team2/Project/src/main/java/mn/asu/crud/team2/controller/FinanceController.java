@@ -57,7 +57,7 @@ public class FinanceController {
         FinanceEntity finance = financeRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("Invalid student Id:" + id));
         model.addAttribute("finance", finance);
-        return "Update-Finance";
+        return "Update_Finance";
     }
 
 
@@ -66,12 +66,12 @@ public class FinanceController {
                               Model model) {
         if (result.hasErrors()) {
             finance.setId(id);
-            return "Update-Finance";
+            return "Update_Finance";
         }
 
         financeRepository.save(finance);
-        model.addAttribute("finance", financeRepository.findAll());
-        return "CRUDValueCreation";
+        model.addAttribute("finances", financeRepository.findAll());
+        return "CRUDFinance";
     }
 
     @GetMapping("/delete/{id}")
