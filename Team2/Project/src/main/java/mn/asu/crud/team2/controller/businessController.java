@@ -69,7 +69,7 @@ public class businessController {
         }
 
         businessRepository.save(business);
-        model.addAttribute("business", businessRepository.findAll());
+        model.addAttribute("businesses", businessRepository.findAll());
         return "CRUDIndex";
     }
 

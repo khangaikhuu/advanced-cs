@@ -71,7 +71,7 @@ public class MarketingController {
         }
 
         marketingRepository.save(marketing);
-        model.addAttribute("marketing", marketingRepository.findAll());
+        model.addAttribute("marketings", marketingRepository.findAll());
         return "CRUDMarketing";
     }
 
