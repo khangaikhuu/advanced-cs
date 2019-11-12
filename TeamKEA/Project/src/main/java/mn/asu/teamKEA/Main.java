@@ -1,12 +1,8 @@
 package mn.asu.teamKEA;
-<<<<<<< HEAD
 import mn.asu.persistence.Words;
 import mn.asu.teamKEA.component.*;
 
 import javax.swing.*;
-=======
-import mn.asu.teamKEA.component.*;
->>>>>>> 30ff0b385d2f07aebe8eca47cd6e5daa3df3cc22
 import java.io.IOException;
 
 public class Main {

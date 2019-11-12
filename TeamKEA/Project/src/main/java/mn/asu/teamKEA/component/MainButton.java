@@ -94,8 +94,5 @@ public class MainButton {
 
     }
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 30ff0b385d2f07aebe8eca47cd6e5daa3df3cc22
 }
