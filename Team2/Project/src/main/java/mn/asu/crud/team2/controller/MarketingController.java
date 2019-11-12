@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -38,16 +39,12 @@ public class MarketingController {
 
     @GetMapping("/signup")
     public String showSignUpForm(MarketingEntity marketingEntity) {
-<<<<<<< HEAD
-        return "Add-Marketing";
-    }
-=======
 
         return "Add-Marketing";
     }
 
     @PostMapping("/add")
-    public String addStudent(@Valid MarketingEntity marketingEntity, BindingResult result, Model model) {
+    public String addMarketing(@Valid MarketingEntity marketingEntity, BindingResult result, Model model) {
         if (result.hasErrors()) {
             return "Add-Marketing";
         }
@@ -56,5 +53,35 @@ public class MarketingController {
         return "redirect:crud";
     }
 
->>>>>>> 2d60dca94d1917fa02813b88217e72ce0c4d847b
+    @GetMapping("/edit/{id}")
+    public String showUpdateForm(@PathVariable("id") long id, Model model) {
+        MarketingEntity marketing = marketingRepository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("Invalid marketing Id:" + id));
+        model.addAttribute("marketing", marketing);
+        return "Update-Marketing";
+    }
+
+
+    @PostMapping("/update/{id}")
+    public String updateMarketing(@PathVariable("id") long id, @Valid MarketingEntity marketing, BindingResult result,
+                                  Model model) {
+        if (result.hasErrors()) {
+            marketing.setId(id);
+            return "Update-Marketing";
+        }
+
+        marketingRepository.save(marketing);
+        model.addAttribute("marketing", marketingRepository.findAll());
+        return "CRUDMarketing";
+    }
+
+    @GetMapping("/delete/{id}")
+    public String deleteMarketing(@PathVariable("id") long id, Model model) {
+        MarketingEntity marketingEntity = marketingRepository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("Invalid marketing Id:" + id));
+        marketingRepository.delete(marketingEntity);
+        model.addAttribute("marketing", marketingRepository.findAll());
+        return "CRUDMarketing";
+    }
 }
+

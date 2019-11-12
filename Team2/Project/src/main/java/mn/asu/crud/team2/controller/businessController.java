@@ -26,13 +26,13 @@ public class businessController {
 
     @GetMapping("/index")
     public String showMarketingPage(Model model) {
-        model.addAttribute("indexs", businessRepository.findAll());
-        return "index";
+        model.addAttribute("businesses", businessRepository.findAll());
+        return "business";
     }
 
     @GetMapping("/crud")
     public String crudIndexPage(Model model) {
-        model.addAttribute("indexs", businessRepository.findAll());
+        model.addAttribute("businesses", businessRepository.findAll());
         return "CRUDIndex";
     }
 
