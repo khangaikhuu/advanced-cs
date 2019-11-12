@@ -68,6 +68,7 @@ public class UsedImageIcons {
 <<<<<<< HEAD
 
 =======
+>>>>>>> 30ff0b385d2f07aebe8eca47cd6e5daa3df3cc22
     public static ImageIcon PreImage1;
 
     static {
@@ -93,7 +94,10 @@ public class UsedImageIcons {
     public static Image nextTransform =nextPre.getImage();
     public static Image nextScale = nextTransform.getScaledInstance(55, 114,  java.awt.Image.SCALE_SMOOTH);
     public static ImageIcon next= new ImageIcon(nextScale);
->>>>>>> f5d98355a7242be65cc55c9c0a5c7a6d791a3346
+<<<<<<< HEAD
+
+=======
+>>>>>>> 30ff0b385d2f07aebe8eca47cd6e5daa3df3cc22
 }
 
 
