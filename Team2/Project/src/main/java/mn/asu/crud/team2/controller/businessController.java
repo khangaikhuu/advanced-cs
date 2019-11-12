@@ -27,13 +27,13 @@ public class businessController {
     @GetMapping("/index")
     public String showMarketingPage(Model model) {
         model.addAttribute("businesses", businessRepository.findAll());
-        return "business";
+        return "Business";
     }
 
     @GetMapping("/crud")
     public String crudIndexPage(Model model) {
         model.addAttribute("businesses", businessRepository.findAll());
-        return "CRUDIndex";
+        return "CRUDBusiness";
     }
 
     @GetMapping("/signup")
@@ -70,7 +70,7 @@ public class businessController {
 
         businessRepository.save(business);
         model.addAttribute("businesses", businessRepository.findAll());
-        return "CRUDIndex";
+        return "CRUDBusiness";
     }
 
     @GetMapping("/delete/{id}")
@@ -79,6 +79,6 @@ public class businessController {
                 .orElseThrow(() -> new IllegalArgumentException("Invalid business Id:" + id));
         businessRepository.delete(businessEntity);
         model.addAttribute("business", businessRepository.findAll());
-        return "CRUDIndex";
+        return "CRUDBusiness";
     }
 }
