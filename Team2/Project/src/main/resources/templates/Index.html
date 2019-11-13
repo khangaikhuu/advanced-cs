@@ -49,25 +49,12 @@ h2 {
    color: green;
 }
 
-public void saveEdits()
-{
-    var editElem = document.getElementById("edit");
-    var userVersion = editElem.innerHTML;
-    localStorage.userEdits = userVersion;
-    document.getElementById("update").innerHTML="Edit Saved";
-}
-public void checkEdits()
-{
-    if(localStorage.userEdits!=null)
-    {
-        document.getElementById("edit").innerHTMl = localStorage.userEdits;
-    }
-}
+
 
 
 </style>
 </head>
-<body onload="checkEdits()">
+<body>
 
 <div class="topnav">
     <a class="active" href="/">Home</a>
@@ -77,8 +64,8 @@ public void checkEdits()
 </div>
 
 <div class = "content">
-    <div id = "edit" contenteditable="true">
-        <h1>Business</h1> <input type="button" value = "edit" onclick="saveEdits()"/>
+    <div>
+        <h1>Business</h1>
         <p>A business is an economic system or organization where commercial activities of selling and producing goods and services are conducted. Most businesses operate for profit, however, non-profit businesses exist commonly to serve for a charitable cost. There are several forms of businesses. The most common forms are; partnership, corporation, and sole proprietorship.</p>
         <p>In order to generate profit, businesses aim to attain investment and a level of customers where its output ensures an earning.
         </p>
@@ -86,7 +73,9 @@ public void checkEdits()
         <p>In its essence, most businesses begin with an idea or concept in which an entrepreneur takes a risk to implement it to society. Research is vital to starting a business as it serves to the foundation of success. Businesses craft a business plan in which the core goals and objectives of the business is outlined. The legal part of the business depends on what type of structure it is.
         </p>
         <img src = "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ioHOe1ivIiUU/v2/1200x-1.jpg" width = "500px" height = "300px">
-        <p class = "b">In 1040, the Marinelli Bell Foundry was established by the successor Pontificia Fonderia Marinelli. The Bell Foundry is considered as Italy's first family business and one of the oldest foundries in the world. </p>
+        <h4>Pontificia Fonderia Marinelli</h4>
+        <a href = "https://en.wikipedia.org/wiki/Pontificia_Fonderia_Marinelli"> More Information </a>
+        <p class = "b"> In 1040, the Marinelli Bell Foundry was established by the successor Pontificia Fonderia Marinelli. The Bell Foundry is considered as Italy's first family business and one of the oldest foundries in the world. </p>
         <h3>Business Structures</h3>
         <h4>Partnership - </h4>
         <p>A partnership is where two or more people join to operate a business together. Members of the partnership would contribute capital and resources to the business. They also are required to share the losses and profit of the business.</p>

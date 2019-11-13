@@ -50,10 +50,8 @@ public class Setup {
         LockedStalinButton.setGraphic(StalinView);
         hLayout.setAlignment(Pos.CENTER);
 
-
-
         primaryStage.setScene(setupScene);
-
+        primaryStage.setFullScreen(true);
         HitlerButton.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent actionEvent) {
                 prologue.prologue(primaryStage);
