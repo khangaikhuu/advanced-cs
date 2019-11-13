@@ -38,13 +38,10 @@ public class MarketingController {
 
     @GetMapping("/signup")
     public String showSignUpForm(MarketingEntity marketingEntity) {
-<<<<<<< HEAD
-        return "Add-Marketing";
-    }
-=======
 
         return "Add-Marketing";
     }
+
 
     @PostMapping("/add")
     public String addStudent(@Valid MarketingEntity marketingEntity, BindingResult result, Model model) {
@@ -56,5 +53,4 @@ public class MarketingController {
         return "redirect:crud";
     }
 
->>>>>>> 2d60dca94d1917fa02813b88217e72ce0c4d847b
 }
