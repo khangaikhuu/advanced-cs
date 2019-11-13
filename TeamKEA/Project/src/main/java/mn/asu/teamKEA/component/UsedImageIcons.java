@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class UsedImageIcons {
-    public static String[][] database = new String[36][2];
+    public static String[][] database = new String[33][2];
     public static Image ourImage;
 
     public static Image getImage(String filename) throws IOException {
@@ -87,7 +87,7 @@ public class UsedImageIcons {
 
     public static ImageIcon getIcon(String i) throws IOException {
         Image nextTransform = getImage(i);
-        Image nextScale = nextTransform.getScaledInstance(54, 114, java.awt.Image.SCALE_SMOOTH);
+        Image nextScale = nextTransform.getScaledInstance(715, 536, java.awt.Image.SCALE_SMOOTH);
         ImageIcon next = new ImageIcon(nextScale);
         return next;
     }

@@ -41,9 +41,11 @@ public class MainButton {
                     Button.setText(database[set][0]);
                     mainPanel.Panel.revalidate();
                     mainPanel.Panel.repaint();
+                    i++;
                 }
                 else
                 {
+
                     Button.setText(null);
                     try {
                         Button.setIcon(getIcon(database[set][1]));
@@ -52,6 +54,7 @@ public class MainButton {
                     }
                     mainPanel.Panel.revalidate();
                     mainPanel.Panel.repaint();
+                    i++;
                 }
             }
 
@@ -67,13 +70,22 @@ public class MainButton {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                set++;
+                if(set%database.length-1 == 0)
+                {
+                    set=0;
+                }
+                else {
+                    set++;
+                }
+
 
             }
         });
 
 
     }
+
+
 
 
 }
