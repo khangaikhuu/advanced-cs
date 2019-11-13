@@ -29,7 +29,7 @@ public class LearnPageController {
 
         long id = rand.nextInt(10);
 
-        model.addAttribute("words", repository.findById(id));
+        model.addAttribute("words",repository.findAll());
         return "LearnPage";
     }
 }
