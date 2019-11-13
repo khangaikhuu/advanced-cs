@@ -5,8 +5,12 @@ import mn.asu.teamKEA.component.*;
 import javax.swing.*;
 import java.io.IOException;
 
+import static mn.asu.teamKEA.component.UsedImageIcons.dataBase;
+
+
 public class Main {
     public static void main(String[] args) throws IOException {
+        dataBase();
         mainButton.nextWord( "Danser",allIcons.danser);
        mainButton.nextSet();
     }

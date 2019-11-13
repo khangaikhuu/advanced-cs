@@ -38,7 +38,7 @@ public class MainButton {
                 if(i % 2 ==0) {
 
                     Button.setIcon(null);
-                    Button.setText(database[i][0]);
+                    Button.setText(database[set][0]);
                     mainPanel.Panel.revalidate();
                     mainPanel.Panel.repaint();
                 }
@@ -46,7 +46,7 @@ public class MainButton {
                 {
                     Button.setText(null);
                     try {
-                        Button.setIcon(getIcon(database[i][1]));
+                        Button.setIcon(getIcon(database[set][1]));
                     } catch (IOException ex) {
                         ex.printStackTrace();
                     }
