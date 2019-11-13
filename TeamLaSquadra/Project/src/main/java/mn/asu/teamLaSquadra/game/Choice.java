@@ -49,7 +49,7 @@ public class Choice {
 
         endingStage=primaryStage;
 
-        Image firstScene = new Image(new FileInputStream("Project/src/main/resources/prison.png"));
+        Image firstScene = new Image(new FileInputStream(getClass().getClassLoader().getResource("prison.png").getFile()));
 
         storyInfo.setFont(Font.font("Arial", FontWeight.BOLD, 30));
         choiceOne.setFont(Font.font("Arial", FontWeight.BOLD, 30));
@@ -238,17 +238,56 @@ public class Choice {
 
         if (input==10)
         {
-            ending.ending("World War 2 ends with the unconditional surrender of the Axis Powers" +
-                    "\nthus ending the most violent struggle in human history. Adolf Hitler commits suicide, The Japanese surrender after" +
-                    "\n two nuclear as well as Italy surrendering and switching sides.",endingStage);
+            Image partyScene;
+            try {
+                nextChoice(partyScene = new Image(new FileInputStream(getClass().getClassLoader().getResource("heinrichHeld.jpg").getFile())),
+                        "The Nazi Party and it's affiliates have been banned in Bavaria. " +
+                                "The Prime Minister, Heinrich Held wants to meet with you in " +
+                                "January 4th. Go to the meeting?", "Reorganize party", "go to meeting");
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
             pressed=10;
         }
 
         if (input==11)
         {
-            ending.ending("Because you left your valuable book behind in prison you have no material to sway the public opinion, so you retire and become a simple salary man.",endingStage);
+            Stage stage = (Stage) exitButton.getScene().getWindow();
+            stage.close();
             pressed=11;
         }
+
+        if(input==12)
+        {
+
+        }
+
+        if(input==13)
+        {
+
+        }
+
+        if(input==14)
+        {
+
+        }
+
+        if(input==15)
+        {
+
+        }
+
+        if(input==16)
+        {
+
+        }
+
+        //ending.ending("World War 2 ends with the unconditional surrender of the Axis Powers" +
+        //                    "\nthus ending the most violent struggle in human history. Adolf Hitler commits suicide, The Japanese surrender after" +
+        //                    "\n two nuclear as well as Italy surrendering and switching sides.",endingStage);
+
+        //ending.ending("Because you left your valuable book behind in prison you have no material to sway the public opinion, so you retire and become a simple salary man.",endingStage);
+
         return pressed;
     }
 

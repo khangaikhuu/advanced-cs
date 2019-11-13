@@ -6,74 +6,68 @@ import javax.swing.*;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.Map;
+import java.util.Random;
 
-import static mn.asu.teamKEA.Main.mainPanel;
+import static mn.asu.teamKEA.Main.*;
+import static mn.asu.teamKEA.component.UsedImageIcons.*;
 
 public class MainButton {
 
-    public static boolean nextPanel = false;
     public JButton Button = new JButton();
-    public MainButton(int x, int y, int width , int height, String name, ImageIcon imageIcon)
-    {
+    public JButton nextButton = new JButton();
+
+    public MainButton(int x, int y, int width, int height,  ImageIcon imageIcon, int x2, int y2 , int width2, int height2, ImageIcon imageIcon2) {
         Button.setBounds(x, y, width, height);
-        Button.setText(name);
         Button.setIcon(imageIcon);
+        nextButton.setBounds(x2,y2,width2,height2);
+        nextButton.setIcon(imageIcon2);
     }
-
-
 
 
     public static int i = 2;
 
-    public void nextWord(JButton button, String text1, String text2, ImageIcon imageIcon1, ImageIcon imageIcon2) {
+    public void nextWord( String text,   ImageIcon imageIcon) {
 
 
         Button.addActionListener(new ActionListener() {
 
-
-
             public void actionPerformed(ActionEvent e) {
+                if(i % 2 ==0) {
 
-                if(i%2==0)
-                {
-                    nextPanel = true;
-                    button.setText(text1);
-                    button.setIcon(imageIcon1);
+                    Button.setIcon(null);
+                    Button.setText(database[i][0]);
                     mainPanel.Panel.revalidate();
                     mainPanel.Panel.repaint();
                 }
                 else
                 {
-
-                    nextPanel = true;
-                    button.setText(text2);
-                    button.setIcon(imageIcon2);
+                    Button.setText(null);
+                    Button.setIcon(getIcon(database[i][1]));
                     mainPanel.Panel.revalidate();
                     mainPanel.Panel.repaint();
                 }
-                i++;
             }
         });
     }
 
-    public int set = 0;
 
+
+    public static int set = 0;
     public void nextSet()
     {
-        set++;
-        Button.addActionListener(new ActionListener() {
+        nextButton.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(set==1)
-                {
+                set++;
 
-                    nextWord(Main.nextButton.Button, "Next", "NExt2",UsedImageIcons.next, UsedImageIcons.next);
-                }
             }
         });
 
 
     }
+
 
 }
