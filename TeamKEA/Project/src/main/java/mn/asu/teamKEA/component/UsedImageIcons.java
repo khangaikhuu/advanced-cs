@@ -68,6 +68,7 @@ public class UsedImageIcons {
     public static Image scale = transform.getScaledInstance(715, 536, java.awt.Image.SCALE_SMOOTH);
     public static ImageIcon danser = new ImageIcon(scale);
 
+
     public static ImageIcon PreImage1;
 
     static {
@@ -92,6 +93,7 @@ public class UsedImageIcons {
         }
     }
 
+<<<<<<< HEAD
 
     public static Image nextTransform = nextPre.getImage();
     public static Image nextScale = nextTransform.getScaledInstance(55, 114, java.awt.Image.SCALE_SMOOTH);
@@ -102,10 +104,17 @@ public class UsedImageIcons {
         Image nextTransform =nextPre.getImage();
         Image nextScale = nextTransform.getScaledInstance(54, 114,  java.awt.Image.SCALE_SMOOTH);
         ImageIcon next= new ImageIcon(nextScale);
+=======
+    public static ImageIcon getIcon(String i) {
+        Image nextTransform = nextPre.getImage();
+        Image nextScale = nextTransform.getScaledInstance(54, 114, java.awt.Image.SCALE_SMOOTH);
+        ImageIcon next = new ImageIcon(nextScale);
+>>>>>>> 153caf5b1f81a5fe4c212756d8817119fc2af706
         return next;
     }
 
 
+<<<<<<< HEAD
 
 
     public void addValues() throws IOException {
@@ -113,10 +122,15 @@ public class UsedImageIcons {
         HashMap<String , ImageIcon> hm = new HashMap();
         hm.put("danser", danser);
         hm.put("demander", demander);
+=======
+    public static String[][] database = new String[19][2];
+    public static void dataBase()
+    {
+        database[1][0] = "Danser";
+>>>>>>> 153caf5b1f81a5fe4c212756d8817119fc2af706
     }
 
 
 }
-
 
 

@@ -7,8 +7,7 @@ import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-      // mainButton.nextWord( "Danser",allIcons.danser);
-       allIcons.addValues();
+        mainButton.nextWord( "Danser",allIcons.danser);
        mainButton.nextSet();
     }
 

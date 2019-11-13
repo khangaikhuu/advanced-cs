@@ -15,9 +15,9 @@ import org.h2.tools.DeleteDbFiles;
 public class H2App {
 
     private static final String DB_DRIVER = "org.h2.Driver";
-    private static final String DB_CONNECTION = "jdbc:h2:~/test";
-    private static final String DB_USER = "";
-    private static final String DB_PASSWORD = "";
+    private static final String DB_CONNECTION = "jdbc:h2:~/project";
+    private static final String DB_USER = "sa";
+    private static final String DB_PASSWORD = "as";
 
     public static void main(String[] args) throws Exception {
         try {
@@ -39,9 +39,9 @@ public class H2App {
         PreparedStatement insertPreparedStatement = null;
         PreparedStatement selectPreparedStatement = null;
 
-        String CreateQuery = "CREATE TABLE PERSON(id int primary key, name varchar(255))";
-        String InsertQuery = "INSERT INTO PERSON" + "(id, name) values" + "(?,?)";
-        String SelectQuery = "select * from PERSON";
+        String CreateQuery = "CREATE TABLE srgr(id int primary key, name varchar(255))";
+        String InsertQuery = "INSERT INTO srgr" + "(id, name) values" + "(?,?)";
+        String SelectQuery = "select * from srgr";
         try {
             connection.setAutoCommit(false);
 
@@ -80,12 +80,12 @@ public class H2App {
         try {
             connection.setAutoCommit(false);
             stmt = connection.createStatement();
-            stmt.execute("CREATE TABLE PERSON(id int primary key, name varchar(255))");
-            stmt.execute("INSERT INTO PERSON(id, name) VALUES(1, 'Anju')");
-            stmt.execute("INSERT INTO PERSON(id, name) VALUES(2, 'Sonia')");
-            stmt.execute("INSERT INTO PERSON(id, name) VALUES(3, 'Asha')");
+            stmt.execute("CREATE TABLE srgr(id int primary key, name varchar(255))");
+            stmt.execute("INSERT INTO srgr(id, name) VALUES(1, 'Anju')");
+            stmt.execute("INSERT INTO srgr(id, name) VALUES(2, 'Sonia')");
+            stmt.execute("INSERT INTO srgr(id, name) VALUES(3, 'Asha')");
 
-            ResultSet rs = stmt.executeQuery("select * from PERSON");
+            ResultSet rs = stmt.executeQuery("select * from project");
             System.out.println("H2 Database inserted through Statement");
             while (rs.next()) {
                 System.out.println("Id "+rs.getInt("id")+" Name "+rs.getString("name"));
