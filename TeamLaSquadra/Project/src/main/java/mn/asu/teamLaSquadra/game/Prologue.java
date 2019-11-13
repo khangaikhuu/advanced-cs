@@ -44,6 +44,7 @@ public class Prologue
         vLayout.setAlignment(Pos.CENTER);
 
         primaryStage.setScene(prologueScene);
+        primaryStage.setFullScreen(true);
 
         ContinueButton.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent actionEvent) {
