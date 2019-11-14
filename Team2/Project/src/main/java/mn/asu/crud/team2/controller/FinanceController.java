@@ -27,7 +27,7 @@ public class FinanceController {
 
     @GetMapping("/index")
     public String showFinancePage(Model model) {
-<<<<<<< HEAD
+
         String tag = "<h2>Finance</h2>\n" +
                 "    <p>Finance means the management of large amounts of money, especially by governments and large companies. It also means all the records of money including income, spent, rent in all people, companies, and governments, etc.</p>\n" +
                 "    <p>There are three main types:</p>\n" +
@@ -46,7 +46,7 @@ public class FinanceController {
                 "    <p>Spending is the money that is used by individuals or in a group of people. People have spending in various ways for their needs and wants that relate to themselves or their businesses. The common ways of people’s spendings are: rent, taxes, food, entertainment, credit card payments, needs, and wants.\n" +
                 "    </p>\n" +
                 "    <p>People often have two ways to pay their spending: cash or credit card. Cash is the money with coins or also made in papers (even notes) to purchase goods or services. Credit is a small card offered by a bank or even in some companies; it allows the owner to purchase their goods or services with no cash.\n" +
-                "    </p>\n" +1
+                "    </p>\n" +
                 "    <h4>Savings</h4>\n" +
                 "    <p>Saving is the important area of personal finance which means the money that is stored for future use by individuals or in a group of people. The common forms of savings are: cash and bank accounts. Savings interact with all areas of finance as it could be saved in people’s income and spend or invest them later.</p>\n" +
                 "    <h5>Investing</h5>\n" +
@@ -62,10 +62,10 @@ public class FinanceController {
                 "        <li>Financing</li>\n" +
                 "        <li>Dividends & Return of Capital</li>\n" +
                 "    </ol>\n";
-        model.addAttribute("finances", tag);
-=======
+
+
         model.addAttribute("finances", financeRepository.findAll());
->>>>>>> c84e2178dd6aa55da273be0b4376612665112c44
+
         return "Finance";
     }
 
