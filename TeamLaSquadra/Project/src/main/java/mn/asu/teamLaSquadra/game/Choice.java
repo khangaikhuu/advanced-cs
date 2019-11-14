@@ -93,8 +93,10 @@ public class Choice {
                         break;
                     case 8:
                         pressed=10;
+                        break;
                     case 10:
                         pressed=12;
+                        break;
                 }
 
                     try {
@@ -129,8 +131,10 @@ public class Choice {
                         break;
                     case 8:
                         pressed = 11;
+                        break;
                     case 10:
                         pressed = 13;
+                        break;
                 }
 
                     try {
