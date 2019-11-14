@@ -26,8 +26,6 @@ public class businessController {
 
     @GetMapping("/index")
     public String showMarketingPage(Model model) {
-        String tag = "<h1>Business</h1>\n" +
-
         model.addAttribute("businesses", businessRepository.findAll());
         return "index";
     }
