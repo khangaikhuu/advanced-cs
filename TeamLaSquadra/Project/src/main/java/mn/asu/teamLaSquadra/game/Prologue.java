@@ -60,7 +60,7 @@ public class Prologue
                     "\n you will play as Adolf Hitler in the first chapter and your goal is to reach the highest seat of power" +
                     "\n in order to play this game it is both educational and at the same time assessing your knowledge on the topics" +
                     "\n presented. You must know which choices will lead to your claim to power or your downfall" +
-                    "\n you must CHOOSE carefully.");
+                    "\n you must CHOOSE carefully or else you will lose.");
 
             instructions.setFont(Font.font("Arial", FontWeight.BOLD, 25));
 
@@ -83,6 +83,7 @@ public class Prologue
                         e.printStackTrace();
                     }
                 }
+                //number for pushing
             });
         }
 }
