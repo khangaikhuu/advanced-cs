@@ -38,6 +38,7 @@ public class Game extends Application
         //makes local variables to save space on the JVM
         startButton = new Button("START");
         exitButton = new Button("EXIT");
+        //game title
         title = new Label("Third Reich History");
         title.setFont(Font.font("Arial", FontWeight.BOLD, 100));
 
