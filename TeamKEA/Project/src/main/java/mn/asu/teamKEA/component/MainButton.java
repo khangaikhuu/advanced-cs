@@ -6,6 +6,7 @@ import javax.swing.*;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.Random;
@@ -27,7 +28,7 @@ public class MainButton {
 
 
     public static int i = 2;
-
+    public static int set = 0;
     public void nextWord( String text,   ImageIcon imageIcon) {
 
 
@@ -37,37 +38,54 @@ public class MainButton {
                 if(i % 2 ==0) {
 
                     Button.setIcon(null);
-                    Button.setText(database[i][0]);
+                    Button.setText(database[set][0]);
                     mainPanel.Panel.revalidate();
                     mainPanel.Panel.repaint();
+                    i++;
                 }
                 else
                 {
+
                     Button.setText(null);
-                    Button.setIcon(getIcon(database[i][1]));
+                    try {
+                        Button.setIcon(getIcon(database[set][1]));
+                    } catch (IOException ex) {
+                        ex.printStackTrace();
+                    }
                     mainPanel.Panel.revalidate();
                     mainPanel.Panel.repaint();
+                    i++;
                 }
             }
+
         });
     }
 
 
 
-    public static int set = 0;
+
     public void nextSet()
     {
         nextButton.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                set++;
+                if(set%database.length-1 == 0)
+                {
+                    set=0;
+                }
+                else {
+                    set++;
+                }
+
 
             }
         });
 
 
     }
+
+
 
 
 }
