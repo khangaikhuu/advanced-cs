@@ -35,7 +35,7 @@ public class businessController {
             "<p>In its essence, most businesses begin with an idea or concept in which an entrepreneur takes a risk to implement it to society. Research is vital to starting a business as it serves to the foundation of success. Businesses craft a business plan in which the core goals and objectives of the business is outlined. The legal part of the business depends on what type of structure it is. </p> \n " +
             "<img src = \"https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ioHOe1ivIiUU/v2/1200x-1.jpg\" width = \"500px\" height = \"300px\"> \n" +
             "<h4>Pontificia Fonderia Marinelli</h4> \n" +
-            "<a href = \"https://en.wikipedia.org/wiki/Pontificia_Fonderia_Marinelli\"> More Information </a>
+            "<a href = \"https://en.wikipedia.org/wiki/Pontificia_Fonderia_Marinelli\"> More Information </a> \n" +
             "<p class = \"b\"> In 1040, the Marinelli Bell Foundry was established by the successor Pontificia Fonderia Marinelli. The Bell Foundry is considered as Italy's first family business and one of the oldest foundries in the world. </p> \n" +
             "<h3>Business Structures</h3> \n" +
             "<h4>Partnership - </h4> \n" +
