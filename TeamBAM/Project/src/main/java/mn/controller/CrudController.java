@@ -74,6 +74,6 @@ public class CrudController {
     public String displayWord() {
         Random r = new Random();
         int index = r.nextInt(quizWords.length());
-        return quizWords[index];
+        return "quiz";
     }
 }
