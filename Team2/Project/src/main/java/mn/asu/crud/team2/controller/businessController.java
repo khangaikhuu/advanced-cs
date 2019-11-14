@@ -26,6 +26,7 @@ public class businessController {
 
     @GetMapping("/index")
     public String showMarketingPage(Model model) {
+<<<<<<< HEAD
         String tag = "<h1>Business</h1>\n" +
             "<h1>Business</h1> \n" +
             "<p>A business is an economic system or organization where commercial activities of selling and producing goods and services are conducted. Most businesses operate for profit, however, non-profit businesses exist commonly to serve for a charitable cost. There are several forms of businesses. The most common forms are; partnership, corporation, and sole proprietorship.</p> \n" +
@@ -47,6 +48,8 @@ public class businessController {
             "<p>Businesses are essential to a country’s economy as it provides goods, services, and job opportunities. The production and exchange of goods and services also assist in the expansion of a market, meeting the expectations, demands, of customers inside and outside of the country. </p> \n" +
             "<p>Certain businesses will partner with specialized institutions and commercial banks in order to receive provision of credit, authorizing them to trade and do business at a larger scale.</p> \n" +
             "<p>With the expansion and commencement of new businesses, comes the opportunity for employment along with the introduction of new innovative products that will lead a country towards establishing a more stable economy.Businesses also provides a source of revenue to the state, paying portions of taxes that go into building more infrastructure having more advancements in technology, and towards the populations education.</p>\n" +
+=======
+>>>>>>> c84e2178dd6aa55da273be0b4376612665112c44
         model.addAttribute("businesses", businessRepository.findAll());
         return "index";
     }
