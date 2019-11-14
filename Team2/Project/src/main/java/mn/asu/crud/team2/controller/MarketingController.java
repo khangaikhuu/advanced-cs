@@ -43,6 +43,7 @@ public class MarketingController {
         return "Add-Marketing";
     }
 
+
     @PostMapping("/add")
     public String addMarketing(@Valid MarketingEntity marketingEntity, BindingResult result, Model model) {
         if (result.hasErrors()) {
@@ -83,5 +84,6 @@ public class MarketingController {
         model.addAttribute("marketings", marketingRepository.findAll());
         return "CRUDMarketing";
     }
+
 }
 
