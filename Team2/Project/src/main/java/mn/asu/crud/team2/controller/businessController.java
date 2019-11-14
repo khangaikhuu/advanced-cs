@@ -26,14 +26,16 @@ public class businessController {
 
     @GetMapping("/index")
     public String showMarketingPage(Model model) {
-        model.addAttribute("indexs", businessRepository.findAll());
+        String tag = "<h1>Business</h1>\n" +
+
+        model.addAttribute("businesses", businessRepository.findAll());
         return "index";
     }
 
     @GetMapping("/crud")
     public String crudIndexPage(Model model) {
-        model.addAttribute("indexs", businessRepository.findAll());
-        return "CRUDIndex";
+        model.addAttribute("businesses", businessRepository.findAll());
+        return "CRUDBusiness";
     }
 
     @GetMapping("/signup")
@@ -69,8 +71,8 @@ public class businessController {
         }
 
         businessRepository.save(business);
-        model.addAttribute("business", businessRepository.findAll());
-        return "CRUDIndex";
+        model.addAttribute("businesses", businessRepository.findAll());
+        return "CRUDBusiness";
     }
 
     @GetMapping("/delete/{id}")
@@ -79,6 +81,6 @@ public class businessController {
                 .orElseThrow(() -> new IllegalArgumentException("Invalid business Id:" + id));
         businessRepository.delete(businessEntity);
         model.addAttribute("business", businessRepository.findAll());
-        return "CRUDIndex";
+        return "CRUDBusiness";
     }
 }

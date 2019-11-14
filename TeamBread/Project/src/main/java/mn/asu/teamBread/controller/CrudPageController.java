@@ -46,9 +46,9 @@ public class CrudPageController {
     @GetMapping("delete/{id}")
     public String deleteStudent(@PathVariable("id") long id, Model model) {
         Word word = wordRepository.findById(id)
-                .orElseThrow(() -> new IllegalArgumentException("Invalid student Id:" + id));
+                .orElseThrow(() -> new IllegalArgumentException("Invalid word Id:" + id));
         wordRepository.delete(word);
-        model.addAttribute("students", wordRepository.findAll());
+        model.addAttribute("words", wordRepository.findAll());
         return "index";
     }
     @GetMapping("edit/{id}")

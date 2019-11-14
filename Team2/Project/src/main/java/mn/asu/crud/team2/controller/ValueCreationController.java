@@ -68,7 +68,7 @@ public class ValueCreationController {
         }
 
         valueCreationRepository.save(valueCreation);
-        model.addAttribute("valueCreation", valueCreationRepository.findAll());
+        model.addAttribute("valueCreations", valueCreationRepository.findAll());
         return "CRUDValueCreation";
     }
 
