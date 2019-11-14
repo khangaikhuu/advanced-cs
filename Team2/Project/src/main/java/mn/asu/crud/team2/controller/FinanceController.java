@@ -27,6 +27,7 @@ public class FinanceController {
 
     @GetMapping("/index")
     public String showFinancePage(Model model) {
+
         String tag = "<h2>Finance</h2>\n" +
                 "    <p>Finance means the management of large amounts of money, especially by governments and large companies. It also means all the records of money including income, spent, rent in all people, companies, and governments, etc.</p>\n" +
                 "    <p>There are three main types:</p>\n" +
@@ -61,7 +62,10 @@ public class FinanceController {
                 "        <li>Financing</li>\n" +
                 "        <li>Dividends & Return of Capital</li>\n" +
                 "    </ol>\n";
-        model.addAttribute("finances", tag);
+
+
+        model.addAttribute("finances", financeRepository.findAll());
+
         return "Finance";
     }
 
