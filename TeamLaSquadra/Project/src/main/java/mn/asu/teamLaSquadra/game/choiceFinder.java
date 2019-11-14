@@ -121,30 +121,9 @@ public class choiceFinder {
             pressed=11;
         }
 
-        if(input==12)
-        {
 
-        }
 
-        if(input==13)
-        {
 
-        }
-
-        if(input==14)
-        {
-
-        }
-
-        if(input==15)
-        {
-
-        }
-
-        if(input==16)
-        {
-
-        }
 
         //ending.ending("World War 2 ends with the unconditional surrender of the Axis Powers" +
         //                    "\nthus ending the most violent struggle in human history. Adolf Hitler commits suicide, The Japanese surrender after" +
