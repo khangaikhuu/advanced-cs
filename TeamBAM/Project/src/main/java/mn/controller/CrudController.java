@@ -12,14 +12,15 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.validation.Valid;
-import java.util.Random;
 
 @Controller
 @RequestMapping("/words/")
 public class CrudController {
     private final WordRepository wordRepository;
     @Autowired
-    public CrudController(WordRepository wordRepository) { this.wordRepository = wordRepository; }
+    public CrudController(WordRepository wordRepository) {
+        this.wordRepository = wordRepository;
+    }
 
     @GetMapping("list")
     public String showUpdateForm(Model model) {
