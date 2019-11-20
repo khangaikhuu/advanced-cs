@@ -68,12 +68,4 @@ public class CrudController {
         model.addAttribute("words", wordRepository.findAll());
         return "CrudWord";
     }
-
-    @GetMapping("random")
-    String[] quizWords = {"hello", "car", "cat", "computer", "desk", "mouse"};
-    public String displayWord() {
-        Random r = new Random();
-        int index = r.nextInt(quizWords.length());
-        return "quiz";
-    }
 }
