@@ -105,6 +105,7 @@
                             <tr th:each="word : ${words}">
                                 <td th:text="${word.name}"></td>
                                 <td th:text="${word.translation}"></td>
+                                <td><a th:href="@{/words/edit/{id}(id=${word.id})}" class="btn btn-primary"><i class="fas fa-user-edit ml-2"></i></a></td>
                                 <td><a th:href="@{/words/delete/{id}(id=${word.id})}" class="btn btn-primary"><i class="fas fa-user-times ml-2"></i></a></td>
                             </tr>
                             </tbody>
