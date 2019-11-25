@@ -1,43 +1,83 @@
 package mn.asu.teamKEA.component;
 
+import mn.asu.teamKEA.Main;
+
 import javax.swing.*;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.Map;
+import java.util.Random;
 
-import static mn.asu.teamKEA.Main.mainPanel;
+import static mn.asu.teamKEA.Main.*;
+import static mn.asu.teamKEA.component.UsedImageIcons.*;
 
 public class MainButton {
 
-    public static boolean nextPanel = false;
     public JButton Button = new JButton();
-    public MainButton(int x, int y, int width , int height, String name)
-    {
+    public JButton nextButton = new JButton();
+
+    public MainButton(int x, int y, int width, int height,  ImageIcon imageIcon, int x2, int y2 , int width2, int height2, ImageIcon imageIcon2) {
         Button.setBounds(x, y, width, height);
-        Button.setText(name);
-        Button.setOpaque(false);
+        Button.setIcon(imageIcon);
+        nextButton.setBounds(x2,y2,width2,height2);
+        nextButton.setIcon(imageIcon2);
     }
 
 
+    public static int i = 2;
+
+    public void nextWord( String text,   ImageIcon imageIcon) {
 
 
-
-    public void buttonAction(JButton button , JLabel label)
-    {
-        Button.addActionListener(
-                actionEvent -> mainPanel.redraw(button , label)
-        );
-    }
-
-    public void buttonAction(JButton button, String text ) {
         Button.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
-                button.setText(text);
-                mainPanel.redraw();
-                nextPanel = true;
+                if(i % 2 ==0) {
+
+                    Button.setIcon(null);
+                    Button.setText(database[i][0]);
+                    mainPanel.Panel.revalidate();
+                    mainPanel.Panel.repaint();
+                }
+                else
+                {
+                    Button.setText(null);
+                    Button.setIcon(getIcon(database[i][1]));
+                    mainPanel.Panel.revalidate();
+                    mainPanel.Panel.repaint();
+                }
             }
         });
+    }
+
+
+
+    public static int set = 0;
+    public void nextSet()
+    {
+        nextButton.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+<<<<<<< HEAD
+                if(set== database.length-1)
+                {
+                    set=0;
+                }
+                else {
+                    set++;
+                }
+
+=======
+                set++;
+>>>>>>> 41f3bd8cf1241b7188c534f4f914bf2870b05ada
+
+            }
+        });
+
+
     }
 
 

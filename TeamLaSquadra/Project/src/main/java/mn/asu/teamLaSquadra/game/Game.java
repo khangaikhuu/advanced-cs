@@ -5,6 +5,7 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.layout.*;
 import javafx.scene.text.Font;
@@ -17,25 +18,29 @@ import java.io.FileNotFoundException;
 
 public class Game extends Application
 {
-    private StackPane root = new StackPane();
-    private Scene scene= new Scene(root, 1550, 1070);
-    private VBox vLayout;
+    private VBox vLayout = new VBox();
+    private Scene scene= new Scene(vLayout, 1550, 1070);
     private Button startButton;
     private Button exitButton;
+    private Label title;
     private Setup setup = new Setup();
 
 
     private Ending ending = new Ending();
-    private Prologue prologue = new Prologue();
-    private boolean next = false;
-    private Choice choice = new Choice();
+
+    public static void main(String []args)
+    {
+        launch(args);
+    }
 
     @Override
-    public void start(Stage primaryStage) throws FileNotFoundException {
+    public void start(final Stage primaryStage) throws FileNotFoundException {
         //makes local variables to save space on the JVM
-        vLayout = new VBox();
         startButton = new Button("START");
         exitButton = new Button("EXIT");
+        //game title
+        title = new Label("Third Reich History");
+        title.setFont(Font.font("Arial", FontWeight.BOLD, 100));
 
         //enlarges buttons by making text larger
         startButton.setFont(Font.font("Arial", FontWeight.BOLD, 100));
@@ -43,10 +48,9 @@ public class Game extends Application
 
         startButton.setOnAction(new EventHandler<ActionEvent>() {
              public void handle(ActionEvent e) {
-                 root.getChildren().remove(vLayout);
                  HBox charLayout  = null;
                  try {
-                     setup.characterSelect(root);
+                     setup.characterSelect(primaryStage);
                  } catch (FileNotFoundException ex) {
                      ex.printStackTrace();
                  }
@@ -64,27 +68,12 @@ public class Game extends Application
         vLayout.setAlignment(Pos.CENTER);
 
         //adds 2 buttons to vertical layout
+        vLayout.getChildren().add(title);
         vLayout.getChildren().add(startButton);
         vLayout.getChildren().add(exitButton);
-        root.getChildren().add(vLayout);
         primaryStage.setScene(scene);
         primaryStage.setFullScreen(true);
         primaryStage.show();
-
-        if(false) {
-            //first choice
-
-
-
-
-
-
-            VBox endingLayout = ending.ending("World War 2 ends with the unconditional surrender of the Axis Powers" +
-                    "\nthus ending the most violent struggle in human history. Adolf Hitler commits suicide, The Japanese surrender after" +
-                    "\n two nuclear as well as Italy surrendering and switching sides.");
-
-            root.getChildren().add(endingLayout);
-        }
 
     }
 

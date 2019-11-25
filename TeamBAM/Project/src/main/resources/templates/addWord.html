@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Add User</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    #OverviewText4 {
+    position: relative;
+    }
+    #OverviewText4 img {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    }
+    body {
+      background-color: white !important;
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    .menu {
+      overflow: hidden;
+      background-color: DarkGray;
+    }
+
+    .topnav a {
+
+      float: left;
+      color: black;
+      text-align: center;
+      margin-left: 300px;
+
+      padding: 14px 16px;
+      text-decoration: overline;
+      font-size: 20px;
+    }
+
+    .topnav a:hover {
+      background-color: ivory;
+      color: black;
+    }
+
+    .topnav a.active {
+      background-color: blue;
+      color: white;
+    }
+    .logo{
+      position: relative;
+      top: 40px;
+      left: 15px;
+    }
+    ul#hor li {
+      display:inline;
+    }
+    .logo .q #hor{
+      font-size: 150%;
+      font-family: "Times New Roman", sans-serif;
+    }
+    b {
+      border: 5px solid;
+    }
+    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="../css/shards.min.css"> -->
+</head>
+
+<body bgcolor="#3399ff">
+<div id = "OverviewText4">
+    <a href="/menu/menu">
+        <img th:src="@{/img/logo.png}" width="5%" alt="memorynotfound logo"/>
+    </a>
+</div>
+<div class="menu">
+
+    <div class="topnav">
+        <a id="home" href="/menu/quiz">Word Quiz</a>
+        <a class="active" id="CrudWord"href="/words/signup">Add Word</a>
+        <a id="dictionary"href="/menu/dictionary">Dictionary (50 words)</a>
+    </div>
+</div>
+<div class="container my-5">
+    <h3> Add Word</h3>
+    <div class="card">
+        <div class="card-body">
+            <div class="col-md-10">
+                <form action="#" th:action="@{/words/add}" th:object="${words}" method="post">
+                    <div class="row">
+                        <div class="form-group col-md-8">
+                            <label for="name" class="col-form-label">Word</label> <input type="text" th:field="*{name}" class="form-control" id="name" placeholder="Word"> <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-md-8">
+                            <label for="translation" class="col-form-label">Translation</label> <input type="text" th:field="*{translation}" class="form-control" id="translation" placeholder="Translation"> <span th:if="${#fields.hasErrors('translation')}" th:errors="*{translation}" class="text-danger"></span>
+                        </div>
+
+                        <div class="col-md-6">
+                            <input type="submit" class="btn btn-primary" value="Add Word">
+                        </div>
+
+                        <div class="form-group col-md-8"></div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
