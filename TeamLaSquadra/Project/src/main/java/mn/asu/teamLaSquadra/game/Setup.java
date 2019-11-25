@@ -50,13 +50,17 @@ public class Setup {
         LockedStalinButton.setGraphic(StalinView);
         hLayout.setAlignment(Pos.CENTER);
 
-
-
         primaryStage.setScene(setupScene);
-
+        primaryStage.setFullScreen(true);
         HitlerButton.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent actionEvent) {
-                prologue.prologue(primaryStage);
+                prologue.prologue(primaryStage, "This story depicts the rise and fall of one of the main belligerents in the most bloody struggle " +
+                        "\nin human history. This game is made for educational purposes only. Adolf Hitler was born in " +
+                                "\nthe small town of Braunau-am-Inn on the 20th of April, 1889 in Austria. " +
+                                "\n He was the fourth of six children. His mother was Klara Hitler and his father was Alois Hitler." +
+                                "\n Alois worked as a border control clerk, and Klara was a housekeeper.He wasn’t very academically talented," +
+                                "\n but he showed some artistic skills. When Adolf was 11, his brother Edmund suddenly died," +
+                                "\n causing Adolf to become very introverted and detached." );
             }
         });
     }
