@@ -19,20 +19,16 @@ public class Prologue
 {
     private Choice choice = new Choice();
     private VBox vLayout = new VBox();
+    private VBox iLayout = new VBox();
     private Scene prologueScene= new Scene(vLayout,1550,1070);
+    private Scene instructionScene = new Scene(iLayout, 1550, 1070);
 
 
-    public void prologue(final Stage primaryStage)
-    {
+
+    public void prologue(final Stage primaryStage, final String introduction) {
         Button ContinueButton = new Button("Continue");
         HBox hLayout = new HBox();
-        Label prologue = new Label("This story depicts the rise and fall of one of the main belligerents in the most bloody struggle " +
-                                    "\nin human history. This game is made for educational purposes only. Adolf Hitler was born in " +
-                                    "\nthe small town of Braunau-am-Inn on the 20th of April, 1889 in Austria. " +
-                                    "\n He was the fourth of six children. His mother was Klara Hitler and his father was Alois Hitler." +
-                                    "\n Alois worked as a border control clerk, and Klara was a housekeeper.He wasn’t very academically talented," +
-                                    "\n but he showed some artistic skills. When Adolf was 11, his brother Edmund suddenly died," +
-                                    "\n causing Adolf to become very introverted and detached. ");
+        Label prologue = new Label(introduction);
 
         prologue.setFont(Font.font("Arial", FontWeight.BOLD, 25));
 
@@ -49,11 +45,45 @@ public class Prologue
         ContinueButton.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent actionEvent) {
                 try {
-                    choice.firstChoice(primaryStage);
-                } catch (FileNotFoundException e) {
+                        instructions(primaryStage);
+                    } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
         });
     }
+        private void instructions(Stage primaryStage)
+        {
+            Button ContinueButton = new Button("Continue");
+            HBox hLayout = new HBox();
+            Label instructions = new Label("You are now playing the first chapter of a historical WW2 game" +
+                    "\n you will play as Adolf Hitler in the first chapter and your goal is to reach the highest seat of power" +
+                    "\n in order to play this game it is both educational and at the same time assessing your knowledge on the topics" +
+                    "\n presented. You must know which choices will lead to your claim to power or your downfall" +
+                    "\n you must CHOOSE carefully or else you will lose.");
+
+            instructions.setFont(Font.font("Arial", FontWeight.BOLD, 25));
+
+            ContinueButton.setFont(Font.font("Arial", FontWeight.BOLD, 50));
+
+            hLayout.getChildren().add(ContinueButton);
+            hLayout.setAlignment(Pos.BOTTOM_RIGHT);
+            iLayout.getChildren().addAll(instructions, hLayout);
+            iLayout.setAlignment(Pos.CENTER);
+
+            primaryStage.setScene(instructionScene);
+            primaryStage.setFullScreen(true);
+
+            final Stage finalSecondStage = primaryStage;
+            ContinueButton.setOnAction(new EventHandler<ActionEvent>() {
+                public void handle(ActionEvent actionEvent) {
+                    try {
+                        choice.firstChoice(finalSecondStage);
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
+                    }
+                }
+                //number for pushing
+            });
+        }
 }
