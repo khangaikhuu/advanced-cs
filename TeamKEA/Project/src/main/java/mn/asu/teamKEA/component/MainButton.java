@@ -70,7 +70,7 @@ public class MainButton {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(set%database.length-1 == 0)
+                if(set== database.length-1)
                 {
                     set=0;
                 }
