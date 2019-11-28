@@ -8,7 +8,11 @@ import java.io.FileNotFoundException;
 
 public class choicePartOne {
 
-    public int choiceSelect(int input, Button exitButton, Choice choice,int pressed) throws FileNotFoundException {
+    int pressed = 0;
+
+    public int choiceSelect(int input, Button exitButton, Choice choice) throws FileNotFoundException {
+
+        pressed=input;
 
         if (input == 12) {
             Image reOrganize;
