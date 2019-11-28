@@ -49,7 +49,7 @@ public class Choice {
 
 
 
-    public void firstChoice(Stage primaryStage) throws FileNotFoundException {
+    public void firstChoice(final Stage primaryStage) throws FileNotFoundException {
 
         endingStage=primaryStage;
 
@@ -116,16 +116,15 @@ public class Choice {
                         e.printStackTrace();
                     }
                 try {
-                    one.choiceSelect(pressed,choiceOne,Choice.this);
+                    pres = one.choiceSelect(pressed, choiceTwo,Choice.this);
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 }
                 try {
-                    two.choiceSelect(pressed,choiceOne,Choice.this);
+                    pres = two.choiceSelect(pressed, choiceTwo,Choice.this);
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 }
-
 
             }
         });
@@ -167,12 +166,12 @@ public class Choice {
                         e.printStackTrace();
                     }
                 try {
-                    one.choiceSelect(pressed,choiceTwo,Choice.this);
+                    pres = one.choiceSelect(pressed, choiceTwo,Choice.this);
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 }
                 try {
-                    two.choiceSelect(pressed,choiceTwo,Choice.this);
+                    pres = two.choiceSelect(pressed, choiceTwo,Choice.this);
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 }
