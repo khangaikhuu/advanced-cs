@@ -61,7 +61,13 @@ public class FinanceController {
                 "        <li>Investments & Budgeting</li>\n" +
                 "        <li>Financing</li>\n" +
                 "        <li>Dividends & Return of Capital</li>\n" +
-                "    </ol>\n";
+                "    </ol>\n" +
+                "<h4>Investments & Budgeting</h4>\n" +
+                "<p>Capital investments and budgeting is the method of where to place the company’s long term capital assets to generate highest risks. Owner(s) is the one(people) to decide whether to take the investment opportunities. People identify capital expenditures which is the money spent on maintaining & acquiring fixed assets.Then, they estimate cash flows which is the total amount of money that is being transferred in and out from the business(company). Finally, they compare investments with planned income and decide capital projects to include in the budget.</p>\n" +
+                "<h4>Capital Financing</h4>\n" +
+                "<p>Capital financing is the process that include a business’s equity, debt or even both which make decisions to how to manage capital investments. Equity means value of shares and debt means money that are borrowed or due.</p> \n" +
+                "<h4>Dividends & Return of Capital</h4>\n" +
+                "<p>This process requires people to decide whether to retain business’s earnings for future investments or even use in different ways such as making dividends. Dividend is the sum of money that is paid regularly by a company to its shareholders out of its profits.</p> \n" +
 
 
         model.addAttribute("finances", financeRepository.findAll());
