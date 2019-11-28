@@ -54,6 +54,7 @@ public class FinanceController {
                 "    <h5>Protection\n" +
                 "    </h5>\n" +
                 "    <p>Protection money is the money providing for specific companies for individuals’ lives or needs, especially for insurances. The common forms are: health insurance and life insurance.</p>\n" +
+                "<img src = \"http://www.gp-ca.com/wp-content/uploads/2014/09/corporate_finance2.jpg\" width = \"500px\" height = \"300px\">" +
                 "    <h3>Corporate Finance</h3>\n" +
                 "    <p>Corporate finance is the finance system of corporations that is used for the products or services in the companies or income, or even funding in the businesses(companies).</p>\n" +
                 "    <p>There are 3 main three finance activities:</p>\n" +
