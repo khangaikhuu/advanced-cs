@@ -41,11 +41,11 @@ public class choicePartTwo {
         if(input==17)
         {
             try {
-                information.changer(primaryStage, "You are now playing the first chapter of a historical WW2 game" +
-                        "\n you will play as Adolf Hitler in the first chapter and your goal is to reach the highest seat of power" +
-                        "\n in order to play this game it is both educational and at the same time assessing your knowledge on the topics" +
-                        "\n presented. You must know which choices will lead to your claim to power or your downfall" +
-                        "\n you must CHOOSE carefully or else you will lose.");
+                information.changer(primaryStage, "World War 2 begins in 1939 September 1st, When Germany invades" +
+                        "\n Poland, which would be considered the final straw for France and Britain. They officially declare war. " +
+                        "\n " +
+                        "\n " +
+                        "\n .");
             } catch (Exception e) {
                 e.printStackTrace();
             }
