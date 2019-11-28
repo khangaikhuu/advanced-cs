@@ -32,8 +32,7 @@ public class Choice {
     private Ending ending = new Ending();
     private Stage endingStage = new Stage();
     private choiceFinder finder = new choiceFinder();
-    private choicePartOne one = new choicePartOne();
-    private choicePartTwo two = new choicePartTwo();
+
 
     public Choice()
     {
@@ -107,6 +106,7 @@ public class Choice {
                         break;
                     case 15:
                         pressed=17;
+                        break;
 
                 }
 
@@ -115,16 +115,6 @@ public class Choice {
                     } catch (FileNotFoundException e) {
                         e.printStackTrace();
                     }
-                try {
-                    pres = one.choiceSelect(pressed, choiceTwo,Choice.this);
-                } catch (FileNotFoundException e) {
-                    e.printStackTrace();
-                }
-                try {
-                    pres = two.choiceSelect(pressed, choiceTwo,Choice.this);
-                } catch (FileNotFoundException e) {
-                    e.printStackTrace();
-                }
 
             }
         });
@@ -165,16 +155,7 @@ public class Choice {
                     } catch (FileNotFoundException e) {
                         e.printStackTrace();
                     }
-                try {
-                    pres = one.choiceSelect(pressed, choiceTwo,Choice.this);
-                } catch (FileNotFoundException e) {
-                    e.printStackTrace();
-                }
-                try {
-                    pres = two.choiceSelect(pressed, choiceTwo,Choice.this);
-                } catch (FileNotFoundException e) {
-                    e.printStackTrace();
-                }
+
 
             }
         });
