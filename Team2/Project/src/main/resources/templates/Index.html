@@ -49,20 +49,7 @@ h2 {
    color: green;
 }
 
-public void saveEdits()
-{
-    var editElem = document.getElementById("edit");
-    var userVersion = editElem.innerHTML;
-    localStorage.userEdits = userVersion;
-    document.getElementById("update").innerHTML="Edit Saved";
-}
-public void checkEdits()
-{
-    if(localStorage.userEdits!=null)
-    {
-        document.getElementById("edit").innerHTMl = localStorage.userEdits;
-    }
-}
+
 
 
 </style>
@@ -78,7 +65,7 @@ public void checkEdits()
 
 <div class = "content">
 
-        <h1>Business</h1>
+        <h1 style = "color:green">Business</h1>
         <p>A business is an economic system or organization where commercial activities of selling and producing goods and services are conducted. Most businesses operate for profit, however, non-profit businesses exist commonly to serve for a charitable cost. There are several forms of businesses. The most common forms are; partnership, corporation, and sole proprietorship.</p>
         <p>In order to generate profit, businesses aim to attain investment and a level of customers where its output ensures an earning.
         </p>

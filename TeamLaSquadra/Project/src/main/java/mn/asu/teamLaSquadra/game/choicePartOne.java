@@ -24,7 +24,15 @@ public class choicePartOne {
         }
 
         if (input == 13) {
-
+            Image meeting;
+            try {
+                choice.nextChoice(meeting = new Image(new FileInputStream(getClass().getClassLoader().getResource("lieutenant.png").getFile())),
+                        "You are at the meeting. Do you agree to respect the authority" +
+                                "\n of the state and to only seek power through democracy?", "No", "Yes");
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+            pressed=13;
         }
 
         if (input == 14) {
