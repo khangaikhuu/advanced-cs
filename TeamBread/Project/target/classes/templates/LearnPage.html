@@ -100,12 +100,18 @@
                 <table width="100%">
                     <tr>
                         <td align="center">
-                            <button class="button button4">Know</button>
+                            <form action="http://localhost:8080/know/knowPage">
+                                <button class="button button4">Know</button>
+                            </form>
+
                         </td>
                     </tr>
                     <tr>
                         <td align="center">
-                            <button class="button button4">Improve</button>
+                            <form th:action="@{/improve/improvePage}" th:object="{}" method="post">
+                                <button class="button button4">Improve</button>
+                            </form>
+
                         </td>
                     </tr>
                 </table>

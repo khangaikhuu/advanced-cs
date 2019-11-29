@@ -57,10 +57,17 @@
             <img th:src="@{/img/ok3.png}" alt="LearnPage" width="190" height="190" src="ok3.png">
         </td>
         <td align="center">
-              <textarea rows="35" cols="30">
+            <div>
+                <textarea class="form-control" rows="12"
+                           style="margin-top: 10px;"  placeholder="Sonstige Bemerkungen"
+                           name="notes" th:inline="text">[${improve}]
                 </textarea>
-            <textarea rows="35" cols="30">
-                </textarea>
+            </div>
+<!--            <textarea th:field="*{improve}" ></textarea></p>-->
+<!--              <textarea rows="35" cols="30" th:object="${word}">-->
+<!--                </textarea>-->
+<!--            <textarea rows="35" cols="30">-->
+<!--                </textarea>-->
         </td>
         <td align="center">
             <img th:src="@{/img/korea.jpg}" alt="LearnPage2" width="190" height="190" src="korea.jpg">
