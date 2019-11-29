@@ -124,12 +124,12 @@ public class choiceFinder {
         }
 
         try {
-            pressed=one.choiceSelect(pressed, exitButton,choice,pressed);
+            pressed=one.choiceSelect(pressed, exitButton,choice);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
         try {
-            pressed=two.choiceSelect(pressed, exitButton,choice,pressed);
+            pressed=two.choiceSelect(pressed, exitButton,choice);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }

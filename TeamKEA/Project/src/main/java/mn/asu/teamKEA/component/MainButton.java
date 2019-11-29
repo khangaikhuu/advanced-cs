@@ -61,7 +61,6 @@ public class MainButton {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-<<<<<<< HEAD
                 if(set== database.length-1)
                 {
                     set=0;
@@ -70,9 +69,7 @@ public class MainButton {
                     set++;
                 }
 
-=======
                 set++;
->>>>>>> 41f3bd8cf1241b7188c534f4f914bf2870b05ada
 
             }
         });

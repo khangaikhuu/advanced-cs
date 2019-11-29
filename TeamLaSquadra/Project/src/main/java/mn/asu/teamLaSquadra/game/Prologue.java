@@ -45,7 +45,7 @@ public class Prologue
         ContinueButton.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent actionEvent) {
                 try {
-                        instructions(primaryStage, "You are now playing the first chapter of a historical WW2 game" +
+                        instructions(primaryStage, "You are now playing a historical WW2 game" +
                                 "\n you will play as Adolf Hitler in the first chapter and your goal is to reach the highest seat of power" +
                                 "\n in order to play this game it is both educational and at the same time assessing your knowledge on the topics" +
                                 "\n presented. You must know which choices will lead to your claim to power or your downfall" +
