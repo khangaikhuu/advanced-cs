@@ -9,6 +9,8 @@ import java.io.FileNotFoundException;
 
 public class choiceFinder {
     private int pressed = 0;
+    private choicePartOne one = new choicePartOne();
+    private choicePartTwo two = new choicePartTwo();
 
     public int choiceSelect(int input, Button exitButton, Choice choice) throws FileNotFoundException {
 
@@ -119,6 +121,17 @@ public class choiceFinder {
             Stage stage = (Stage) exitButton.getScene().getWindow();
             stage.close();
             pressed=11;
+        }
+
+        try {
+            pressed=one.choiceSelect(pressed, exitButton,choice);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        try {
+            pressed=two.choiceSelect(pressed, exitButton,choice);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
         }
 
 
