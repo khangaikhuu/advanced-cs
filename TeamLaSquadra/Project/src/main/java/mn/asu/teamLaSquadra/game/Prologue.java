@@ -86,4 +86,31 @@ public class Prologue
                 //number for pushing
             });
         }
+
+    public void changer(Stage primaryStage, final String description)
+    {
+        Button ContinueButton = new Button("Continue");
+        HBox hLayout = new HBox();
+        final Label instructions = new Label(description);
+
+        instructions.setFont(Font.font("Arial", FontWeight.BOLD, 25));
+
+        ContinueButton.setFont(Font.font("Arial", FontWeight.BOLD, 50));
+
+        hLayout.getChildren().add(ContinueButton);
+        hLayout.setAlignment(Pos.BOTTOM_RIGHT);
+        iLayout.getChildren().addAll(instructions, hLayout);
+        iLayout.setAlignment(Pos.CENTER);
+
+        primaryStage.setScene(instructionScene);
+        primaryStage.setFullScreen(true);
+
+        final Stage finalSecondStage = primaryStage;
+        ContinueButton.setOnAction(new EventHandler<ActionEvent>() {
+            public void handle(ActionEvent actionEvent) {
+               instructions.setText(description);
+            }
+            //number for pushing
+        });
+    }
 }
