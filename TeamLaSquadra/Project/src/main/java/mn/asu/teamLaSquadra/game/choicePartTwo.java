@@ -9,7 +9,11 @@ import java.io.FileNotFoundException;
 
 public class choicePartTwo {
 
-    public int choiceSelect(int input, Button exitButton, Choice choice,int pressed) throws FileNotFoundException {
+    int pressed=0;
+
+    public int choiceSelect(int input, Button exitButton, Choice choice) throws FileNotFoundException {
+
+        pressed=input;
 
         if (input == 15) {
             Image backPrison;
