@@ -9,18 +9,18 @@ import java.io.FileNotFoundException;
 
 public class choicePartTwo {
 
-    int pressed=0;
+    int pressed = 0;
+    Prologue information = new Prologue();
 
-    public int choiceSelect(int input, Button exitButton, Choice choice) throws FileNotFoundException {
+    public int choiceSelect(int input, Button exitButton, Choice choice,Stage primaryStage) throws FileNotFoundException {
 
-        pressed=input;
+        pressed = input;
 
         if (input == 15) {
             Image backPrison;
             try {
                 choice.nextChoice(backPrison = new Image(new FileInputStream(getClass().getClassLoader().getResource("prison.png").getFile())),
-                        "You are back in prison for disagreeing with the Prime Minister." +
-                                "\n Retard", "Okay", "Exit");
+                        "You are back in prison for disagreeing with the Prime Minister", "Okay", "Exit");
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
@@ -39,8 +39,7 @@ public class choicePartTwo {
             pressed = 16;
         }
 
-        if(input==17)
-        {
+        if (input == 17) {
             try {
                 information.changer(primaryStage, "World War 2 begins in 1939 September 1st, When Germany invades" +
                         "\n Poland, which would be considered the final straw for France and Britain. They officially declare war. " +
@@ -52,7 +51,7 @@ public class choicePartTwo {
             }
 
 
-        if (input == 17) {
+            if (input == 17) {
                 Image freedom;
                 try {
                     choice.nextChoice(freedom = new Image(new FileInputStream(getClass().getClassLoader().getResource("freedom.png").getFile())),
@@ -70,7 +69,10 @@ public class choicePartTwo {
                 pressed = 17;
 
 
+            }
+
         }
         return pressed;
     }
 }
+
