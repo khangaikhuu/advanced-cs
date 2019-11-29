@@ -10,9 +10,8 @@ import java.io.FileNotFoundException;
 public class choicePartTwo {
 
     int pressed = 0;
-    Prologue information = new Prologue();
 
-    public int choiceSelect(int input, Button exitButton, Choice choice,Stage primaryStage) throws FileNotFoundException {
+    public int choiceSelect(int input, Button exitButton, Choice choice) throws FileNotFoundException {
 
         pressed = input;
 
@@ -39,18 +38,6 @@ public class choicePartTwo {
             pressed = 16;
         }
 
-        if (input == 17) {
-            try {
-                information.changer(primaryStage, "World War 2 begins in 1939 September 1st, When Germany invades" +
-                        "\n Poland, which would be considered the final straw for France and Britain. They officially declare war. " +
-                        "\n " +
-                        "\n " +
-                        "\n .");
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-
-
             if (input == 17) {
                 Image freedom;
                 try {
@@ -70,9 +57,8 @@ public class choicePartTwo {
 
 
             }
-
-        }
         return pressed;
+        }
+
     }
-}
 
