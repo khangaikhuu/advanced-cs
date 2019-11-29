@@ -30,7 +30,7 @@ public class choicePartTwo {
         if (input == 16) {
             Image freedom;
             try {
-                choice.nextChoice(freedom = new Image(new FileInputStream(getClass().getClassLoader().getResource("freedom.png").getFile())),
+                choice.nextChoice(freedom = new Image(new FileInputStream(getClass().getClassLoader().getResource("freedom.jpg").getFile())),
                         "Nice! You are a completely free man now as long as you" +
                                 "\n abide by the state's laws", "Okay", "Exit");
             } catch (FileNotFoundException e) {
