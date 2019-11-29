@@ -35,6 +35,7 @@ public class Choice {
     private choicePartOne one = new choicePartOne();
     private choicePartTwo two = new choicePartTwo();
 
+
     public Choice()
     {
         sceneView = new ImageView();
@@ -107,6 +108,7 @@ public class Choice {
                         break;
                     case 15:
                         pressed=17;
+                        break;
 
                 }
 
@@ -115,16 +117,18 @@ public class Choice {
                     } catch (FileNotFoundException e) {
                         e.printStackTrace();
                     }
+
                 try {
-                    pres = one.choiceSelect(pressed, choiceTwo,Choice.this);
+                    pres = one.choiceSelect(pressed, choiceOne,Choice.this);
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 }
                 try {
-                    pres = two.choiceSelect(pressed, choiceTwo,Choice.this);
+                    pres = two.choiceSelect(pressed, choiceOne,Choice.this);
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 }
+
 
             }
         });
@@ -175,6 +179,8 @@ public class Choice {
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 }
+
+
 
             }
         });

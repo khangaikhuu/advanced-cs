@@ -8,9 +8,12 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 
 public class choicePartTwo {
-    private int pressed = 0;
+
+    int pressed=0;
 
     public int choiceSelect(int input, Button exitButton, Choice choice) throws FileNotFoundException {
+
+        pressed=input;
 
         if (input == 15) {
             Image backPrison;
