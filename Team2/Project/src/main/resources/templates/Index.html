@@ -49,20 +49,7 @@ h2 {
    color: green;
 }
 
-public void saveEdits()
-{
-    var editElem = document.getElementById("edit");
-    var userVersion = editElem.innerHTML;
-    localStorage.userEdits = userVersion;
-    document.getElementById("update").innerHTML="Edit Saved";
-}
-public void checkEdits()
-{
-    if(localStorage.userEdits!=null)
-    {
-        document.getElementById("edit").innerHTMl = localStorage.userEdits;
-    }
-}
+
 
 
 </style>
@@ -77,8 +64,8 @@ public void checkEdits()
 </div>
 
 <div class = "content">
-    <div id = "edit" contenteditable="true">
-        <h1>Business</h1> <input type="button" value = "edit" onclick="saveEdits()"/>
+
+        <h1 style = "color:green">Business</h1>
         <p>A business is an economic system or organization where commercial activities of selling and producing goods and services are conducted. Most businesses operate for profit, however, non-profit businesses exist commonly to serve for a charitable cost. There are several forms of businesses. The most common forms are; partnership, corporation, and sole proprietorship.</p>
         <p>In order to generate profit, businesses aim to attain investment and a level of customers where its output ensures an earning.
         </p>
@@ -100,7 +87,7 @@ public void checkEdits()
         <p>Certain businesses will partner with specialized institutions and commercial banks in order to receive provision of credit, authorizing them to trade and do business at a larger scale.</p>
         <p>With the expansion and commencement of new businesses, comes the opportunity for employment along with the introduction of new innovative products that will lead a country towards establishing a more stable economy.Businesses also provides a source of revenue to the state, paying portions of taxes that go into building more infrastructure having more advancements in technology, and towards the populations education.</p>
 
-    </div>
+
 
 </div>
 

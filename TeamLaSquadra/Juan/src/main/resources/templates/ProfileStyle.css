@@ -1,0 +1,54 @@
+div.outer-left{
+    background-color: green;
+    float:left;
+}
+div.inner-left{
+    background-color: lightseagreen;
+    float:left;
+}
+div.education{
+    background-color: darkcyan;
+}
+div.languages{
+    background-color: teal;
+    float:left;
+}
+div.hobbies{
+    background-color: lightseagreen;
+}
+div.planets{
+    float:left;
+    background-color: turquoise;
+}
+div.time{
+    float:right;
+    background-color: lightseagreen;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;
+}
+
+h1{
+    color:white;
+}
+h2{
+    color:white;
+}
+h3{
+    color:white;
+}
+p{
+    color:white;
+}
+
+div.outer-right{
+    float:right;
+    background-color: aqua;
+}
+
