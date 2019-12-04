@@ -50,18 +50,32 @@
           border-radius: 50%;
         }
         .button {
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 15px 30px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-.button4 {background-color: #e7e7e7; color: black; border-radius: 50%;}
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        .menu-container {
+            /* ... */
+            display: flex;
+            justify-content: center;    /* Add this */
+        }
+        .centerDiv
+        {
+            width: 60%;
+            height:200px;
+            margin: 0 auto;
+            background-color:#FFA500 ;
+        }
+
+
+        .button4 {background-color: #e7e7e7; color: black; border-radius: 50%;}
 </style>
 </head>
 
@@ -81,47 +95,58 @@
     </ul>
     <ul>
 <!--        <textarea rows="20" cols="70">-->
-            <div th:switch="${words}" class="container my-5">
-                        <div class="col-md-10">
-                            <h2 th:case="null">No Students yet!</h2>
-                            <div th:case="*">
-                                <table class="table table-striped table-responsive-md">
-                                    <thead>
-                                    <tr>
-                                        <td text-align = "right">
-                                        <th>Word</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                      <tr th:each="word : ${words}">
-                                        <td th:text="${word.name}"></td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-<!--        </textarea>-->
+        <div class="menu-container">
+            <div>
+                <table width="100%">
+                    <tr>
+                        <td align="center">
+                            <form action="http://localhost:8080/know/knowPage">
+                                <button class="button button4">Know</button>
+                            </form>
 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                            <form th:action="@{/improve/improvePage}" th:object="#" method="post">
+                                <button class="button button4">Improve</button>
+                            </form>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div th:switch="${words}" class="centerDiv">
+                <div class="col-md-10">
+                    <h2 th:case="null">No Students yet!</h2>
+                    <div th:case="*">
+                        <table class="table table-striped table-responsive-md">
+                            <thead>
+                                <tr>
+                                    <th style="text-align: right">Word</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                              <tr th:each="word : ${words}">
+                                <td th:text="${word.name}"></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <a href="" class="previous round">&#8680;</a>
+            </div>
+        </div>
+<!--        </textarea>-->
     </ul>
+
+
 
         <a href="" class="previous round">&#8681;</a>
 
-        <a href="" class="previous round">&#8680;</a>
-
 </div>
-<table width="100%">
-    <tr>
-        <td align="center">
-            <button class="button button4">Know</button>
-        </td>
-        <td align="center">
-            <button class="button button4">Improve</button>
-        </td>
-    </tr>
-</table>
-
-
 
 
 </body>

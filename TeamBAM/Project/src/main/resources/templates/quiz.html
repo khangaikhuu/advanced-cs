@@ -69,6 +69,12 @@
         <a id="CrudWord"href="/words/signup">Add Word</a>
         <a id = "dictionary" href="/menu/dictionary">Dictionary (50 words)</a>
     </div>
+        <table>
+            <tr th:each="word : ${words}">
+                <td th:text="${word.name}"></td>
+                <td th:text="${word.translation}"></td>
+            </tr>
+        </table>
 </div>
 </body>
 </html>
