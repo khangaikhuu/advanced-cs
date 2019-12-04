@@ -109,6 +109,9 @@ public class Choice {
                     case 15:
                         pressed=17;
                         break;
+                    case 16:
+                        pressed=17;
+                        break;
 
                 }
 

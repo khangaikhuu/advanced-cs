@@ -41,7 +41,7 @@ public class choicePartTwo {
             if (input == 17) {
                 Image freedom;
                 try {
-                    choice.nextChoice(freedom = new Image(new FileInputStream(getClass().getClassLoader().getResource("freedom.png").getFile())),
+                    choice.nextChoice(freedom = new Image(new FileInputStream(getClass().getClassLoader().getResource("freedom.jpg").getFile())),
                             "\n After the formation of the National Socialist Party, Adolf Hitler gains as much power as he can. " +
                                     "\n Once Adolf Hitler was appointed chancellor he made haste to to eliminate anybody who opposed him." +
                                     "\n The national socialist party even people who aided him in his rise to power. This is where the night" +
