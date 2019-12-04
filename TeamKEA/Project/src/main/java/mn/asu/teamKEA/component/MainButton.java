@@ -60,8 +60,8 @@ public class MainButton {
         nextButton.addActionListener(new ActionListener() {
 
             @Override
-            public void actionPerformed(ActionEvent e) {
-<<<<<<< HEAD
+            public void actionPerformed(ActionEvent e)
+            {
                 if(set== database.length-1)
                 {
                     set=0;
@@ -69,16 +69,8 @@ public class MainButton {
                 else {
                     set++;
                 }
-
-=======
                 set++;
->>>>>>> 41f3bd8cf1241b7188c534f4f914bf2870b05ada
-
             }
         });
-
-
     }
-
-
 }
