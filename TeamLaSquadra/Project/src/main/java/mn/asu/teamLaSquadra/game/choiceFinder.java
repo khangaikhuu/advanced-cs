@@ -12,7 +12,7 @@ public class choiceFinder {
     private choicePartOne one = new choicePartOne();
     private choicePartTwo two = new choicePartTwo();
 
-    public int choiceSelect(int input, Button exitButton, Choice choice) throws FileNotFoundException {
+    public int choiceSelect(int input, Button exitButton, Choice choice,Stage primaryStage) throws FileNotFoundException {
 
         if(input==1)
         {
@@ -129,7 +129,7 @@ public class choiceFinder {
             e.printStackTrace();
         }
         try {
-            pressed=two.choiceSelect(pressed, exitButton,choice);
+            pressed=two.choiceSelect(pressed, exitButton,choice,primaryStage);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
