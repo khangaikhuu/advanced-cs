@@ -13,9 +13,9 @@ import java.util.ArrayList;
 
 public class ImprovePageController {
 
-    private ArrayList <String> wordsToImprove = new ArrayList<>();
+    private ArrayList <String> wordsToI
+    @GetMapping("/improvePage")mprove = new ArrayList<>();
 
-    @GetMapping("/improvePage")
     public String showImprovePage(Model model) {
         wordsToImprove.add("Hello");
         model.addAttribute("word", wordsToImprove.get(0));
