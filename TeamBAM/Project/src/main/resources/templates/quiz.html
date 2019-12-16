@@ -17,14 +17,14 @@
         left: 5px;
         }
         body {
-         background-color: turquiose !important;
+         background-color: white !important;
          margin: 0;
          font-family: sans-serif;
         }
 
         .menu {
          overflow: hidden;
-         background-color: orange;
+         background-color: DarkGray;
         }
 
         .topnav a {
@@ -32,10 +32,10 @@
          float: left;
          color: black;
          text-align: center;
-         margin-left: 450px;
+         margin-left: 300px;
 
          padding: 14px 16px;
-         text-decoration: none;
+         text-decoration: overline;
          font-size: 20px;
         }
 
@@ -69,6 +69,12 @@
         <a id="CrudWord"href="/words/signup">Add Word</a>
         <a id = "dictionary" href="/menu/dictionary">Dictionary (50 words)</a>
     </div>
+        <table>
+            <tr th:each="word : ${words}">
+                <td th:text="${word.name}"></td>
+                <td th:text="${word.translation}"></td>
+            </tr>
+        </table>
 </div>
 </body>
 </html>

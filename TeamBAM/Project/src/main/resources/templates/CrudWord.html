@@ -16,14 +16,14 @@
     left: 5px;
     }
     body {
-      background-color: turquoise !important;
+      background-color: white !important;
       margin: 0;
       font-family: sans-serif;
     }
 
     .menu {
       overflow: hidden;
-      background-color: orange;
+      background-color: DarkGray;
     }
 
     .topnav a {
@@ -98,6 +98,7 @@
                             <tr>
                                 <th>Word</th>
                                 <th>Translation</th>
+                                <th>Edit</th>
                                 <th>Delete</th>
                             </tr>
                             </thead>
@@ -105,6 +106,7 @@
                             <tr th:each="word : ${words}">
                                 <td th:text="${word.name}"></td>
                                 <td th:text="${word.translation}"></td>
+                                <td><a th:href="@{/words/edit/{id}(id=${word.id})}" class="btn btn-primary"><i class="fas fa-user-edit ml-2"></i></a></td>
                                 <td><a th:href="@{/words/delete/{id}(id=${word.id})}" class="btn btn-primary"><i class="fas fa-user-times ml-2"></i></a></td>
                             </tr>
                             </tbody>

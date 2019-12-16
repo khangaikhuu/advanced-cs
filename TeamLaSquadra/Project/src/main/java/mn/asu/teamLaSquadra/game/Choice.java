@@ -30,7 +30,12 @@ public class Choice {
     private HBox hLayout;
     private Scene choiceScene = new Scene(vChoice,1550,1000);
     private Ending ending = new Ending();
-    private Stage endingStage;
+    private Stage endingStage = new Stage();
+    private choiceFinder finder = new choiceFinder();
+    private choicePartOne one = new choicePartOne();
+    private choicePartTwo two = new choicePartTwo();
+
+
     public Choice()
     {
         sceneView = new ImageView();
@@ -45,11 +50,11 @@ public class Choice {
 
 
 
-    public void firstChoice(Stage primaryStage) throws FileNotFoundException {
+    public void firstChoice(final Stage primaryStage) throws FileNotFoundException {
 
         endingStage=primaryStage;
 
-        Image firstScene = new Image(new FileInputStream("Project/src/main/resources/prison.png"));
+        Image firstScene = new Image(new FileInputStream(getClass().getClassLoader().getResource("prison.png").getFile()));
 
         storyInfo.setFont(Font.font("Arial", FontWeight.BOLD, 30));
         choiceOne.setFont(Font.font("Arial", FontWeight.BOLD, 30));
@@ -67,6 +72,7 @@ public class Choice {
         vChoice.getChildren().addAll(storyImage, storyInfo, hLayout);
         vChoice.setAlignment(Pos.CENTER);
         primaryStage.setScene(choiceScene);
+        primaryStage.setFullScreen(true);
         //button handler
         choiceOne.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent actionEvent) {
@@ -90,13 +96,41 @@ public class Choice {
                         break;
                     case 8:
                         pressed=10;
+                        break;
+                    case 10:
+                        pressed=12;
+                        break;
+                    case 12:
+                        pressed=14;
+                        break;
+                    case 13:
+                        pressed=15;
+                        break;
+                    case 15:
+                        pressed=17;
+                        break;
+                    case 16:
+                        pressed=17;
+                        break;
+
                 }
 
                     try {
-                        pres = choiceSelect(pressed, choiceOne);
+                        pres = finder.choiceSelect(pressed, choiceOne, Choice.this);
                     } catch (FileNotFoundException e) {
                         e.printStackTrace();
                     }
+
+                try {
+                    pres = one.choiceSelect(pressed, choiceOne,Choice.this);
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
+                try {
+                    pres = two.choiceSelect(pressed, choiceOne,Choice.this);
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
 
 
             }
@@ -124,18 +158,42 @@ public class Choice {
                         break;
                     case 8:
                         pressed = 11;
+                        break;
+                    case 10:
+                        pressed = 13;
+                        break;
+                    case 13:
+                        pressed=16;
+                        break;
+                    case 16:
+                        pressed=18;
+                        break;
+
                 }
 
                     try {
-                        pres = choiceSelect(pressed, choiceTwo);
+                        pres = finder.choiceSelect(pressed, choiceTwo,Choice.this);
                     } catch (FileNotFoundException e) {
                         e.printStackTrace();
                     }
+                try {
+                    pres = one.choiceSelect(pressed, choiceTwo,Choice.this);
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
+                try {
+                    pres = two.choiceSelect(pressed, choiceTwo,Choice.this);
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
+
 
 
             }
         });
     }
+
+
 
     public void nextChoice(Image nextScene, String textInfo, String buttonDes1, String buttonDes2) throws FileNotFoundException {
 
@@ -145,112 +203,4 @@ public class Choice {
         choiceTwo.setText(buttonDes2);
 
     }
-
-    private int choiceSelect(int input, Button exitButton) throws FileNotFoundException{
-
-        if(input==1)
-        {
-            Image sceneKampf;
-            try {
-
-                nextChoice(sceneKampf = new Image(new FileInputStream(getClass().getClassLoader().getResource("prison.png").getFile())),
-                        "You have added a new page on your book.", "exit", "sleep");
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            }
-
-            input=1;
-        }
-
-        if(input==2)
-        {
-            Image sceneKampf;
-            try {
-                nextChoice(sceneKampf = new Image(new FileInputStream(getClass().getClassLoader().getResource("prison.png").getFile())),
-                        "You couldn't sleep because you didn't write last night.", "just lie there", "exit");
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            }
-
-            input=2;
-        }
-
-        if(input==3)
-        {
-            Stage stage = (Stage) exitButton.getScene().getWindow();
-            stage.close();
-        }
-
-        if (input==4) {
-            Image sceneKampf;
-            try {
-                nextChoice(sceneKampf = new Image(new FileInputStream(getClass().getClassLoader().getResource("prison.png").getFile())),
-                        "The next day in prison is here.", "get out of bed", "exit");
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            }
-
-            input=4;
-        }
-
-        if(input==5)
-        {
-            Stage stage = (Stage) exitButton.getScene().getWindow();
-            stage.close();
-        }
-
-
-        if (input==6) {
-            Image sceneDayPrison;
-            try {
-                nextChoice(sceneDayPrison = new Image(new FileInputStream(getClass().getClassLoader().getResource("dayprison.jpg").getFile())),
-                        "The guard is calling you out.", "yes", "exit");
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            }
-            input=6;
-        }
-
-        if(input==7)
-        {
-            Stage stage = (Stage) exitButton.getScene().getWindow();
-            stage.close();
-        }
-
-        if (input==8) {
-            Image sceneDayPrison;
-            try {
-                nextChoice(sceneDayPrison = new Image(new FileInputStream(getClass().getClassLoader().getResource("leavingPrison.jpg").getFile())),
-                        "The Bavarian Supreme Cour has pardoned your treason, \n" +
-                                "and you are released from prison after only a year\n" +
-                                ", in 20 December 1924.", "Pack up your stuff and leave", "Leave");
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            }
-            pressed=8;
-        }
-
-        if(input==9)
-        {
-            Stage stage = (Stage) exitButton.getScene().getWindow();
-            stage.close();
-        }
-
-        if (input==10)
-        {
-            ending.ending("World War 2 ends with the unconditional surrender of the Axis Powers" +
-                    "\nthus ending the most violent struggle in human history. Adolf Hitler commits suicide, The Japanese surrender after" +
-                    "\n two nuclear as well as Italy surrendering and switching sides.",endingStage);
-            pressed=10;
-        }
-
-        if (input==11)
-        {
-            ending.ending("Because you left your valuable book behind in prison you have no material to sway the public opinion, so you retire and become a simple salary man.",endingStage);
-            pressed=11;
-        }
-        return pressed;
-    }
-
-
 }

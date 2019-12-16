@@ -6,14 +6,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Chingun" />
+        <module name="Khangarid" />
         <module name="Manal" />
         <module name="Anudari" />
         <module name="Anand" />
         <module name="Erkhembaatar" />
         <module name="Project (2) (org.springframework.boot)" />
-        <module name="Khangarid" />
+        <module name="Mr.Khangai" />
+        <module name="Project" />
         <module name="Jason" />
+        <module name="Chingun" />
         <module name="SungMin" />
         <module name="MrKhangai" />
         <module name="AminErdene" />
@@ -21,23 +23,22 @@
         <module name="Hannah" />
         <module name="Hayeon" />
         <module name="Bilguundalai" />
-        <module name="Project (1)" />
+        <module name="Project (2)" />
         <module name="Juan" />
-        <module name="Mr.Khangai" />
-        <module name="Project (3)" />
+        <module name="Project (4)" />
         <module name="Tsengel" />
       </profile>
       <profile name="Annotation profile for advanced-cs" enabled="true">
-        <sourceOutputDir name="../../Team2/Project/target/generated-sources/annotations" />
-        <sourceTestOutputDir name="../../Team2/Project/target/generated-test-sources/test-annotations" />
+        <sourceOutputDir name="../../TeamLaSquadra/Project/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../TeamLaSquadra/Project/target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Project (2)" />
+        <module name="Project (3)" />
       </profile>
-      <profile name="Annotation profile for Project (4)" enabled="true">
-        <sourceOutputDir name="../../TeamKEA/Project/target/generated-sources/annotations" />
-        <sourceTestOutputDir name="../../TeamKEA/Project/target/generated-test-sources/test-annotations" />
+      <profile name="Annotation profile for Project (1)" enabled="true">
+        <sourceOutputDir name="../../TeamBAM/Project/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../TeamBAM/Project/target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Project (4)" />
+        <module name="Project (1)" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -57,11 +58,12 @@
       <module name="Manal" target="1.8" />
       <module name="Mr.Khangai" target="1.8" />
       <module name="MrKhangai" target="1.8" />
-      <module name="Project (1)" target="1.5" />
+      <module name="Project" target="1.5" />
+      <module name="Project (1)" target="1.8" />
       <module name="Project (2)" target="1.8" />
       <module name="Project (2) (org.springframework.boot)" target="1.8" />
-      <module name="Project (3)" target="1.5" />
-      <module name="Project (4)" target="8" />
+      <module name="Project (3)" target="6" />
+      <module name="Project (4)" target="1.5" />
       <module name="SungMin" target="1.5" />
       <module name="Team2" target="1.5" />
       <module name="team2" target="1.6" />
