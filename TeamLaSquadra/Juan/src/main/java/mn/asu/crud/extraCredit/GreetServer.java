@@ -1,3 +1,5 @@
+package mn.asu.crud.extraCredit;
+
 import java.net.*;
 import java.io.*;
 
@@ -7,7 +9,7 @@ public class GreetServer {
     private PrintWriter out;
     private BufferedReader in;
 
-    public void start(int port) {
+    public void start(int port) throws IOException {
         serverSocket = new ServerSocket(port);
         clientSocket = serverSocket.accept();
         out = new PrintWriter(clientSocket.getOutputStream(), true);
@@ -21,21 +23,15 @@ public class GreetServer {
         }
     }
 
-    public void stop() {
+    public void stop() throws IOException {
         in.close();
         out.close();
         clientSocket.close();
         serverSocket.close();
     }
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         GreetServer server=new GreetServer();
         server.start(6666);
     }
-    @Test
-    public void givenGreetingClient_whenServerRespondsWhenStarted_thenCorrect() {
-        GreetClient client = new GreetClient();
-        client.startConnection("127.0.0.1", 6666);
-        String response = client.sendMessage("hello server");
-        assertEquals("hello client", response);
-    }
+
 }
