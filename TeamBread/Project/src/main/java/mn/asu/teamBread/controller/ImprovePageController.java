@@ -18,7 +18,7 @@ public class ImprovePageController {
 
     public String showImprovePage(Model model) {
         wordsToImprove.add("Hello");
-        model.addAttribute("word", wordsToImprove.get(0));
+        model.addAttribute("improve", wordsToImprove);
         return "ImprovePage";
     }
 
