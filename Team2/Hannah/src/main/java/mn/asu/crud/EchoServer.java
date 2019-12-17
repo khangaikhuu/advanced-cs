@@ -4,7 +4,7 @@ import java.net.*;
 import java.io.*;
 
 public class EchoServer {
-    public void start(int port) throws IOException {
+    public void start(int port, ServerSocket serverSocket, Socket clientSocket, PrintWriter out, BufferedReader in) throws IOException {
         serverSocket = new ServerSocket(port);
         clientSocket = serverSocket.accept();
         out = new PrintWriter(clientSocket.getOutputStream(), true);
