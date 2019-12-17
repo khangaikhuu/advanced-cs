@@ -1,4 +1,7 @@
-package mn.asu.crud.websocket;
+package mn.asu.crud.entity;
+
+
+import mn.asu.crud.entity.GreetClient;
 
 
 import org.junit.After;
@@ -10,13 +13,13 @@ import java.io.IOException;
 
 import static org.testng.Assert.assertEquals;
 
-public class TestClientServer {
+class TestClientServer {
 
-    private EchoClient client;
+    private mn.asu.crud.websocket.EchoClient client;
 
     @Before
     public void setup() throws IOException {
-        client = new EchoClient();
+        client = new mn.asu.crud.websocket.EchoClient();
         client.startConnection("127.0.0.1", 4444);
     }
 
