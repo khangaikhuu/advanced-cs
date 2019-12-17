@@ -39,6 +39,7 @@ public class choicePartTwo {
         }
 
             if (input == 17) {
+
                 Image freedom;
                 try {
                     choice.nextChoice(freedom = new Image(new FileInputStream(getClass().getClassLoader().getResource("freedom.jpg").getFile())),
@@ -56,6 +57,18 @@ public class choicePartTwo {
                 pressed = 17;
 
 
+            }
+
+            if(input==18)
+            {
+                Image freedom;
+                try {
+                    choice.nextChoice(freedom = new Image(new FileInputStream(getClass().getClassLoader().getResource("gameOver.jpg").getFile())),
+                            "", "Exit", "Exit");
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
+                pressed = 17;
             }
         return pressed;
         }
