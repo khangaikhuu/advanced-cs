@@ -1,8 +1,21 @@
 package mn.asu.crud.ExtraCredit;
 
+import org.junit.After;
+import org.junit.Before;
+
 import java.io.IOException;
 
 public class TestEchoServer {
+    @Before
+    public void setup() {
+        EchoServer client = new EchoServer();
+        client.startConnection("127.0.0.1", 4444);
+    }
+    @After
+    public void tearDown() throws IOException {
+        GreetClient client = new GreetClient();
+        client.stopConnection();
+    }
     public void givenClient_whenServerEchosMessage_thenCorrect() throws IOException {
         GreetClient client = null;
         String resp1 = client.sendMessage("hello");
