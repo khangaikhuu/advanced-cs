@@ -1,8 +1,10 @@
 package mn.asu.crud.websocket;
 
-import org.aspectj.lang.annotation.After;
-import org.aspectj.lang.annotation.Before;
+
+import org.junit.After;
+import org.junit.Before;
 import org.testng.annotations.Test;
+
 
 import java.io.IOException;
 
@@ -10,8 +12,10 @@ import static org.testng.Assert.assertEquals;
 
 public class TestClientServer {
 
+    private EchoClient client;
+
     @Before
-    public void setup() {
+    public void setup() throws IOException {
         client = new EchoClient();
         client.startConnection("127.0.0.1", 4444);
     }
@@ -25,7 +29,7 @@ public class TestClientServer {
     }
 
     @After
-    public void tearDown() {
+    public void tearDown() throws IOException {
         client.stopConnection();
     }
 }
