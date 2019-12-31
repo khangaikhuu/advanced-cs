@@ -16,13 +16,5 @@ public class MainFrame {
         Frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
-    public MainFrame(int width, int height, String title) {
-        Frame.setTitle(title);
-        Frame.setSize(width, height);
-        Frame.setLayout(null);
-        Frame.setVisible(true);
-    }
 
-
-    public void changePanel(JPanel p) { Frame.add(p); }
 }

@@ -1,17 +1,14 @@
+
 package mn.asu.teamKEA.component;
 
-import mn.asu.teamKEA.Main;
-
 import javax.swing.*;
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
-import java.util.Map;
-import java.util.Random;
+import java.io.IOException;
 
-import static mn.asu.teamKEA.Main.*;
-import static mn.asu.teamKEA.component.UsedImageIcons.*;
+import static mn.asu.teamKEA.Main.mainPanel;
+import static mn.asu.teamKEA.component.UsedImageIcons.database;
+import static mn.asu.teamKEA.component.UsedImageIcons.getIcon;
 
 public class MainButton {
 
@@ -26,9 +23,9 @@ public class MainButton {
     }
 
 
-    public static int i = 2;
+    public static int i = 1;
 
-    public void nextWord( String text,   ImageIcon imageIcon) {
+    public void nextWord( ) {
 
 
         Button.addActionListener(new ActionListener() {
@@ -37,17 +34,20 @@ public class MainButton {
                 if(i % 2 ==0) {
 
                     Button.setIcon(null);
-                    Button.setText(database[i][0]);
-                    mainPanel.Panel.revalidate();
-                    mainPanel.Panel.repaint();
+                    Button.setText(database[set][0]);
                 }
                 else
                 {
                     Button.setText(null);
-                    Button.setIcon(getIcon(database[i][1]));
-                    mainPanel.Panel.revalidate();
-                    mainPanel.Panel.repaint();
+                    try {
+                        Button.setIcon(getIcon(database[set][1]));
+                    } catch (IOException ex) {
+                        ex.printStackTrace();
+                    }
                 }
+                i++;
+                mainPanel.Panel.revalidate();
+                mainPanel.Panel.repaint();
             }
         });
     }
@@ -60,12 +60,7 @@ public class MainButton {
         nextButton.addActionListener(new ActionListener() {
 
             @Override
-<<<<<<< HEAD
-            public void actionPerformed(ActionEvent e)
-            {
-=======
             public void actionPerformed(ActionEvent e) {
->>>>>>> f38ce0c43a8917956a96558003fc827d0cee1528
                 if(set== database.length-1)
                 {
                     set=0;
@@ -73,14 +68,15 @@ public class MainButton {
                 else {
                     set++;
                 }
-<<<<<<< HEAD
-                set++;
-=======
+                mainPanel.Panel.revalidate();
+                mainPanel.Panel.repaint();
 
-                set++;
-
->>>>>>> f38ce0c43a8917956a96558003fc827d0cee1528
             }
         });
+
+
     }
+
+
 }
+
