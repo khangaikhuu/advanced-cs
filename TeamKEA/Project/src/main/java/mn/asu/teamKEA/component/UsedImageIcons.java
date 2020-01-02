@@ -10,7 +10,7 @@ import java.util.HashMap;
 public class UsedImageIcons {
 
     public static Image ourImage;
-    public static String[][] database = new String[35][2];
+    public static String[][] database = new String[34][2];
     public static Image getImage(String filename) throws IOException {
         File sourceImage = new File(UsedImageIcons.class.getClassLoader().getResource(filename).getFile());
 
@@ -28,7 +28,7 @@ public class UsedImageIcons {
 
     static {
         try {
-            paris = getIcon("static/Pariss.jpg");
+            paris = getIcon2("static/Pariss.jpg");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -43,10 +43,25 @@ public class UsedImageIcons {
             e.printStackTrace();
         }
     }
+    public static ImageIcon back;
 
+    static {
+        try {
+            back = getIcon("Nextcopy.png");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static ImageIcon getIcon2(String i) throws IOException {
+        Image nextTransform = getImage(i);
+        Image nextScale = nextTransform.getScaledInstance(800, 400, java.awt.Image.SCALE_SMOOTH);
+        ImageIcon next = new ImageIcon(nextScale);
+        return next;
+    }
     public static ImageIcon getIcon(String i) throws IOException {
         Image nextTransform = getImage(i);
-        Image nextScale = nextTransform.getScaledInstance(700, 500, java.awt.Image.SCALE_SMOOTH);
+        Image nextScale = nextTransform.getScaledInstance(100, 200, java.awt.Image.SCALE_SMOOTH);
         ImageIcon next = new ImageIcon(nextScale);
         return next;
     }
