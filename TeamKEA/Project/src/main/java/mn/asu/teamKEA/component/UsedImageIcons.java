@@ -69,7 +69,7 @@ public class UsedImageIcons {
 
     public static void dataBase() throws IOException {
         UsedImageIcons.class.getClassLoader().getResources(".jpg");
-        database[0][0] = "Welcome to the French Flashcards. Hope it helps you in your French journey!";
+        database[0][0] = "French Flashcards!";
         database[1][0] = "Aimer";
         database[2][0] = "Arriver";
         database[3][0] = "Chercher";

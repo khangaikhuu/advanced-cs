@@ -2,6 +2,7 @@
 package mn.asu.teamKEA.component;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
@@ -21,6 +22,7 @@ public class MainButton {
         Button.setOpaque(false);
         Button.setContentAreaFilled(false);
         Button.setBorderPainted(false);
+        Button.setFont(new Font("Calibri", Font.BOLD, 80));
 
         nextButton.setBounds(x2,y2,width2,height2);
         nextButton.setIcon(imageIcon2);
@@ -28,6 +30,7 @@ public class MainButton {
         nextButton.setOpaque(false);
         nextButton.setContentAreaFilled(false);
         nextButton.setBorderPainted(false);
+        Button.setFont(new Font("Arial", Font.PLAIN, 80));
 
         backButton.setBounds(x3,y3,width3,height3);
         backButton.setIcon(imageIcon3);
@@ -35,6 +38,7 @@ public class MainButton {
         backButton.setOpaque(false);
         backButton.setContentAreaFilled(false);
         backButton.setBorderPainted(false);
+        Button.setFont(new Font("Arial", Font.PLAIN, 80));
     }
 
 
