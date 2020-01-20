@@ -4,7 +4,8 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-public class test {
+public class TestGreet {
+
     @Test
     public void givenGreetingClient_whenServerRespondsWhenStarted_thenCorrect() throws IOException {
         GreetClient client = new GreetClient();

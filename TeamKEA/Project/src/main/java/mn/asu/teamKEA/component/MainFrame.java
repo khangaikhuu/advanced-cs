@@ -14,15 +14,8 @@ public class MainFrame {
         Frame.setVisible(true);
         Frame.add(p);
         Frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    }
-
-    public MainFrame(int width, int height, String title) {
-        Frame.setTitle(title);
-        Frame.setSize(width, height);
-        Frame.setLayout(null);
-        Frame.setVisible(true);
+        Frame.setResizable(false);
     }
 
 
-    public void changePanel(JPanel p) { Frame.add(p); }
 }

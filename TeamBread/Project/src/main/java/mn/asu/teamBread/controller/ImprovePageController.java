@@ -13,14 +13,20 @@ import java.util.ArrayList;
 
 public class ImprovePageController {
 
+
     @GetMapping("index")
     public String showUpdateForm(Model model) {
         return "NavigationBar";
     }
+
+    private ArrayList<String> wordsToImprove = new ArrayList<>();
+
     @GetMapping("/improvePage")
     public String showImprovePage(Model model) {
-
-            return "ImprovePage";
-        }
+        wordsToImprove.add("Hello");
+        model.addAttribute("improve", wordsToImprove);
+        return "ImprovePage";
     }
 
+
+}

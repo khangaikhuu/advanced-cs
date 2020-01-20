@@ -129,7 +129,7 @@ public class choiceFinder {
             e.printStackTrace();
         }
         try {
-            pressed=two.choiceSelect(pressed, exitButton,choice,primaryStage);
+            pressed=two.choiceSelect(pressed, exitButton,choice);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
