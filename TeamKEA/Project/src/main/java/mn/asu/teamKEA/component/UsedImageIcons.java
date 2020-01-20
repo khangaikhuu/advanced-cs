@@ -55,13 +55,13 @@ public class UsedImageIcons {
 
     public static ImageIcon getIcon2(String i) throws IOException {
         Image nextTransform = getImage(i);
-        Image nextScale = nextTransform.getScaledInstance(800, 400, java.awt.Image.SCALE_SMOOTH);
+        Image nextScale = nextTransform.getScaledInstance(800, 500, java.awt.Image.SCALE_SMOOTH);
         ImageIcon next = new ImageIcon(nextScale);
         return next;
     }
     public static ImageIcon getIcon(String i) throws IOException {
         Image nextTransform = getImage(i);
-        Image nextScale = nextTransform.getScaledInstance(100, 200, java.awt.Image.SCALE_SMOOTH);
+        Image nextScale = nextTransform.getScaledInstance(200, 100, java.awt.Image.SCALE_SMOOTH);
         ImageIcon next = new ImageIcon(nextScale);
         return next;
     }

@@ -24,7 +24,8 @@ public class MainButton {
     }
 
 
-    public static int i = 1;
+    public static int i = 2;
+    public static int set = 0;
 
     public void nextWord( ) {
 
@@ -46,16 +47,15 @@ public class MainButton {
                         ex.printStackTrace();
                     }
                 }
-                i++;
                 mainPanel.Panel.revalidate();
                 mainPanel.Panel.repaint();
+                i++;
             }
         });
     }
 
 
 
-    public static int set = 0;
     public void nextSet()
     {
         nextButton.addActionListener(new ActionListener() {
@@ -69,6 +69,15 @@ public class MainButton {
                 else {
                     set++;
                 }
+
+                Button.setText(null);
+                    try {
+                        Button.setIcon(getIcon2(database[set][1]));
+                    } catch (IOException ex) {
+                        ex.printStackTrace();
+                    }
+
+                i=2;
                 mainPanel.Panel.revalidate();
                 mainPanel.Panel.repaint();
 
@@ -81,7 +90,7 @@ public class MainButton {
 
     public void backSet()
     {
-        nextButton.addActionListener(new ActionListener() {
+        backButton.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -92,8 +101,19 @@ public class MainButton {
                 else {
                     set--;
                 }
+
+
+                Button.setText(null);
+                    try {
+                        Button.setIcon(getIcon2(database[set][1]));
+                    } catch (IOException ex) {
+                        ex.printStackTrace();
+                    }
+
+                i=2;
                 mainPanel.Panel.revalidate();
                 mainPanel.Panel.repaint();
+
 
             }
         });
