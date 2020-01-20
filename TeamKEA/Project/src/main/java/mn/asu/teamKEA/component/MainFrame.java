@@ -14,6 +14,7 @@ public class MainFrame {
         Frame.setVisible(true);
         Frame.add(p);
         Frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        Frame.setResizable(false);
     }
 
 

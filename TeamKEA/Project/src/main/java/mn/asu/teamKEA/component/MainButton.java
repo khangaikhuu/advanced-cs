@@ -17,10 +17,24 @@ public class MainButton {
     public MainButton(int x, int y, int width, int height,  ImageIcon imageIcon, int x2, int y2 , int width2, int height2, ImageIcon imageIcon2, int x3, int y3, int width3, int height3, ImageIcon imageIcon3) {
         Button.setBounds(x, y, width, height);
         Button.setIcon(imageIcon);
+
+        Button.setOpaque(false);
+        Button.setContentAreaFilled(false);
+        Button.setBorderPainted(false);
+
         nextButton.setBounds(x2,y2,width2,height2);
         nextButton.setIcon(imageIcon2);
+
+        nextButton.setOpaque(false);
+        nextButton.setContentAreaFilled(false);
+        nextButton.setBorderPainted(false);
+
         backButton.setBounds(x3,y3,width3,height3);
         backButton.setIcon(imageIcon3);
+
+        backButton.setOpaque(false);
+        backButton.setContentAreaFilled(false);
+        backButton.setBorderPainted(false);
     }
 
 
