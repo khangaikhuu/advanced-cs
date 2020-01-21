@@ -11,6 +11,6 @@ public class MainLabel {
     public MainLabel(String text, int x, int y, int width, int height) {
         Label.setText(text);
         Label.setBounds(x, y, width, height);
-        Label.setFont(new Font("Lobster Two", Font.ITALIC, 15));
+        Label.setFont(new Font("Arial", Font.ITALIC, 30));
     }
 }

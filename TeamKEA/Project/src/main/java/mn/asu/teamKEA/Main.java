@@ -1,10 +1,6 @@
 package mn.asu.teamKEA;
 
-import mn.asu.teamKEA.component.MainButton;
-import mn.asu.teamKEA.component.MainFrame;
-import mn.asu.teamKEA.component.MainPanel;
-import mn.asu.teamKEA.component.UsedImageIcons;
-
+import mn.asu.teamKEA.component.*;
 import java.io.IOException;
 
 public class Main {
@@ -16,6 +12,7 @@ public static void main(String[] args) throws IOException {
         }
 
 public static MainButton mainButton = new MainButton(0, 0, 800, 500,UsedImageIcons.paris,600,500,200,100,UsedImageIcons.next, 0, 500, 200, 100, UsedImageIcons.back);
-public static MainPanel mainPanel = new MainPanel(mainButton.Button , mainButton.nextButton, mainButton.backButton, 800, 640);
+public static MainLabel mainLabel = new MainLabel(MainButton.set+1+"/"+UsedImageIcons.database.length,400,500,100,100);
+public static MainPanel mainPanel = new MainPanel(mainButton.Button , mainButton.nextButton, mainButton.backButton, mainLabel.Label,800, 640);
 public static MainFrame mainFrame = new MainFrame(mainPanel.Panel ,800 , 640 ,"French Flashcards");
         }
