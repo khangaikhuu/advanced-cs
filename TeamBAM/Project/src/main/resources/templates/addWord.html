@@ -16,9 +16,7 @@
     left: 5px;
     }
     body {
-      background-color: white !important;
-      margin: 0;
-      font-family: sans-serif;
+      background-image: url('poly.png');
     }
 
     .menu {
@@ -62,13 +60,17 @@
     b {
       border: 5px solid;
     }
+    .imageTwo{
+      opacity: 0.55;
+      filter: alpha(opacity=50);
+    }
     </style>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <!-- <link rel="stylesheet" href="../css/shards.min.css"> -->
 </head>
 
-<body bgcolor="#3399ff">
+<body>
 <div id = "OverviewText4">
     <a href="/menu/menu">
         <img th:src="@{/img/logo.png}" width="5%" alt="memorynotfound logo"/>
