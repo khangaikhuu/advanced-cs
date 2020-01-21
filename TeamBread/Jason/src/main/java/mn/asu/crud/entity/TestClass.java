@@ -1,5 +1,4 @@
 package mn.asu.crud.entity;
-import org.junit.Test;
 
 import java.io.IOException;
 
@@ -24,7 +23,7 @@ public class TestClass {
     private void assertEquals(String hello_client, String response) {
     }
 
-    @Test
+
     public void givenClient_whenServerEchosMessage_thenCorrect() throws IOException {
         GreetClient client = null;
         String resp1 = client.sendMessage("hello");

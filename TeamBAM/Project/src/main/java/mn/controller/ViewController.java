@@ -7,6 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.Collection;
 import java.util.Iterator;
 import java.util.Random;
 
@@ -19,19 +20,30 @@ public class ViewController {
     public ViewController(WordRepository wordRepository) {
         this.wordRepository = wordRepository;
     }
+
     @GetMapping("quiz")
     public String showQuiz(Model model) {
-        Random rnd = new Random();
-        Iterator it = wordRepository.findAll().iterator();
-        int length = 0;
-        while(it.hasNext())
-        {
-            System.out.println(length);
-            length+=1;
+
+        int size = 0;
+        if (wordRepository.findAll() instanceof Collection<?>) {
+            size = ((Collection<?>)wordRepository.findAll()).size();
         }
-        int index = rnd.nextInt(length - 1);
-        long i = (long) index;
-        model.addAttribute("words", wordRepository.findById(i));
+        Random rnd = new Random();
+        long randomIndex = 0;
+        if (size != 0)
+        {
+             randomIndex = rnd.nextInt(size);
+        }
+
+//        while(it.hasNext())
+//        {
+//            length+=1;
+//        }
+//        int index = rnd.nextInt(length - 1);
+//        long i = (long) index;
+        if (randomIndex > 0){
+            model.addAttribute("words", wordRepository.findById(randomIndex).get());
+        }
         return "quiz";
     }
 
