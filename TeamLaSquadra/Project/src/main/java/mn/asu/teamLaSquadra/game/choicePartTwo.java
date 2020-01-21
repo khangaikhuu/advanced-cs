@@ -38,8 +38,7 @@ public class choicePartTwo {
             pressed = 16;
         }
 
-<<<<<<< HEAD
-        if(input==18) {
+        if (input == 18) {
             Image gameOver;
             try {
                 choice.nextChoice(gameOver = new Image(new FileInputStream(getClass().getClassLoader().getResource("gameOver.png").getFile())),
@@ -47,14 +46,11 @@ public class choicePartTwo {
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
-            pressed=18;
+            pressed = 18;
         }
 
-            if (input == 19) {
-=======
-            if (input == 17) {
+        if (input == 19) {
 
->>>>>>> 5f98fd62713f34eee3eb5507da781512b32464d3
                 Image freedom;
                 try {
                     choice.nextChoice(freedom = new Image(new FileInputStream(getClass().getClassLoader().getResource("freedom.png").getFile())),
@@ -72,22 +68,19 @@ public class choicePartTwo {
                 pressed = 19;
             }
 
-            if(input==20) {
+            if (input == 20) {
                 Stage stage = (Stage) exitButton.getScene().getWindow();
                 stage.close();
-                pressed=20;
+                pressed = 20;
             }
 
-<<<<<<< HEAD
-        if(input==21) {
-            Stage stage = (Stage) exitButton.getScene().getWindow();
-            stage.close();
-            pressed=21;
-        }
+            if (input == 21) {
+                Stage stage = (Stage) exitButton.getScene().getWindow();
+                stage.close();
+                pressed = 21;
+            }
 
-=======
-            if(input==18)
-            {
+            if (input == 18) {
                 Image freedom;
                 try {
                     choice.nextChoice(freedom = new Image(new FileInputStream(getClass().getClassLoader().getResource("gameOver.jpg").getFile())),
@@ -97,9 +90,8 @@ public class choicePartTwo {
                 }
                 pressed = 17;
             }
->>>>>>> 5f98fd62713f34eee3eb5507da781512b32464d3
-        return pressed;
+            return pressed;
         }
-
     }
+
 
