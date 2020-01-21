@@ -42,7 +42,7 @@ public class MainButton {
     }
 
 
-    public static int i = 2;
+    public static int i = 3;
     public static int set = 0;
 
     public void nextWord( ) {
@@ -51,6 +51,23 @@ public class MainButton {
         Button.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
+                if(i==0)
+                {
+                    if(i%2 ==0)
+                    {
+                        Button.setIcon(null);
+                        Button.setText(database[set][0]);
+                    }
+                    else
+                    {
+                        Button.setText(null);
+                        try {
+                            Button.setIcon(getIcon2(database[set][1]));
+                        } catch (IOException ex) {
+                            ex.printStackTrace();
+                        }
+                    }
+                }
                 if(i % 2 ==0) {
 
                     Button.setIcon(null);
@@ -88,14 +105,13 @@ public class MainButton {
                     set++;
                 }
 
-                Button.setText(null);
-                    try {
-                        Button.setIcon(getIcon2(database[set][1]));
-                    } catch (IOException ex) {
-                        ex.printStackTrace();
-                    }
 
-                i=2;
+                Button.setIcon(null);
+                Button.setText(database[set][0]);
+
+
+
+                i=3;
                 mainPanel.Panel.revalidate();
                 mainPanel.Panel.repaint();
 
@@ -121,14 +137,11 @@ public class MainButton {
                 }
 
 
-                Button.setText(null);
-                    try {
-                        Button.setIcon(getIcon2(database[set][1]));
-                    } catch (IOException ex) {
-                        ex.printStackTrace();
-                    }
+                Button.setIcon(null);
+                Button.setText(database[set][0]);
 
-                i=2;
+
+                i=3;
                 mainPanel.Panel.revalidate();
                 mainPanel.Panel.repaint();
 
