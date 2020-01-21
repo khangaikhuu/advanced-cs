@@ -28,7 +28,7 @@ public class Choice {
     private int pres;
     private VBox vChoice = new VBox();
     private HBox hLayout;
-    private Scene choiceScene = new Scene(vChoice,1550,1000);
+    private Scene choiceScene = new Scene(vChoice,1366,768);
     private Ending ending = new Ending();
     private Stage endingStage = new Stage();
     private choiceFinder finder = new choiceFinder();
@@ -61,7 +61,7 @@ public class Choice {
         choiceTwo.setFont(Font.font("Arial", FontWeight.BOLD, 30));
 
         sceneView.setFitHeight(700);
-        sceneView.setFitWidth(1920);
+        sceneView.setFitWidth(768);
 
         sceneView.setImage(firstScene);
         storyImage.setGraphic(sceneView);
@@ -106,17 +106,25 @@ public class Choice {
                     case 13:
                         pressed=15;
                         break;
-                    case 15:
+                    case 14:
                         pressed=17;
+                        break;
+                    case 15:
+                        pressed=18;
+                        break;
+                    case 18:
+                        pressed=20;
                         break;
                     case 16:
-                        pressed=17;
+                        pressed=19;
                         break;
-
+                    case 19:
+                        pressed=21;
+                        break;
                 }
 
                     try {
-                        pres = finder.choiceSelect(pressed, choiceOne, Choice.this);
+                        pres = finder.choiceSelect(pressed, choiceOne, Choice.this,primaryStage);
                     } catch (FileNotFoundException e) {
                         e.printStackTrace();
                     }
@@ -162,17 +170,31 @@ public class Choice {
                     case 10:
                         pressed = 13;
                         break;
+                    case 12:
+                        pressed=14;
+                        break;
                     case 13:
                         pressed=16;
                         break;
-                    case 16:
+                    case 14:
+                        pressed=17;
+                        break;
+                    case 15:
                         pressed=18;
                         break;
-
+                    case 18:
+                        pressed=20;
+                        break;
+                    case 16:
+                        pressed=19;
+                        break;
+                    case 19:
+                        pressed=21;
+                        break;
                 }
 
                     try {
-                        pres = finder.choiceSelect(pressed, choiceTwo,Choice.this);
+                        pres = finder.choiceSelect(pressed, choiceTwo,Choice.this,primaryStage);
                     } catch (FileNotFoundException e) {
                         e.printStackTrace();
                     }

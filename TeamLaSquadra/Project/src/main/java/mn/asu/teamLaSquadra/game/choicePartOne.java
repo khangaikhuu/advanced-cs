@@ -2,6 +2,7 @@ package mn.asu.teamLaSquadra.game;
 
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
+import javafx.stage.Stage;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -19,7 +20,7 @@ public class choicePartOne {
             try {
                 choice.nextChoice(reOrganize = new Image(new FileInputStream(getClass().getClassLoader().getResource("heinrichHeld.jpg").getFile())),
                         "You attempt to reorganize the Nazi Party without knowledge of the new laws" +
-                                "\n due to not going to the meeting. You are back in prison.", "Reorganize party", "go to meeting");
+                                "\n due to not going to the meeting. You are back in prison.", "continue", "continue");
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
@@ -39,8 +40,22 @@ public class choicePartOne {
         }
 
         if (input == 14) {
-
+            Image gameOver;
+            try {
+                choice.nextChoice(gameOver = new Image(new FileInputStream(getClass().getClassLoader().getResource("gameOver.png").getFile())),
+                        "Game Over", "exit", "exit");
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+            pressed=14;
         }
+
+        if(input==17) {
+            Stage stage = (Stage) exitButton.getScene().getWindow();
+            stage.close();
+        }
+
+
         return pressed;
     }
 }

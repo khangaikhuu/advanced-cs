@@ -7,6 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.Collection;
 import java.util.Random;
 
 @Controller
@@ -24,12 +25,21 @@ public class LearnPageController {
     public String showImprovePage(Model model) {
 
 
-        repository.findAll();
-        Random rand = new Random();
+        int size = 0;
+        if (repository.findAll() instanceof Collection<?>) {
+            size = ((Collection<?>) repository.findAll()).size();
+        }
+        Random rnd = new Random();
+        long randomIndex = 0;
+        if (size != 0)
+        {
+            randomIndex = rnd.nextInt(size);
+        }
 
-        long id = rand.nextInt(10);
 
-        model.addAttribute("words",repository.findAll());
+        if (randomIndex > 0){
+            model.addAttribute("words", repository.findById(randomIndex).get());
+        }
         return "LearnPage";
     }
 }

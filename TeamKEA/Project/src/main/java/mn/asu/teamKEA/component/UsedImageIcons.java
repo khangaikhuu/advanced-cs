@@ -10,7 +10,7 @@ import java.util.HashMap;
 public class UsedImageIcons {
 
     public static Image ourImage;
-    public static String[][] database = new String[33][2];
+    public static String[][] database = new String[34][2];
     public static Image getImage(String filename) throws IOException {
         File sourceImage = new File(UsedImageIcons.class.getClassLoader().getResource(filename).getFile());
 
@@ -23,87 +23,53 @@ public class UsedImageIcons {
 
     }
 
-    public static ImageIcon icon1;
-
-    static {
-        try {
-            icon1 = new ImageIcon(getImage("static/Arriver.JPG"));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public static ImageIcon icon2;
-
-
-    static {
-        try {
-            icon2 = new ImageIcon(getImage("static/Aimer.JPG"));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 
     public static ImageIcon paris;
 
     static {
         try {
-            paris = new ImageIcon(getImage("static/Pariss.jpg"));
+            paris = getIcon2("static/Pariss.jpg");
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    public static ImageIcon PreImage;
+    public static ImageIcon next;
 
     static {
         try {
-            PreImage = new ImageIcon(getImage("static/Danser.JPG"));
+            next = getIcon("Next.png");
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-
-    public static Image transform = PreImage.getImage();
-    public static Image scale = transform.getScaledInstance(715, 536, java.awt.Image.SCALE_SMOOTH);
-    public static ImageIcon danser = new ImageIcon(scale);
-
-
-    public static ImageIcon PreImage1;
+    public static ImageIcon back;
 
     static {
         try {
-            PreImage1 = new ImageIcon(getImage("static/Demander.JPG"));
+            back = getIcon("Nextcopy.png");
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    public static Image transform2 = PreImage1.getImage();
-    public static Image scale2 = transform2.getScaledInstance(715, 536, java.awt.Image.SCALE_SMOOTH);
-    public static ImageIcon demander = new ImageIcon(scale2);
-
-    public static ImageIcon nextPre;
-
-    static {
-        try {
-            nextPre = new ImageIcon(getImage("Next.png"));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    public static ImageIcon getIcon2(String i) throws IOException {
+        Image nextTransform = getImage(i);
+        Image nextScale = nextTransform.getScaledInstance(800, 500, java.awt.Image.SCALE_SMOOTH);
+        ImageIcon next = new ImageIcon(nextScale);
+        return next;
     }
-
-    public static ImageIcon getIcon(String i) {
-        Image nextTransform = nextPre.getImage();
-        Image nextScale = nextTransform.getScaledInstance(54, 114, java.awt.Image.SCALE_SMOOTH);
+    public static ImageIcon getIcon(String i) throws IOException {
+        Image nextTransform = getImage(i);
+        Image nextScale = nextTransform.getScaledInstance(200, 100, java.awt.Image.SCALE_SMOOTH);
         ImageIcon next = new ImageIcon(nextScale);
         return next;
     }
 
 
     public static void dataBase() throws IOException {
-        UsedImageIcons.class.getClassLoader().getResources("*.jpg");
-        database[0][0] = "Danser";
+        UsedImageIcons.class.getClassLoader().getResources(".jpg");
+        database[0][0] = "French Flashcards!";
         database[1][0] = "Aimer";
         database[2][0] = "Arriver";
         database[3][0] = "Chercher";
@@ -136,9 +102,9 @@ public class UsedImageIcons {
         database[30][0] = "Visiter";
         database[31][0] = "Voler";
         database[32][0] = "Voyager";
+        database[33][0] = "Danser";
 
-
-        database[0][1]= "static/Danser.JPG";
+        database[0][1]= "static/Pariss.jpg";
         database[1][1]= "static/Aimer.JPG";
         database[2][1]= "static/Arriver.JPG";
         database[3][1]= "static/Chercher.JPG";
@@ -171,7 +137,7 @@ public class UsedImageIcons {
         database[30][1]= "static/Visiter.JPG";
         database[31][1]= "static/Voler.JPG";
         database[32][1]= "static/Voyager.JPG";
-
+        database[33][1] = "static/Danser.JPG";
     }
 
 

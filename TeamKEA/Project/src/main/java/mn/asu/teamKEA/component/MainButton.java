@@ -1,34 +1,51 @@
+
 package mn.asu.teamKEA.component;
 
-import mn.asu.teamKEA.Main;
-
 import javax.swing.*;
-
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
-import java.util.Map;
-import java.util.Random;
+import java.io.IOException;
 
-import static mn.asu.teamKEA.Main.*;
+import static mn.asu.teamKEA.Main.mainPanel;
 import static mn.asu.teamKEA.component.UsedImageIcons.*;
 
 public class MainButton {
 
     public JButton Button = new JButton();
     public JButton nextButton = new JButton();
-
-    public MainButton(int x, int y, int width, int height,  ImageIcon imageIcon, int x2, int y2 , int width2, int height2, ImageIcon imageIcon2) {
+    public JButton backButton = new JButton();
+    public MainButton(int x, int y, int width, int height,  ImageIcon imageIcon, int x2, int y2 , int width2, int height2, ImageIcon imageIcon2, int x3, int y3, int width3, int height3, ImageIcon imageIcon3) {
         Button.setBounds(x, y, width, height);
         Button.setIcon(imageIcon);
+
+        Button.setOpaque(false);
+        Button.setContentAreaFilled(false);
+        Button.setBorderPainted(false);
+        Button.setFont(new Font("Calibri", Font.BOLD, 80));
+
         nextButton.setBounds(x2,y2,width2,height2);
         nextButton.setIcon(imageIcon2);
+
+        nextButton.setOpaque(false);
+        nextButton.setContentAreaFilled(false);
+        nextButton.setBorderPainted(false);
+        Button.setFont(new Font("Arial", Font.PLAIN, 80));
+
+        backButton.setBounds(x3,y3,width3,height3);
+        backButton.setIcon(imageIcon3);
+
+        backButton.setOpaque(false);
+        backButton.setContentAreaFilled(false);
+        backButton.setBorderPainted(false);
+        Button.setFont(new Font("Arial", Font.PLAIN, 80));
     }
 
 
     public static int i = 2;
+    public static int set = 0;
 
-    public void nextWord( String text,   ImageIcon imageIcon) {
+    public void nextWord( ) {
 
 
         Button.addActionListener(new ActionListener() {
@@ -37,35 +54,32 @@ public class MainButton {
                 if(i % 2 ==0) {
 
                     Button.setIcon(null);
-                    Button.setText(database[i][0]);
-                    mainPanel.Panel.revalidate();
-                    mainPanel.Panel.repaint();
+                    Button.setText(database[set][0]);
                 }
                 else
                 {
                     Button.setText(null);
-                    Button.setIcon(getIcon(database[i][1]));
-                    mainPanel.Panel.revalidate();
-                    mainPanel.Panel.repaint();
+                    try {
+                        Button.setIcon(getIcon2(database[set][1]));
+                    } catch (IOException ex) {
+                        ex.printStackTrace();
+                    }
                 }
+                mainPanel.Panel.revalidate();
+                mainPanel.Panel.repaint();
+                i++;
             }
         });
     }
 
 
 
-    public static int set = 0;
     public void nextSet()
     {
         nextButton.addActionListener(new ActionListener() {
 
             @Override
-<<<<<<< HEAD
-            public void actionPerformed(ActionEvent e)
-            {
-=======
             public void actionPerformed(ActionEvent e) {
->>>>>>> f38ce0c43a8917956a96558003fc827d0cee1528
                 if(set== database.length-1)
                 {
                     set=0;
@@ -73,14 +87,56 @@ public class MainButton {
                 else {
                     set++;
                 }
-<<<<<<< HEAD
-                set++;
-=======
 
-                set++;
+                Button.setText(null);
+                    try {
+                        Button.setIcon(getIcon2(database[set][1]));
+                    } catch (IOException ex) {
+                        ex.printStackTrace();
+                    }
 
->>>>>>> f38ce0c43a8917956a96558003fc827d0cee1528
+                i=2;
+                mainPanel.Panel.revalidate();
+                mainPanel.Panel.repaint();
+
             }
         });
+
+
+    }
+
+
+    public void backSet()
+    {
+        backButton.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(set== 0)
+                {
+                    set=database.length-1;
+                }
+                else {
+                    set--;
+                }
+
+
+                Button.setText(null);
+                    try {
+                        Button.setIcon(getIcon2(database[set][1]));
+                    } catch (IOException ex) {
+                        ex.printStackTrace();
+                    }
+
+                i=2;
+                mainPanel.Panel.revalidate();
+                mainPanel.Panel.repaint();
+
+
+            }
+        });
+
+
     }
 }
+

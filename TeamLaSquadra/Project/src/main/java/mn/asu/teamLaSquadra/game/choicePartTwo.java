@@ -19,7 +19,7 @@ public class choicePartTwo {
             Image backPrison;
             try {
                 choice.nextChoice(backPrison = new Image(new FileInputStream(getClass().getClassLoader().getResource("prison.png").getFile())),
-                        "You are back in prison for disagreeing with the Prime Minister", "Okay", "Exit");
+                        "You are back in prison for disagreeing with the Prime Minister", "Okay", "Okay");
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
@@ -31,18 +31,33 @@ public class choicePartTwo {
             try {
                 choice.nextChoice(freedom = new Image(new FileInputStream(getClass().getClassLoader().getResource("freedom.jpg").getFile())),
                         "Nice! You are a completely free man now as long as you" +
-                                "\n abide by the state's laws", "Okay", "Exit");
+                                "\n abide by the state's laws", "Okay", "Okay");
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
             pressed = 16;
         }
 
+<<<<<<< HEAD
+        if(input==18) {
+            Image gameOver;
+            try {
+                choice.nextChoice(gameOver = new Image(new FileInputStream(getClass().getClassLoader().getResource("gameOver.png").getFile())),
+                        "Game Over", "exit", "exit");
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+            pressed=18;
+        }
+
+            if (input == 19) {
+=======
             if (input == 17) {
 
+>>>>>>> 5f98fd62713f34eee3eb5507da781512b32464d3
                 Image freedom;
                 try {
-                    choice.nextChoice(freedom = new Image(new FileInputStream(getClass().getClassLoader().getResource("freedom.jpg").getFile())),
+                    choice.nextChoice(freedom = new Image(new FileInputStream(getClass().getClassLoader().getResource("freedom.png").getFile())),
                             "\n After the formation of the National Socialist Party, Adolf Hitler gains as much power as he can. " +
                                     "\n Once Adolf Hitler was appointed chancellor he made haste to to eliminate anybody who opposed him." +
                                     "\n The national socialist party even people who aided him in his rise to power. This is where the night" +
@@ -50,15 +65,27 @@ public class choicePartTwo {
                                     "\n original paramilitary organization was threat him. Hitler sent out his Schutzstaffel officers to begin purging  " +
                                     "\n the members of the Sturmabteilung such as its leader Ernst Rohm who was one Hitler's original followers during his rise" +
                                     "\n after the elimination of Sturmabteilung and the consolidation of the Gestapo and Schutzstaffel the Nazi party's power was unmatched" +
-                                    "\n in the country.", "....", "Continue");
+                                    "\n in the country.", "exit", "exit");
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 }
-                pressed = 17;
-
-
+                pressed = 19;
             }
 
+            if(input==20) {
+                Stage stage = (Stage) exitButton.getScene().getWindow();
+                stage.close();
+                pressed=20;
+            }
+
+<<<<<<< HEAD
+        if(input==21) {
+            Stage stage = (Stage) exitButton.getScene().getWindow();
+            stage.close();
+            pressed=21;
+        }
+
+=======
             if(input==18)
             {
                 Image freedom;
@@ -70,6 +97,7 @@ public class choicePartTwo {
                 }
                 pressed = 17;
             }
+>>>>>>> 5f98fd62713f34eee3eb5507da781512b32464d3
         return pressed;
         }
 

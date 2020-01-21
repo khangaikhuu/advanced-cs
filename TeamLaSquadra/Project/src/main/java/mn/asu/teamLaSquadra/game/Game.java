@@ -19,7 +19,7 @@ import java.io.FileNotFoundException;
 public class Game extends Application
 {
     private VBox vLayout = new VBox();
-    private Scene scene= new Scene(vLayout, 1550, 1070);
+    private Scene scene= new Scene(vLayout, 1366, 768);
     private Button startButton;
     private Button exitButton;
     private Label title;
