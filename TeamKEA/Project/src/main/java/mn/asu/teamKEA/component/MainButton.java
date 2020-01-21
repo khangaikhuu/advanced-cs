@@ -2,6 +2,7 @@
 package mn.asu.teamKEA.component;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
@@ -17,14 +18,32 @@ public class MainButton {
     public MainButton(int x, int y, int width, int height,  ImageIcon imageIcon, int x2, int y2 , int width2, int height2, ImageIcon imageIcon2, int x3, int y3, int width3, int height3, ImageIcon imageIcon3) {
         Button.setBounds(x, y, width, height);
         Button.setIcon(imageIcon);
+
+        Button.setOpaque(false);
+        Button.setContentAreaFilled(false);
+        Button.setBorderPainted(false);
+        Button.setFont(new Font("Calibri", Font.BOLD, 80));
+
         nextButton.setBounds(x2,y2,width2,height2);
         nextButton.setIcon(imageIcon2);
+
+        nextButton.setOpaque(false);
+        nextButton.setContentAreaFilled(false);
+        nextButton.setBorderPainted(false);
+        Button.setFont(new Font("Arial", Font.PLAIN, 80));
+
         backButton.setBounds(x3,y3,width3,height3);
         backButton.setIcon(imageIcon3);
+
+        backButton.setOpaque(false);
+        backButton.setContentAreaFilled(false);
+        backButton.setBorderPainted(false);
+        Button.setFont(new Font("Arial", Font.PLAIN, 80));
     }
 
 
-    public static int i = 1;
+    public static int i = 3;
+    public static int set = 0;
 
     public void nextWord( ) {
 
@@ -32,6 +51,23 @@ public class MainButton {
         Button.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
+                if(i==0)
+                {
+                    if(i%2 ==0)
+                    {
+                        Button.setIcon(null);
+                        Button.setText(database[set][0]);
+                    }
+                    else
+                    {
+                        Button.setText(null);
+                        try {
+                            Button.setIcon(getIcon2(database[set][1]));
+                        } catch (IOException ex) {
+                            ex.printStackTrace();
+                        }
+                    }
+                }
                 if(i % 2 ==0) {
 
                     Button.setIcon(null);
@@ -46,16 +82,15 @@ public class MainButton {
                         ex.printStackTrace();
                     }
                 }
-                i++;
                 mainPanel.Panel.revalidate();
                 mainPanel.Panel.repaint();
+                i++;
             }
         });
     }
 
 
 
-    public static int set = 0;
     public void nextSet()
     {
         nextButton.addActionListener(new ActionListener() {
@@ -69,6 +104,14 @@ public class MainButton {
                 else {
                     set++;
                 }
+
+
+                Button.setIcon(null);
+                Button.setText(database[set][0]);
+
+
+
+                i=3;
                 mainPanel.Panel.revalidate();
                 mainPanel.Panel.repaint();
 
@@ -81,7 +124,7 @@ public class MainButton {
 
     public void backSet()
     {
-        nextButton.addActionListener(new ActionListener() {
+        backButton.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -92,8 +135,16 @@ public class MainButton {
                 else {
                     set--;
                 }
+
+
+                Button.setIcon(null);
+                Button.setText(database[set][0]);
+
+
+                i=3;
                 mainPanel.Panel.revalidate();
                 mainPanel.Panel.repaint();
+
 
             }
         });
