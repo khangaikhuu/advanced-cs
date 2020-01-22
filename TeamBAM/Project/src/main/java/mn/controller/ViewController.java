@@ -1,5 +1,6 @@
 package mn.controller;
 
+import mn.entity.WordWrapper;
 import mn.entity.Words;
 import mn.entity.WordsForm;
 import mn.repository.WordRepository;
@@ -8,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.sql.Wrapper;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.Random;
@@ -24,9 +26,17 @@ public class ViewController {
 
     @GetMapping("quiz")
     public String showQuiz(Model model) {
+        WordsForm form = new WordsForm();
+        for (Words word : wordRepository.findAll())
+        {
+            WordWrapper wrapper = new WordWrapper();
+            wrapper.setId(word.getId());
+            wrapper.setInputWord(word.getTranslation());
+            wrapper.setWordName(word.getName());
+            form.addWord(wrapper);
+        }
 
-        model.addAttribute("words", wordRepository.findAll());
-
+        model.addAttribute("form", form);
         return "quiz";
     }
 
@@ -42,7 +52,8 @@ public class ViewController {
 
     @RequestMapping(value="/answers", method = RequestMethod.POST)
     public String processQuery(@ModelAttribute WordsForm form, Model model){
-        System.out.println(form.getClientList());
+        System.out.println(form.getWords());
+
         return "";
     }
 

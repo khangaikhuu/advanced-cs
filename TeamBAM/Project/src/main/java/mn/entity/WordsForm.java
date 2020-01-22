@@ -3,13 +3,21 @@ package mn.entity;
 import java.util.ArrayList;
 
 public class WordsForm {
-    private ArrayList<String> clientList;
+    private ArrayList<WordWrapper> words;
 
-    public ArrayList<String> getClientList() {
-        return clientList;
+    public WordsForm() {
+        this.words = new ArrayList<>();
     }
 
-    public void setClientList(ArrayList<String> clientList) {
-        this.clientList = clientList;
+    public ArrayList<WordWrapper> getWords() {
+        return words;
+    }
+    public void addWord(WordWrapper word)
+    {
+        this.words.add(word);
+    }
+
+    public void setWords(ArrayList<WordWrapper> words) {
+        this.words = words;
     }
 }

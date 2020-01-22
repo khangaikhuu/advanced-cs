@@ -74,13 +74,12 @@
         <a id = "dictionary" href="/menu/dictionary">Dictionary (50 words)</a>
     </div>
         <div class="mn">
-            <form th:action="@{/menu/answers}" method="post">
+            <form th:action="@{/menu/answers}" th:object="${form}" method="post">
                 <table>
-                    <tr th:each="word : ${words}">
-                        <div th:id="'word'+${word.id}">
-                            <td th:id="'word'+${word.id}" th:text="${word.name}"></td>
-                            <td><input type="text" value=""></td>
-                        </div>
+                    <tr th:each="word, itemStat : *{words}">
+                        <td><input th:field="*{words[__${itemStat.index}__].id}" /></td>
+                        <td><input th:field="*{words[__${itemStat.index}__].wordName}" /></td>
+                        <td><input th:field="*{words[__${itemStat.index}__].inputWord}" /></td>
                     </tr>
                 </table>
                 <input type="submit" value="Submit">

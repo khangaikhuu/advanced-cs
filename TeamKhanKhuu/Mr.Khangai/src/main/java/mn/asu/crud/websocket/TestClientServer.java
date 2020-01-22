@@ -16,6 +16,7 @@ public class TestClientServer {
 
     @Before
     public void setup() throws IOException {
+
         client = new EchoClient();
         client.startConnection("127.0.0.1", 4444);
     }
@@ -23,7 +24,7 @@ public class TestClientServer {
     @Test
     public void givenGreetingClient_whenServerRespondsWhenStarted_thenCorrect() throws IOException {
         GreetClient client = new GreetClient();
-        client.startConnection("127.0.0.1", 6666);
+        client.startConnection("127.0.0.1", 4444);
         String response = client.sendMessage("hello server");
         assertEquals("hello client", response);
     }
