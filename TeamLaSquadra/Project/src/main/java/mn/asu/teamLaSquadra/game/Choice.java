@@ -135,7 +135,7 @@ public class Choice {
                     e.printStackTrace();
                 }
                 try {
-                    pres = two.choiceSelect(pressed, choiceOne,Choice.this);
+                    pres = two.choiceSelect(pressed, choiceOne,Choice.this,sceneView);
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 }
@@ -204,7 +204,7 @@ public class Choice {
                     e.printStackTrace();
                 }
                 try {
-                    pres = two.choiceSelect(pressed, choiceTwo,Choice.this);
+                    pres = two.choiceSelect(pressed, choiceTwo,Choice.this,sceneView);
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 }

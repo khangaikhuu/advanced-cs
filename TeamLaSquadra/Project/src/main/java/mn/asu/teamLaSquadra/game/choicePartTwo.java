@@ -1,7 +1,11 @@
 package mn.asu.teamLaSquadra.game;
 
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 
 import java.io.FileInputStream;
@@ -11,7 +15,7 @@ public class choicePartTwo {
 
     int pressed = 0;
 
-    public int choiceSelect(int input, Button exitButton, Choice choice) throws FileNotFoundException {
+    public int choiceSelect(int input, Button exitButton, Choice choice, ImageView sceneView) throws FileNotFoundException {
 
         pressed = input;
 
@@ -50,10 +54,10 @@ public class choicePartTwo {
         }
 
         if (input == 19) {
-
                 Image freedom;
+                sceneView.setFitHeight(350);
                 try {
-                    choice.nextChoice(freedom = new Image(new FileInputStream(getClass().getClassLoader().getResource("freedom.png").getFile())),
+                    choice.nextChoice(freedom = new Image(new FileInputStream(getClass().getClassLoader().getResource("history-ending.jpg").getFile())),
                             "\n After the formation of the National Socialist Party, Adolf Hitler gains as much power as he can. " +
                                     "\n Once Adolf Hitler was appointed chancellor he made haste to to eliminate anybody who opposed him." +
                                     "\n The national socialist party even people who aided him in his rise to power. This is where the night" +
