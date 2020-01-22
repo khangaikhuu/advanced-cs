@@ -54,7 +54,7 @@ public class ViewController {
     public String processQuery(@ModelAttribute WordsForm form, Model model){
         System.out.println(form.getWords());
 
-        return "";
+        return "answers";
     }
 
 }
