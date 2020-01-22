@@ -123,16 +123,7 @@ public class choiceFinder {
             pressed=11;
         }
 
-        try {
-            pressed=one.choiceSelect(pressed, exitButton,choice);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-        try {
-            pressed=two.choiceSelect(pressed, exitButton,choice);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
+
 
 
         //ending.ending("World War 2 ends with the unconditional surrender of the Axis Powers" +
