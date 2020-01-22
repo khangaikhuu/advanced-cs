@@ -7,6 +7,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
 
+import static mn.asu.teamKEA.Main.mainLabel;
 import static mn.asu.teamKEA.Main.mainPanel;
 import static mn.asu.teamKEA.component.UsedImageIcons.*;
 
@@ -112,6 +113,7 @@ public class MainButton {
 
 
                 i=3;
+                mainLabel.Label.setText(set+1+"/"+database.length);
                 mainPanel.Panel.revalidate();
                 mainPanel.Panel.repaint();
 
@@ -142,6 +144,7 @@ public class MainButton {
 
 
                 i=3;
+                mainLabel.Label.setText(set+1+"/"+database.length);
                 mainPanel.Panel.revalidate();
                 mainPanel.Panel.repaint();
 

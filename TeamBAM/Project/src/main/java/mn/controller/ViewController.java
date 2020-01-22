@@ -1,11 +1,12 @@
 package mn.controller;
 
+import mn.entity.Words;
+import mn.entity.WordsForm;
 import mn.repository.WordRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
 import java.util.Iterator;
@@ -24,26 +25,8 @@ public class ViewController {
     @GetMapping("quiz")
     public String showQuiz(Model model) {
 
-        int size = 0;
-        if (wordRepository.findAll() instanceof Collection<?>) {
-            size = ((Collection<?>)wordRepository.findAll()).size();
-        }
-        Random rnd = new Random();
-        long randomIndex = 0;
-        if (size != 0)
-        {
-             randomIndex = rnd.nextInt(size);
-        }
+        model.addAttribute("words", wordRepository.findAll());
 
-//        while(it.hasNext())
-//        {
-//            length+=1;
-//        }
-//        int index = rnd.nextInt(length - 1);
-//        long i = (long) index;
-        if (randomIndex > 0){
-            model.addAttribute("words", wordRepository.findById(randomIndex).get());
-        }
         return "quiz";
     }
 
@@ -57,5 +40,10 @@ public class ViewController {
         return "menu";
     }
 
+    @RequestMapping(value="/answers", method = RequestMethod.POST)
+    public String processQuery(@ModelAttribute WordsForm form, Model model){
+        System.out.println(form.getClientList());
+        return "";
+    }
 
 }
