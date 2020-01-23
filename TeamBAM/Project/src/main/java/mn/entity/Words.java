@@ -9,11 +9,11 @@ public class Words {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    @NotBlank(message = "Name is mandatory")
+    @NotBlank(message = "Word is mandatory")
     @Column(name = "name")
     private String name;
 
-    @NotBlank(message = "Email is mandatory")
+    @NotBlank(message = "Translation is mandatory")
     @Column(name = "translation")
     private String translation;
 
