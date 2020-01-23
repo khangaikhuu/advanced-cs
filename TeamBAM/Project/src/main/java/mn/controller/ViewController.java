@@ -1,18 +1,17 @@
 package mn.controller;
 
+import mn.entity.Answer;
 import mn.entity.WordWrapper;
 import mn.entity.Words;
 import mn.entity.WordsForm;
 import mn.repository.WordRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import java.sql.Wrapper;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.Random;
+import java.util.*;
 
 @Controller
 @RequestMapping("/menu/")
@@ -31,7 +30,7 @@ public class ViewController {
         {
             WordWrapper wrapper = new WordWrapper();
             wrapper.setId(word.getId());
-            wrapper.setInputWord(word.getTranslation());
+            wrapper.setInputWord("");
             wrapper.setWordName(word.getName());
             form.addWord(wrapper);
         }
@@ -53,7 +52,20 @@ public class ViewController {
     @RequestMapping(value="/answers", method = RequestMethod.POST)
     public String processQuery(@ModelAttribute WordsForm form, Model model){
         System.out.println(form.getWords());
-
+        ArrayList givenWords = form.getWords();
+        int correctCounter = 0;
+        for (Object w : givenWords)
+        {
+            WordWrapper wrapper = (WordWrapper) w;
+            long id = wrapper.getId();
+            Words word = wordRepository.findById(id).get();
+            if (((WordWrapper) w).getInputWord().equals(word.getTranslation()))
+            {
+                correctCounter+=1;
+            }
+        }
+        Answer answerCounter = new Answer(correctCounter);
+        model.addAttribute("answer", answerCounter);
         return "answers";
     }
 

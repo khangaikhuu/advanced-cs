@@ -62,6 +62,22 @@
       opacity: 0.55;
       filter: alpha(opacity=50);
     }
+    .mn {
+      position: absolute;
+      top: 200px;
+      left: 760px;
+      font-size: 300%;
+    }
+    .my {
+      position: absolute;
+      top: 160px;
+      left: 720px;
+    }
+    .mi {
+      position: relative;
+      top: 410px;
+      left: 725px;
+    }
 </style>
 <body>
     <div id = "OverviewText4" style="position: relative; z-index: 2;">
@@ -75,6 +91,17 @@
             <a id="CrudWord"href="/words/signup">Add Word</a>
             <a id="dictionary"href="/menu/dictionary">Dictionary (50 words)</a>
         </div>
+    </div>
+    <div class="my">
+        <h1>You Got</h1>
+    </div>
+    <div class="mn">
+        <h1 th:inline="text" >
+            <small th:text="${answer.counter}">Answer</small>
+        </h1>
+    </div>
+    <div class="mi">
+        <h1>Correct!</h1>
     </div>
 </body>
 </html>
